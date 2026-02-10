@@ -25,7 +25,7 @@
         localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
     }
 
-    /* ---------- Apply consent to gtag + load AdSense ---------- */
+    /* ---------- Apply consent to gtag ---------- */
 
     function applyConsent(analytics, ads) {
         if (typeof gtag === 'function') {
@@ -34,31 +34,6 @@
                 'ad_storage': ads ? 'granted' : 'denied'
             });
         }
-
-        if (ads) {
-            loadAdSense();
-        }
-    }
-
-    var adSenseLoaded = false;
-
-    function loadAdSense() {
-        if (adSenseLoaded) return;
-        adSenseLoaded = true;
-
-        var s = document.createElement('script');
-        s.async = true;
-        s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1770515539594674';
-        s.crossOrigin = 'anonymous';
-        s.onload = function () {
-            var ads = document.querySelectorAll('ins.adsbygoogle');
-            for (var i = 0; i < ads.length; i++) {
-                try {
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                } catch (e) {}
-            }
-        };
-        document.head.appendChild(s);
     }
 
     /* ---------- UI helpers ---------- */
