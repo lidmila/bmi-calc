@@ -135,6 +135,11 @@
             hideSettings();
         });
 
+        var btnSettingsAccept = document.getElementById('cookie-settings-accept-all');
+        var btnSettingsReject = document.getElementById('cookie-settings-reject');
+        if (btnSettingsAccept) btnSettingsAccept.addEventListener('click', acceptAll);
+        if (btnSettingsReject) btnSettingsReject.addEventListener('click', rejectOptional);
+
         var btnReopen = document.getElementById('cookie-reopen');
         if (btnReopen) btnReopen.addEventListener('click', function (e) {
             e.preventDefault();
