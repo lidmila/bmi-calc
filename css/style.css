@@ -494,6 +494,30 @@ a:hover {
     margin: 0 auto;
 }
 
+/* ---------- Banner Ad ---------- */
+.banner-ad {
+    text-align: center;
+    padding: 24px 20px;
+}
+
+.banner-ad a {
+    display: inline-block;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.banner-ad a:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.banner-ad img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
 @media (min-width: 700px) {
     .section-with-image {
         flex-direction: row;
