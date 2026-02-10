@@ -5,7 +5,9 @@
       "Bash(findstr:*)",
       "WebSearch",
       "WebFetch(domain:www.color-hex.com)",
-      "WebFetch(domain:codewhiskers.app)"
+      "WebFetch(domain:codewhiskers.app)",
+      "WebFetch(domain:support.google.com)",
+      "WebFetch(domain:idealnibmi.com)"
     ]
   }
 }
