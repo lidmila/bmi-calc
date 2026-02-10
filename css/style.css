@@ -684,6 +684,17 @@ a:hover {
     color: #e0e2aa;
 }
 
+/* ---------- Support Section ---------- */
+.support-section {
+    text-align: center;
+}
+
+.support-button-wrapper {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
 /* =============================
    Responsive Breakpoints
    ============================= */
