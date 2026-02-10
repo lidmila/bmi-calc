@@ -479,6 +479,48 @@ a:hover {
     margin-bottom: 6px;
 }
 
+/* ---------- Section with Image ---------- */
+.section-with-image {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.section-image img {
+    border-radius: 12px;
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    margin: 0 auto;
+}
+
+@media (min-width: 700px) {
+    .section-with-image {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 32px;
+    }
+
+    .section-text {
+        flex: 1;
+    }
+
+    .section-image {
+        flex-shrink: 0;
+        width: 280px;
+    }
+
+    .section-image img {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 900px) {
+    .section-image {
+        width: 340px;
+    }
+}
+
 /* ---------- Formula Box ---------- */
 .formula-box {
     background: #f9faf5;
