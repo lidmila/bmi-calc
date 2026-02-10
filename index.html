@@ -8,13 +8,13 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('consent', 'default', {
-            'analytics_storage': 'denied'
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied'
         });
         gtag('config', 'G-361YSTSGFC');
     </script>
 
     <meta name="google-site-verification" content="rRDlr3yOBQlZS4ZTvVlBEnPMkeGqleIC22zFe0q0wLQ" />
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1770515539594674" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI Kalkulačka – Přesná kalkulačka BMI online | Ideální BMI</title>
@@ -685,7 +685,65 @@
         </div>
     </footer>
 
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookie-banner">
+        <div class="cookie-banner-inner">
+            <p class="cookie-text">Tento web používá cookies pro analytiku a reklamu. Nezbytné cookies (platby) jsou vždy aktivní.</p>
+            <div class="cookie-buttons">
+                <button class="cookie-btn cookie-btn-accept" id="cookie-accept-all">Přijmout vše</button>
+                <button class="cookie-btn cookie-btn-reject" id="cookie-reject">Pouze nezbytné</button>
+                <button class="cookie-btn cookie-btn-settings" id="cookie-open-settings">Nastavení</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Settings Panel -->
+    <div class="cookie-settings-overlay" id="cookie-settings">
+        <div class="cookie-settings-panel">
+            <div class="cookie-settings-header">
+                <h3>Nastavení cookies</h3>
+                <button class="cookie-settings-close" id="cookie-close-settings" aria-label="Zavřít">&times;</button>
+            </div>
+            <div class="cookie-settings-body">
+                <div class="cookie-setting-item">
+                    <div class="cookie-setting-info">
+                        <strong>Nezbytné</strong>
+                        <span>Stripe (platby) — nutné pro fungování webu</span>
+                    </div>
+                    <div class="cookie-toggle-wrapper">
+                        <input type="checkbox" checked disabled class="cookie-toggle" id="cookie-necessary">
+                        <label for="cookie-necessary" class="cookie-toggle-label"></label>
+                    </div>
+                </div>
+                <div class="cookie-setting-item">
+                    <div class="cookie-setting-info">
+                        <strong>Analytické</strong>
+                        <span>Google Analytics — měření návštěvnosti</span>
+                    </div>
+                    <div class="cookie-toggle-wrapper">
+                        <input type="checkbox" class="cookie-toggle" id="cookie-analytics">
+                        <label for="cookie-analytics" class="cookie-toggle-label"></label>
+                    </div>
+                </div>
+                <div class="cookie-setting-item">
+                    <div class="cookie-setting-info">
+                        <strong>Reklamní</strong>
+                        <span>Google AdSense — personalizované reklamy</span>
+                    </div>
+                    <div class="cookie-toggle-wrapper">
+                        <input type="checkbox" class="cookie-toggle" id="cookie-ads">
+                        <label for="cookie-ads" class="cookie-toggle-label"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="cookie-settings-footer">
+                <button class="cookie-btn cookie-btn-accept" id="cookie-save-settings">Uložit nastavení</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
+    <script src="js/cookies.js"></script>
     <script src="js/data/lms-boys.js"></script>
     <script src="js/data/lms-girls.js"></script>
     <script src="js/calculator.js"></script>
