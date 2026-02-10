@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://idealnibmi.cz/sitemap.xml
+Sitemap: https://idealnibmi.com/sitemap.xml

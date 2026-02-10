@@ -50,6 +50,14 @@
         s.async = true;
         s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1770515539594674';
         s.crossOrigin = 'anonymous';
+        s.onload = function () {
+            var ads = document.querySelectorAll('ins.adsbygoogle');
+            for (var i = 0; i < ads.length; i++) {
+                try {
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                } catch (e) {}
+            }
+        };
         document.head.appendChild(s);
     }
 

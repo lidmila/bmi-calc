@@ -29,6 +29,11 @@ img {
     display: block;
 }
 
+ins.adsbygoogle[data-ad-status="unfilled"],
+ins.adsbygoogle:empty {
+    display: none !important;
+}
+
 a {
     color: #5d7912;
     text-decoration: none;
