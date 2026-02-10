@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "Bash(findstr:*)",
+      "WebSearch",
+      "WebFetch(domain:www.color-hex.com)",
+      "WebFetch(domain:codewhiskers.app)"
+    ]
+  }
+}

@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Kalkulačka – Přesná kalkulačka BMI online | Ideální BMI</title>
+    <meta name="description" content="Přesná BMI kalkulačka online zdarma. Vypočítejte si BMI podle výšky, váhy, věku, pohlaví a obvodu pasu. BMI kalkulačka pro dospělé i děti.">
+    <meta name="keywords" content="BMI kalkulačka, BMI, body mass index, výpočet BMI, ideální BMI, BMI tabulka, BMI pro děti, BMI podle věku">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://idealnibmi.cz/">
+    <link rel="alternate" hreflang="cs" href="https://idealnibmi.cz/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="BMI Kalkulačka – Přesná kalkulačka BMI online | Ideální BMI">
+    <meta property="og:description" content="Přesná BMI kalkulačka online zdarma. Vypočítejte si BMI podle výšky, váhy, věku, pohlaví a obvodu pasu. BMI kalkulačka pro dospělé i děti.">
+    <meta property="og:image" content="https://idealnibmi.cz/img/BMI-calc.png">
+    <meta property="og:url" content="https://idealnibmi.cz/">
+    <meta property="og:locale" content="cs_CZ">
+    <meta property="og:site_name" content="Ideální BMI">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/BMI-calc.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Ideální BMI",
+        "url": "https://idealnibmi.cz/",
+        "description": "Přesná BMI kalkulačka online zdarma pro dospělé i děti.",
+        "inLanguage": "cs"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "BMI Kalkulačka",
+        "url": "https://idealnibmi.cz/",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "CZK"
+        },
+        "description": "Online BMI kalkulačka pro výpočet Body Mass Indexu podle výšky, váhy, věku a pohlaví."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Co je BMI a k čemu slouží?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "BMI (Body Mass Index) je jednoduchý ukazatel, který poměřuje vaši hmotnost a výšku. Slouží jako orientační screening pro posouzení, zda je vaše hmotnost v normálním rozmezí, nebo zda máte podváhu, nadváhu či obezitu."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Jak se počítá BMI?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "BMI se počítá podle vzorce: BMI = hmotnost (kg) ÷ výška (m)². Například při hmotnosti 75 kg a výšce 180 cm (1,80 m): BMI = 75 ÷ (1,80 × 1,80) = 75 ÷ 3,24 = 23,1."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Jak vypočítat BMI – vzorec?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Vzorec pro výpočet BMI je: BMI = hmotnost v kilogramech dělená druhou mocninou výšky v metrech. Nejprve převeďte výšku z centimetrů na metry (dělte 100), poté výšku umocněte na druhou a hmotností podělte."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Je BMI přesný ukazatel zdraví?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "BMI je užitečný orientační nástroj, ale má svá omezení. Nerozlišuje mezi svalovou a tukovou hmotou, nezohledňuje rozložení tuku v těle ani kostní strukturu. Pro přesnější posouzení je vhodné kombinovat BMI s měřením obvodu pasu a dalšími zdravotními ukazateli."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Jaké je ideální BMI pro muže a ženy?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Podle WHO je ideální BMI pro dospělé v rozmezí 18,5–24,9 bez ohledu na pohlaví. Ženy ale přirozeně mají vyšší podíl tělesného tuku, proto může být BMI kolem 20–22 pro ženy a 22–25 pro muže považováno za optimální."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Jak se liší BMI podle věku?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "S věkem se mění složení těla – ubývá svalová hmota a přibývá tuková tkáň. Proto se u seniorů (65+) považuje za optimální mírně vyšší BMI (23–30). U dětí a dospívajících se BMI hodnotí pomocí percentilových grafů s ohledem na věk a pohlaví."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Jak se počítá BMI u dětí?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "U dětí se BMI počítá stejným vzorcem jako u dospělých, ale výsledek se porovnává s percentilovými tabulkami (CDC nebo WHO) pro daný věk a pohlaví. Podle percentilu se dítě zařadí do kategorie: podváha (pod 5. percentil), normální váha (5.–84. percentil), nadváha (85.–94. percentil) nebo obezita (95. percentil a výše)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Co znamená BMI 25?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "BMI 25 je hraniční hodnota mezi normální váhou a nadváhou. Pokud vaše BMI dosahuje 25 nebo více, jedná se o nadváhu. Je to signál, že byste měli věnovat pozornost svému stravování a pohybovým návykům."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Co znamená BMI 30?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "BMI 30 a více znamená obezitu I. stupně. Tato hodnota je spojena se zvýšeným rizikem kardiovaskulárních onemocnění, diabetu 2. typu a dalších zdravotních komplikací. Doporučuje se konzultovat s lékařem."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Jak snížit BMI?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "BMI snížíte úpravou životního stylu: vyváženou stravou s mírným kalorickým deficitem, pravidelným pohybem (alespoň 150 minut týdně), dostatkem spánku a zvládáním stresu. Doporučuje se postupné hubnutí 0,5–1 kg týdně. Při BMI nad 30 je vhodná konzultace s lékařem."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Proč je důležitý obvod pasu?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Obvod pasu je důležitý doplněk BMI, protože měří abdominální (viscerální) tuk, který je z hlediska zdraví nejrizikovější. WHO definuje zvýšené riziko při obvodu pasu nad 94 cm u mužů a 80 cm u žen, vysoké riziko nad 102 cm u mužů a 88 cm u žen."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Platí BMI pro sportovce a kulturisty?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "BMI není vhodný ukazatel pro sportovce a kulturisty s výrazně vyvinutou svalovou hmotou. Svaly jsou těžší než tuk, proto mohou mít tito lidé vysoké BMI, přestože mají nízký podíl tělesného tuku. V těchto případech je lepší použít měření tělesného složení (např. bioimpedanční analýzu)."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="/" class="logo" aria-label="Ideální BMI – domovská stránka">
+                <img src="img/BMI-calc.png" alt="Ideální BMI logo" width="40" height="40">
+                <span class="logo-text">Ideální BMI</span>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Otevřít menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav" id="nav" aria-label="Hlavní navigace">
+                <a href="#kalkulacka" class="nav-link">Kalkulačka</a>
+                <a href="#co-je-bmi" class="nav-link">Co je BMI</a>
+                <a href="#jak-pocitat" class="nav-link">Jak počítat</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero + Calculator -->
+        <section class="hero" id="kalkulacka">
+            <div class="container">
+                <h1>BMI Kalkulačka – Vypočítejte si své ideální BMI</h1>
+                <p class="hero-subtitle">Přesný výpočet BMI online zdarma. Zadejte svou výšku a váhu a okamžitě zjistěte, zda je vaše hmotnost v normě. Kalkulačka pro dospělé i děti s ohledem na věk a pohlaví.</p>
+
+                <!-- Calculator Card -->
+                <div class="calc-card" id="calculator">
+                    <!-- Tabs -->
+                    <div class="calc-tabs" role="tablist">
+                        <button class="calc-tab active" role="tab" aria-selected="true" data-tab="basic" id="tab-basic" aria-controls="panel-basic">Základní</button>
+                        <button class="calc-tab" role="tab" aria-selected="false" data-tab="advanced" id="tab-advanced" aria-controls="panel-advanced">Podrobná</button>
+                        <button class="calc-tab" role="tab" aria-selected="false" data-tab="children" id="tab-children" aria-controls="panel-children">Děti</button>
+                    </div>
+
+                    <!-- Basic Panel -->
+                    <div class="calc-panel active" id="panel-basic" role="tabpanel" aria-labelledby="tab-basic">
+                        <form id="form-basic" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="basic-height">Výška (cm)</label>
+                                    <input type="number" id="basic-height" min="100" max="250" step="1" placeholder="např. 175" required>
+                                    <span class="form-error" id="error-basic-height"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="basic-weight">Hmotnost (kg)</label>
+                                    <input type="number" id="basic-weight" min="20" max="300" step="0.1" placeholder="např. 72" required>
+                                    <span class="form-error" id="error-basic-weight"></span>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn-calculate">Vypočítat BMI</button>
+                        </form>
+                    </div>
+
+                    <!-- Advanced Panel -->
+                    <div class="calc-panel" id="panel-advanced" role="tabpanel" aria-labelledby="tab-advanced">
+                        <form id="form-advanced" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="adv-height">Výška (cm)</label>
+                                    <input type="number" id="adv-height" min="100" max="250" step="1" placeholder="např. 175" required>
+                                    <span class="form-error" id="error-adv-height"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="adv-weight">Hmotnost (kg)</label>
+                                    <input type="number" id="adv-weight" min="20" max="300" step="0.1" placeholder="např. 72" required>
+                                    <span class="form-error" id="error-adv-weight"></span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="adv-gender">Pohlaví</label>
+                                    <select id="adv-gender" required>
+                                        <option value="">Vyberte...</option>
+                                        <option value="male">Muž</option>
+                                        <option value="female">Žena</option>
+                                    </select>
+                                    <span class="form-error" id="error-adv-gender"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="adv-age">Věk (roky)</label>
+                                    <input type="number" id="adv-age" min="18" max="120" step="1" placeholder="např. 35" required>
+                                    <span class="form-error" id="error-adv-age"></span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="adv-waist">Obvod pasu (cm) <span class="optional">– volitelné</span></label>
+                                    <input type="number" id="adv-waist" min="40" max="200" step="0.1" placeholder="např. 85">
+                                    <span class="form-error" id="error-adv-waist"></span>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn-calculate">Vypočítat BMI</button>
+                        </form>
+                    </div>
+
+                    <!-- Children Panel -->
+                    <div class="calc-panel" id="panel-children" role="tabpanel" aria-labelledby="tab-children">
+                        <form id="form-children" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="child-gender">Pohlaví</label>
+                                    <select id="child-gender" required>
+                                        <option value="">Vyberte...</option>
+                                        <option value="male">Chlapec</option>
+                                        <option value="female">Dívka</option>
+                                    </select>
+                                    <span class="form-error" id="error-child-gender"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="child-age-years">Věk (roky)</label>
+                                    <input type="number" id="child-age-years" min="2" max="19" step="1" placeholder="např. 10" required>
+                                    <span class="form-error" id="error-child-age-years"></span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="child-age-months">Měsíce (0–11)</label>
+                                    <input type="number" id="child-age-months" min="0" max="11" step="1" placeholder="např. 6" value="0">
+                                    <span class="form-error" id="error-child-age-months"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="child-height">Výška (cm)</label>
+                                    <input type="number" id="child-height" min="50" max="200" step="0.1" placeholder="např. 140" required>
+                                    <span class="form-error" id="error-child-height"></span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="child-weight">Hmotnost (kg)</label>
+                                    <input type="number" id="child-weight" min="5" max="150" step="0.1" placeholder="např. 35" required>
+                                    <span class="form-error" id="error-child-weight"></span>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn-calculate">Vypočítat BMI</button>
+                        </form>
+                    </div>
+
+                    <!-- Result -->
+                    <div class="calc-result" id="calc-result" hidden>
+                        <div class="result-header">
+                            <span class="result-label">Vaše BMI</span>
+                            <span class="result-value" id="result-value"></span>
+                            <span class="result-category" id="result-category"></span>
+                        </div>
+
+                        <!-- BMI Gauge -->
+                        <div class="bmi-gauge" id="bmi-gauge">
+                            <div class="gauge-bar">
+                                <div class="gauge-marker" id="gauge-marker">
+                                    <span class="gauge-marker-label" id="gauge-marker-label"></span>
+                                </div>
+                            </div>
+                            <div class="gauge-labels">
+                                <span>16</span>
+                                <span>18.5</span>
+                                <span>25</span>
+                                <span>30</span>
+                                <span>35</span>
+                                <span>40</span>
+                            </div>
+                        </div>
+
+                        <!-- Additional info -->
+                        <div class="result-details" id="result-details"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Co je BMI -->
+        <section class="section" id="co-je-bmi">
+            <div class="container">
+                <h2>Co je BMI? (Body Mass Index)</h2>
+                <p><strong>BMI</strong>, neboli <strong>Body Mass Index</strong> (index tělesné hmotnosti), je jednoduchý číselný ukazatel, který vyjadřuje poměr mezi vaší hmotností a výškou. Tento index vyvinul belgický matematik Adolphe Quetelet již v roce 1832 a dodnes slouží jako základní screeningový nástroj pro posouzení tělesné hmotnosti v populaci.</p>
+                <p>BMI se používá po celém světě jako rychlý a snadno dostupný způsob, jak zjistit, zda se vaše hmotnost nachází ve zdravém rozmezí. Světová zdravotnická organizace (WHO) na základě BMI definuje kategorie od podváhy přes normální hmotnost až po různé stupně obezity. Tyto kategorie pomáhají lékařům i jednotlivcům orientačně posoudit zdravotní rizika spojená s hmotností.</p>
+                <p>Je důležité si uvědomit, že <strong>BMI má svá omezení</strong>. Nerozlišuje mezi svalovou a tukovou hmotou, nezohledňuje rozložení tuku v těle (břišní tuk je rizikovější než podkožní), ani nebere v úvahu kostní strukturu, pohlaví či etnický původ. Proto by BMI nemělo být jediným ukazatelem zdravotního stavu – je vhodné jej doplnit o další měření, například <strong>obvod pasu</strong>, podíl tělesného tuku nebo krevní testy.</p>
+                <p>Přesto zůstává BMI cenným nástrojem pro první orientaci. Pokud vám naše kalkulačka ukáže hodnotu mimo normální rozmezí, doporučujeme konzultaci s lékařem, který provede komplexnější vyšetření.</p>
+            </div>
+        </section>
+
+        <!-- Jak se počítá BMI -->
+        <section class="section section-alt" id="jak-pocitat">
+            <div class="container">
+                <h2>Jak se počítá BMI? Vzorec a příklad</h2>
+                <p>Výpočet BMI je velmi jednoduchý. Stačí znát svou <strong>hmotnost v kilogramech</strong> a <strong>výšku v metrech</strong>. Vzorec pro výpočet BMI vypadá takto:</p>
+
+                <div class="formula-box">
+                    <p class="formula">BMI = hmotnost (kg) &divide; výška (m)&sup2;</p>
+                </div>
+
+                <h3>Příklad výpočtu krok za krokem</h3>
+                <p>Představme si osobu s hmotností <strong>75 kg</strong> a výškou <strong>180 cm</strong>:</p>
+                <ol>
+                    <li><strong>Převeďte výšku na metry:</strong> 180 cm &divide; 100 = <strong>1,80 m</strong></li>
+                    <li><strong>Umocněte výšku na druhou:</strong> 1,80 &times; 1,80 = <strong>3,24 m&sup2;</strong></li>
+                    <li><strong>Vydělte hmotnost druhou mocninou výšky:</strong> 75 &divide; 3,24 = <strong>23,1</strong></li>
+                </ol>
+                <p>Výsledné BMI je <strong>23,1</strong>, což spadá do kategorie <strong>normální váhy</strong> (18,5–24,9). Tato osoba má tedy zdravou hmotnost.</p>
+                <p>Pokud nechcete počítat ručně, jednoduše použijte naši <a href="#kalkulacka">BMI kalkulačku</a> výše – zadáte výšku a váhu a výsledek dostanete okamžitě.</p>
+            </div>
+        </section>
+
+        <!-- BMI tabulka -->
+        <section class="section" id="bmi-tabulka">
+            <div class="container">
+                <h2>BMI tabulka – kategorie a hodnocení</h2>
+                <p>Následující tabulka vychází z klasifikace <strong>Světové zdravotnické organizace (WHO)</strong> a ukazuje jednotlivé kategorie BMI s odpovídajícím zdravotním rizikem:</p>
+
+                <div class="table-responsive">
+                    <table class="bmi-table">
+                        <thead>
+                            <tr>
+                                <th>Kategorie</th>
+                                <th>BMI</th>
+                                <th>Zdravotní riziko</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bmi-cat-severe-underweight">
+                                <td>Těžká podváha</td>
+                                <td>&lt; 16,0</td>
+                                <td><span class="risk-badge risk-high">Vysoké</span></td>
+                            </tr>
+                            <tr class="bmi-cat-underweight">
+                                <td>Podváha</td>
+                                <td>16,0 – 16,99</td>
+                                <td><span class="risk-badge risk-medium">Střední</span></td>
+                            </tr>
+                            <tr class="bmi-cat-mild-underweight">
+                                <td>Mírná podváha</td>
+                                <td>17,0 – 18,49</td>
+                                <td><span class="risk-badge risk-low">Nízké</span></td>
+                            </tr>
+                            <tr class="bmi-cat-normal">
+                                <td>Normální váha</td>
+                                <td>18,5 – 24,99</td>
+                                <td><span class="risk-badge risk-minimal">Minimální</span></td>
+                            </tr>
+                            <tr class="bmi-cat-overweight">
+                                <td>Nadváha</td>
+                                <td>25,0 – 29,99</td>
+                                <td><span class="risk-badge risk-elevated">Zvýšené</span></td>
+                            </tr>
+                            <tr class="bmi-cat-obese1">
+                                <td>Obezita I. stupně</td>
+                                <td>30,0 – 34,99</td>
+                                <td><span class="risk-badge risk-high">Vysoké</span></td>
+                            </tr>
+                            <tr class="bmi-cat-obese2">
+                                <td>Obezita II. stupně</td>
+                                <td>35,0 – 39,99</td>
+                                <td><span class="risk-badge risk-very-high">Velmi vysoké</span></td>
+                            </tr>
+                            <tr class="bmi-cat-obese3">
+                                <td>Obezita III. stupně</td>
+                                <td>&ge; 40,0</td>
+                                <td><span class="risk-badge risk-extreme">Extrémně vysoké</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- BMI podle věku a pohlaví -->
+        <section class="section section-alt" id="bmi-vek-pohlavi">
+            <div class="container">
+                <h2>BMI podle věku a pohlaví</h2>
+                <p>Přestože WHO klasifikace používá stejné prahové hodnoty pro muže i ženy, existují důležité rozdíly ve složení těla, které je třeba brát v úvahu pro přesnější interpretaci.</p>
+
+                <h3>BMI kalkulačka muž vs. žena – rozdíly ve složení těla</h3>
+                <p>Ženy mají přirozeně vyšší podíl tělesného tuku (přibližně 20–25 %) oproti mužům (15–20 %). To znamená, že při stejném BMI mají ženy obvykle více tukové tkáně. Muži naopak bývají svalnatější, což může jejich BMI zvýšit, aniž by to nutně znamenalo nadbytek tuku.</p>
+                <p>Zatímco standardní WHO kategorie platí obecně, optimální BMI pro <strong>ženy</strong> je obvykle uváděno v rozmezí <strong>20–22</strong> a pro <strong>muže 22–25</strong>. Naše podrobná kalkulačka tuto informaci zohledňuje v interpretaci výsledku.</p>
+
+                <h3>BMI kalkulačka podle věku – doporučené rozsahy</h3>
+                <p>S přibývajícím věkem se mění složení těla – ubývá svalová hmota a přibývá tuková tkáň. Proto se doporučené rozmezí BMI mírně mění:</p>
+
+                <div class="table-responsive">
+                    <table class="bmi-table age-table">
+                        <thead>
+                            <tr>
+                                <th>Věková skupina</th>
+                                <th>Doporučené BMI</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>18–24 let</td><td>19–24</td></tr>
+                            <tr><td>25–34 let</td><td>20–25</td></tr>
+                            <tr><td>35–44 let</td><td>21–26</td></tr>
+                            <tr><td>45–54 let</td><td>22–27</td></tr>
+                            <tr><td>55–64 let</td><td>23–28</td></tr>
+                            <tr><td>65+ let</td><td>24–29</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>BMI kalkulačka podle obvodu pasu – WHO prahy</h3>
+                <p>Obvod pasu je důležitým doplňkem BMI, protože měří množství viscerálního (břišního) tuku, který je z hlediska zdraví nejrizikovější. WHO definuje následující prahy pro evropskou populaci:</p>
+
+                <div class="table-responsive">
+                    <table class="bmi-table waist-table">
+                        <thead>
+                            <tr>
+                                <th>Riziko</th>
+                                <th>Muži</th>
+                                <th>Ženy</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="waist-ok"><td>Nízké</td><td>&lt; 94 cm</td><td>&lt; 80 cm</td></tr>
+                            <tr class="waist-elevated"><td>Zvýšené</td><td>94–102 cm</td><td>80–88 cm</td></tr>
+                            <tr class="waist-high"><td>Vysoké</td><td>&gt; 102 cm</td><td>&gt; 88 cm</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>Měření obvodu pasu se provádí ve stoje, v úrovni pupku, při volném výdechu. Kombinace BMI a obvodu pasu poskytuje přesnější obrázek o zdravotních rizicích než samotné BMI.</p>
+            </div>
+        </section>
+
+        <!-- BMI pro děti -->
+        <section class="section" id="bmi-deti">
+            <div class="container">
+                <h2>BMI kalkulačka pro děti</h2>
+                <p>U dětí a dospívajících (2–20 let) se BMI hodnotí odlišně než u dospělých. Protože se tělo v průběhu růstu neustále mění, nelze použít stejné prahové hodnoty. Místo toho se používá <strong>percentilový systém</strong>, který porovnává BMI dítěte s referenční populací stejného věku a pohlaví.</p>
+                <p>Naše kalkulačka používá <strong>CDC (Centers for Disease Control and Prevention) LMS referenční data</strong> pro výpočet přesného percentilu. Percentil udává, kolik procent dětí stejného věku a pohlaví má nižší BMI.</p>
+
+                <div class="table-responsive">
+                    <table class="bmi-table children-table">
+                        <thead>
+                            <tr>
+                                <th>Kategorie</th>
+                                <th>Percentil</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="child-cat-underweight"><td>Podváha</td><td>&lt; 5. percentil</td></tr>
+                            <tr class="child-cat-normal"><td>Normální váha</td><td>5. – 84. percentil</td></tr>
+                            <tr class="child-cat-overweight"><td>Nadváha</td><td>85. – 94. percentil</td></tr>
+                            <tr class="child-cat-obese"><td>Obezita</td><td>&ge; 95. percentil</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="info-box">
+                    <p><strong>Důležité upozornění:</strong> BMI u dětí je pouze orientační ukazatel. Výsledky by měly být vždy konzultovány s pediatrem, který posoudí celkový zdravotní stav dítěte v kontextu jeho individuálního vývoje, genetiky a životního stylu.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section section-alt" id="faq">
+            <div class="container">
+                <h2>Často kladené otázky o BMI</h2>
+
+                <div class="faq-list" id="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Co je BMI a k čemu slouží?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>BMI (Body Mass Index) je jednoduchý ukazatel, který poměřuje vaši hmotnost a výšku. Slouží jako orientační screening pro posouzení, zda je vaše hmotnost v normálním rozmezí, nebo zda máte podváhu, nadváhu či obezitu. BMI používají lékaři po celém světě jako rychlý a dostupný nástroj pro první posouzení stavu výživy pacienta.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Jak se počítá BMI?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>BMI se počítá podle vzorce: BMI = hmotnost (kg) &divide; výška (m)&sup2;. Například při hmotnosti 75 kg a výšce 180 cm (1,80 m): BMI = 75 &divide; (1,80 &times; 1,80) = 75 &divide; 3,24 = 23,1. Tato hodnota spadá do kategorie normální váhy.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Jak vypočítat BMI – vzorec?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Vzorec pro výpočet BMI je: BMI = hmotnost v kilogramech dělená druhou mocninou výšky v metrech. Nejprve převeďte výšku z centimetrů na metry (dělte 100), poté výšku umocněte na druhou a hmotností podělte. Například: 80 kg &divide; (1,75 m)&sup2; = 80 &divide; 3,0625 = 26,1.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Je BMI přesný ukazatel zdraví?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>BMI je užitečný orientační nástroj, ale má svá omezení. Nerozlišuje mezi svalovou a tukovou hmotou, nezohledňuje rozložení tuku v těle ani kostní strukturu. Proto může u sportovců s velkou svalovou hmotou ukazovat nadváhu, přestože mají nízký podíl tuku. Pro přesnější posouzení je vhodné kombinovat BMI s měřením obvodu pasu a dalšími zdravotními ukazateli.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Jaké je ideální BMI pro muže a ženy?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Podle WHO je ideální BMI pro dospělé v rozmezí 18,5–24,9 bez ohledu na pohlaví. Ženy ale přirozeně mají vyšší podíl tělesného tuku, proto může být BMI kolem 20–22 pro ženy a 22–25 pro muže považováno za optimální. Důležité je také zohlednit věk, fyzickou aktivitu a celkový zdravotní stav.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Jak se liší BMI podle věku?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>S věkem se mění složení těla – ubývá svalová hmota a přibývá tuková tkáň. Proto se u seniorů (65+) považuje za optimální mírně vyšší BMI (23–30). Studie ukazují, že u starších lidí je mírně vyšší BMI spojeno s nižší úmrtností. U dětí a dospívajících se BMI hodnotí pomocí percentilových grafů s ohledem na věk a pohlaví.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Jak se počítá BMI u dětí?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>U dětí se BMI počítá stejným vzorcem jako u dospělých (hmotnost &divide; výška&sup2;), ale výsledek se porovnává s percentilovými tabulkami pro daný věk a pohlaví. Podle percentilu se dítě zařadí do kategorie: podváha (pod 5. percentil), normální váha (5.–84. percentil), nadváha (85.–94. percentil) nebo obezita (95. percentil a výše). Doporučujeme výsledky konzultovat s pediatrem.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Co znamená BMI 25?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>BMI 25 je hraniční hodnota mezi normální váhou a nadváhou. Pokud vaše BMI dosahuje 25 nebo více (ale méně než 30), jedná se o nadváhu. Je to signál, že byste měli věnovat pozornost svému stravování a pohybovým návykům. Samotné BMI 25 ale nemusí nutně znamenat zdravotní problém – záleží na celkovém složení těla a dalších faktorech.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Co znamená BMI 30?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>BMI 30 a více znamená obezitu I. stupně. Tato hodnota je spojena se zvýšeným rizikem kardiovaskulárních onemocnění, diabetu 2. typu, některých nádorových onemocnění a dalších zdravotních komplikací. Pokud vaše BMI překračuje 30, doporučuje se konzultovat situaci s lékařem a zvážit úpravu životního stylu.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Jak snížit BMI?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>BMI snížíte úpravou životního stylu: vyváženou stravou s mírným kalorickým deficitem (300–500 kcal denně), pravidelným pohybem (alespoň 150 minut středně intenzivního cvičení týdně), dostatkem spánku (7–9 hodin) a zvládáním stresu. Doporučuje se postupné hubnutí 0,5–1 kg týdně. Při BMI nad 30 je vhodná konzultace s lékařem nebo nutričním terapeutem.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Proč je důležitý obvod pasu?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Obvod pasu je důležitý doplněk BMI, protože měří abdominální (viscerální) tuk, který je z hlediska zdraví nejrizikovější. Viscerální tuk obklopuje vnitřní orgány a je spojen s vyšším rizikem srdečních onemocnění, diabetu a metabolického syndromu. WHO definuje zvýšené riziko při obvodu pasu nad 94 cm u mužů a 80 cm u žen, vysoké riziko nad 102 cm u mužů a 88 cm u žen.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Platí BMI pro sportovce a kulturisty?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>BMI není vhodný ukazatel pro sportovce a kulturisty s výrazně vyvinutou svalovou hmotou. Svaly jsou těžší než tuk, proto mohou mít tito lidé vysoké BMI, přestože mají nízký podíl tělesného tuku. V těchto případech je lepší použít měření tělesného složení, například bioimpedanční analýzu (BIA), kalipetraci nebo DEXA sken.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="disclaimer">Tato kalkulačka slouží pouze k informativním účelům a nenahrazuje odborné lékařské vyšetření. Při jakýchkoli obavách o svou hmotnost nebo zdravotní stav se poraďte s lékařem.</p>
+            <p class="footer-operator">Provozovatel: CodeWhiskers | IČ: 05684447 | DIČ: CZ9057190912 | Jindice 115, 285 04 Rašovice-Uhlířské Janovice | hello@codewhiskers.app</p>
+            <p class="footer-copy">&copy; 2025 Ideální BMI | Zdroje: <a href="https://www.who.int/" target="_blank" rel="noopener">WHO</a>, <a href="https://www.cdc.gov/" target="_blank" rel="noopener">CDC</a></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/data/lms-boys.js"></script>
+    <script src="js/data/lms-girls.js"></script>
+    <script src="js/calculator.js"></script>
+    <script src="js/ui.js"></script>
+</body>
+</html>
