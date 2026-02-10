@@ -11,6 +11,19 @@
             'analytics_storage': 'denied',
             'ad_storage': 'denied'
         });
+        // Restore saved consent BEFORE AdSense loads
+        (function() {
+            try {
+                var raw = localStorage.getItem('cookie_consent');
+                if (raw) {
+                    var c = JSON.parse(raw);
+                    gtag('consent', 'update', {
+                        'analytics_storage': c.analytics ? 'granted' : 'denied',
+                        'ad_storage': c.ads ? 'granted' : 'denied'
+                    });
+                }
+            } catch(e) {}
+        })();
         gtag('config', 'G-361YSTSGFC');
     </script>
 
