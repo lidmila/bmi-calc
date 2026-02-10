@@ -874,19 +874,12 @@ a:hover {
 .cookie-btn-accept {
     background: #9ead2f;
     color: #fff;
+    padding: 12px 28px;
+    font-size: 0.95rem;
 }
 
 .cookie-btn-accept:hover {
     background: #7d9321;
-}
-
-.cookie-btn-reject {
-    background: #f0f0f0;
-    color: #333;
-}
-
-.cookie-btn-reject:hover {
-    background: #e0e0e0;
 }
 
 .cookie-btn-settings {
@@ -897,6 +890,18 @@ a:hover {
 
 .cookie-btn-settings:hover {
     background: #f9faf5;
+}
+
+.cookie-btn-reject {
+    background: transparent;
+    color: #999;
+    font-weight: 400;
+    font-size: 0.82rem;
+    padding: 8px 12px;
+}
+
+.cookie-btn-reject:hover {
+    color: #555;
 }
 
 /* ---------- Settings Overlay ---------- */
