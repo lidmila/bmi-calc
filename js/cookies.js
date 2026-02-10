@@ -135,6 +135,19 @@
             hideSettings();
         });
 
+        var btnReopen = document.getElementById('cookie-reopen');
+        if (btnReopen) btnReopen.addEventListener('click', function (e) {
+            e.preventDefault();
+            var consent = getConsent();
+            if (consent) {
+                var analyticsToggle = document.getElementById('cookie-analytics');
+                var adsToggle = document.getElementById('cookie-ads');
+                if (analyticsToggle) analyticsToggle.checked = consent.analytics;
+                if (adsToggle) adsToggle.checked = consent.ads;
+            }
+            showSettings();
+        });
+
         init();
     }
 
