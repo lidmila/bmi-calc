@@ -680,6 +680,28 @@ a:hover {
 .risk-very-high { background: #fbe9e7; color: #bf360c; }
 .risk-extreme { background: #ffebee; color: #b71c1c; }
 
+/* ---------- Standalone Children Calculator ---------- */
+#calculator-deti {
+    margin-top: 28px;
+    margin-bottom: 24px;
+}
+
+#calculator-deti .calc-deti-heading {
+    font-size: 1.15rem;
+    color: #1a1a1a;
+    padding: 20px 20px 0;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+#calculator-deti form {
+    padding: 20px;
+}
+
+#calculator-deti .calc-result {
+    border-top: 1px solid #eee;
+}
+
 /* ---------- Info Box ---------- */
 .info-box {
     background: #fff8e1;

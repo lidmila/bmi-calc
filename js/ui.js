@@ -19,6 +19,12 @@
     var gaugeMarkerLabel = document.getElementById('gauge-marker-label');
     var faqItems = document.querySelectorAll('.faq-question');
 
+    // Standalone children calculator (section #bmi-deti)
+    var resultSectionDeti = document.getElementById('calc-result-deti');
+    var resultValueDeti = document.getElementById('result-value-deti');
+    var resultCategoryDeti = document.getElementById('result-category-deti');
+    var resultDetailsDeti = document.getElementById('result-details-deti');
+
     // ---- Mobile Menu ----
     hamburger.addEventListener('click', function () {
         var isOpen = nav.classList.toggle('open');
@@ -221,6 +227,72 @@
         showChildResult(result.bmi, result.category, details);
     });
 
+    // Standalone children calculator (#bmi-deti section)
+    var formDeti = document.getElementById('form-deti');
+    if (formDeti) {
+        formDeti.addEventListener('submit', function (e) {
+            e.preventDefault();
+            clearErrors(this);
+
+            var gender = document.getElementById('deti-gender').value;
+            var ageYears = getNumVal('deti-age-years');
+            var ageMonths = getNumVal('deti-age-months') || 0;
+            var height = getNumVal('deti-height');
+            var weight = getNumVal('deti-weight');
+
+            var valid = true;
+            if (!gender) {
+                showError('error-deti-gender', 'Vyberte pohlaví.');
+                valid = false;
+            }
+            if (ageYears === null || ageYears < 2 || ageYears > 19) {
+                showError('error-deti-age-years', 'Zadejte věk mezi 2 a 19 let.');
+                valid = false;
+            }
+            if (ageMonths < 0 || ageMonths > 11) {
+                showError('error-deti-age-months', 'Zadejte měsíce mezi 0 a 11.');
+                valid = false;
+            }
+            if (!height || height < 50 || height > 200) {
+                showError('error-deti-height', 'Zadejte výšku mezi 50 a 200 cm.');
+                valid = false;
+            }
+            if (!weight || weight < 5 || weight > 150) {
+                showError('error-deti-weight', 'Zadejte hmotnost mezi 5 a 150 kg.');
+                valid = false;
+            }
+
+            if (!valid) return;
+
+            var result = BMICalculator.calculateChildBMI(weight, height, gender, ageYears, ageMonths);
+            if (!result) {
+                showError('error-deti-age-years', 'Nepodařilo se vypočítat BMI. Zkontrolujte zadané údaje.');
+                return;
+            }
+
+            var details = [
+                {
+                    text: '<strong>Percentil:</strong> ' + result.percentile + '. percentil',
+                    type: 'info'
+                },
+                {
+                    text: '<strong>Z-skóre:</strong> ' + result.zScore,
+                    type: 'info'
+                },
+                {
+                    text: result.percentile + '. percentil znamená, že ' + result.percentile + ' % dětí stejného věku a pohlaví má nižší BMI.',
+                    type: 'info'
+                },
+                {
+                    text: 'Výsledky BMI u dětí jsou pouze orientační. Doporučujeme je konzultovat s pediatrem.',
+                    type: 'warning'
+                }
+            ];
+
+            showDetiResult(result.bmi, result.category, details);
+        });
+    }
+
     // ---- Result Display ----
 
     function showResult(bmi, category, details) {
@@ -257,6 +329,34 @@
         // Show
         resultSection.hidden = false;
         resultSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function showDetiResult(bmi, category, details) {
+        resultValueDeti.textContent = bmi.toFixed(1).replace('.', ',');
+        resultCategoryDeti.textContent = category.label;
+        resultCategoryDeti.className = 'result-category cat-' + category.key;
+
+        // Details
+        renderDetailsInto(resultDetailsDeti, details);
+
+        // Show
+        resultSectionDeti.hidden = false;
+        resultSectionDeti.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function renderDetailsInto(container, details) {
+        if (!details || details.length === 0) {
+            container.innerHTML = '';
+            return;
+        }
+        var html = '';
+        for (var i = 0; i < details.length; i++) {
+            var cls = 'detail-item';
+            if (details[i].type === 'warning') cls += ' warning';
+            if (details[i].type === 'danger') cls += ' danger';
+            html += '<div class="' + cls + '">' + details[i].text + '</div>';
+        }
+        container.innerHTML = html;
     }
 
     function renderDetails(details) {
