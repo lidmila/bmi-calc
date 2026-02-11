@@ -254,11 +254,17 @@ var BMICalculator = (function () {
         var percentile = zToPercentile(zScore);
         var category = getChildCategory(percentile);
 
+        var medianBMI = Math.round(lms.M * 10) / 10;
+        var heightM = heightCm / 100;
+        var idealWeight = Math.round(lms.M * heightM * heightM * 10) / 10;
+
         return {
             bmi: bmi,
             zScore: Math.round(zScore * 100) / 100,
             percentile: percentile,
-            category: category
+            category: category,
+            medianBMI: medianBMI,
+            idealWeight: idealWeight
         };
     }
 
@@ -275,6 +281,15 @@ var BMICalculator = (function () {
         return Math.max(0, Math.min(100, pos));
     }
 
+    function getIdealWeightRange(heightCm) {
+        var heightM = heightCm / 100;
+        var hSq = heightM * heightM;
+        return {
+            min: Math.round(18.5 * hSq * 10) / 10,
+            max: Math.round(24.9 * hSq * 10) / 10
+        };
+    }
+
     // Public API
     return {
         calculateBMI: calculateBMI,
@@ -284,6 +299,7 @@ var BMICalculator = (function () {
         getGenderContext: getGenderContext,
         getAgeInterpretation: getAgeInterpretation,
         calculateChildBMI: calculateChildBMI,
-        getGaugePosition: getGaugePosition
+        getGaugePosition: getGaugePosition,
+        getIdealWeightRange: getIdealWeightRange
     };
 })();

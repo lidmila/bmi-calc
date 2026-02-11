@@ -87,7 +87,18 @@
 
         var bmi = BMICalculator.calculateBMI(weight, height);
         var category = BMICalculator.getCategory(bmi);
-        showResult(bmi, category, []);
+        var idealRange = BMICalculator.getIdealWeightRange(height);
+        var details = [
+            {
+                text: '<strong>Optimální BMI:</strong> 18,5–24,9 (normální váha dle WHO)',
+                type: 'info'
+            },
+            {
+                text: '<strong>Ideální hmotnost pro vaši výšku (' + height + ' cm):</strong> ' + idealRange.min.toFixed(1).replace('.', ',') + '–' + idealRange.max.toFixed(1).replace('.', ',') + ' kg',
+                type: 'info'
+            }
+        ];
+        showResult(bmi, category, details);
     });
 
     // Advanced form
@@ -219,6 +230,14 @@
                 type: 'info'
             },
             {
+                text: '<strong>Mediánové BMI pro tento věk a pohlaví:</strong> ' + result.medianBMI.toFixed(1).replace('.', ','),
+                type: 'info'
+            },
+            {
+                text: '<strong>Ideální hmotnost (50. percentil):</strong> ' + result.idealWeight.toFixed(1).replace('.', ',') + ' kg',
+                type: 'info'
+            },
+            {
                 text: 'Výsledky BMI u dětí jsou pouze orientační. Doporučujeme je konzultovat s pediatrem.',
                 type: 'warning'
             }
@@ -281,6 +300,14 @@
                 },
                 {
                     text: result.percentile + '. percentil znamená, že ' + result.percentile + ' % dětí stejného věku a pohlaví má nižší BMI.',
+                    type: 'info'
+                },
+                {
+                    text: '<strong>Mediánové BMI pro tento věk a pohlaví:</strong> ' + result.medianBMI.toFixed(1).replace('.', ','),
+                    type: 'info'
+                },
+                {
+                    text: '<strong>Ideální hmotnost (50. percentil):</strong> ' + result.idealWeight.toFixed(1).replace('.', ',') + ' kg',
                     type: 'info'
                 },
                 {
