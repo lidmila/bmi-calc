@@ -65,6 +65,7 @@
         applyConsent(true, true);
         hideBanner();
         hideSettings();
+        location.reload();
     }
 
     function rejectOptional() {
@@ -84,6 +85,7 @@
         applyConsent(analytics, ads);
         hideBanner();
         hideSettings();
+        if (ads) location.reload();
     }
 
     /* ---------- Init ---------- */
