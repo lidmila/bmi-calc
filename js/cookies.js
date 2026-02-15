@@ -31,7 +31,9 @@
         if (typeof gtag === 'function') {
             gtag('consent', 'update', {
                 'analytics_storage': analytics ? 'granted' : 'denied',
-                'ad_storage': ads ? 'granted' : 'denied'
+                'ad_storage': ads ? 'granted' : 'denied',
+                'ad_user_data': ads ? 'granted' : 'denied',
+                'ad_personalization': ads ? 'granted' : 'denied'
             });
         }
     }

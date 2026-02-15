@@ -9,7 +9,9 @@
         gtag('js', new Date());
         gtag('consent', 'default', {
             'analytics_storage': 'denied',
-            'ad_storage': 'denied'
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied'
         });
         // Restore saved consent BEFORE AdSense loads
         (function() {
@@ -19,7 +21,9 @@
                     var c = JSON.parse(raw);
                     gtag('consent', 'update', {
                         'analytics_storage': c.analytics ? 'granted' : 'denied',
-                        'ad_storage': c.ads ? 'granted' : 'denied'
+                        'ad_storage': c.ads ? 'granted' : 'denied',
+                        'ad_user_data': c.ads ? 'granted' : 'denied',
+                        'ad_personalization': c.ads ? 'granted' : 'denied'
                     });
                 }
             } catch(e) {}
