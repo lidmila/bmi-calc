@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-361YSTSGFC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied'
+        });
+        (function() {
+            try {
+                var raw = localStorage.getItem('cookie_consent');
+                if (raw) {
+                    var c = JSON.parse(raw);
+                    gtag('consent', 'update', {
+                        'analytics_storage': c.analytics ? 'granted' : 'denied',
+                        'ad_storage': c.ads ? 'granted' : 'denied',
+                        'ad_user_data': c.ads ? 'granted' : 'denied',
+                        'ad_personalization': c.ads ? 'granted' : 'denied'
+                    });
+                }
+            } catch(e) {}
+        })();
+        gtag('config', 'G-361YSTSGFC');
+    </script>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9561317089977080"
+     crossorigin="anonymous"></script>
+    <meta name="google-adsense-account" content="ca-pub-9561317089977080">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bazální metabolismus: výpočet a kalkulačka | Ideální BMI</title>
+    <meta name="description" content="Vypočítejte si bazální metabolismus (BMR) pomocí ověřených vzorců. Zjistěte, kolik kalorií spalujete v klidu a jak BMR využít při hubnutí.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://idealnibmi.com/bazalni-metabolismus.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Bazální metabolismus: výpočet a kalkulačka | Ideální BMI">
+    <meta property="og:description" content="Vypočítejte si bazální metabolismus (BMR) pomocí ověřených vzorců. Zjistěte, kolik kalorií spalujete v klidu a jak BMR využít při hubnutí.">
+    <meta property="og:image" content="https://idealnibmi.com/img/og-bazalni-metabolismus.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://idealnibmi.com/bazalni-metabolismus.html">
+    <meta property="og:locale" content="cs_CZ">
+    <meta property="og:site_name" content="Ideální BMI">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bazální metabolismus: výpočet a kalkulačka | Ideální BMI">
+    <meta name="twitter:description" content="Vypočítejte si bazální metabolismus (BMR) pomocí ověřených vzorců. Zjistěte, kolik kalorií spalujete v klidu a jak BMR využít při hubnutí.">
+    <meta name="twitter:image" content="https://idealnibmi.com/img/og-bazalni-metabolismus.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/BMI-calc.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css?v=6">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Bazální metabolismus: výpočet a kalkulačka",
+        "description": "Vypočítejte si bazální metabolismus (BMR) pomocí ověřených vzorců. Zjistěte, kolik kalorií spalujete v klidu a jak BMR využít při hubnutí.",
+        "image": "https://idealnibmi.com/img/og-bazalni-metabolismus.png",
+        "author": {
+            "@type": "Organization",
+            "name": "CodeWhiskers",
+            "url": "https://idealnibmi.com/"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "CodeWhiskers",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://idealnibmi.com/img/BMI-calc.png"
+            }
+        },
+        "datePublished": "2026-03-18",
+        "dateModified": "2026-03-18",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://idealnibmi.com/bazalni-metabolismus.html"
+        },
+        "inLanguage": "cs"
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="/" class="logo" aria-label="Ideální BMI – domovská stránka">
+                <img src="img/BMI-calc.png" alt="Ideální BMI logo" width="40" height="40">
+                <span class="logo-text">Ideální BMI</span>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Otevřít menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav" id="nav" aria-label="Hlavní navigace">
+                <a href="/" class="nav-link">Kalkulačka</a>
+                <a href="jak-snizit-bmi.html" class="nav-link">Jak snížit BMI</a>
+                <a href="bmi-u-deti.html" class="nav-link">BMI u dětí</a>
+                <a href="bmi-vs-jine-metody.html" class="nav-link">BMI vs. jiné metody</a>
+                <div class="nav-dropdown">
+                    <button class="nav-link nav-dropdown-toggle" aria-expanded="false">Články <span class="nav-arrow">▾</span></button>
+                    <div class="nav-dropdown-menu">
+                        <a href="hubnuti-chuzi.html" class="nav-dropdown-link">Hubnutí chůzí</a>
+                        <a href="hubnuti-po-40.html" class="nav-dropdown-link">Hubnutí po 40</a>
+                        <a href="hubnuti-po-50.html" class="nav-dropdown-link">Hubnutí po 50</a>
+                        <a href="hubnuti-po-porodu.html" class="nav-dropdown-link">Hubnutí po porodu</a>
+                        <a href="pocitani-kalorii.html" class="nav-dropdown-link">Počítání kalorií</a>
+                        <a href="nejlepsi-sport-na-hubnuti.html" class="nav-dropdown-link">Nejlepší sport na hubnutí</a>
+                        <a href="tepova-frekvence-spalovani.html" class="nav-dropdown-link">Tepová frekvence</a>
+                        <a href="metabolismus.html" class="nav-dropdown-link">Metabolismus</a>
+                        <a href="bazalni-metabolismus.html" class="nav-dropdown-link">Bazální metabolismus</a>
+                        <a href="stupne-obezity.html" class="nav-dropdown-link">Stupně obezity</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+    <!-- Section 1: Úvod -->
+    <section class="section">
+        <div class="container">
+            <h1>Bazální metabolismus: výpočet, vzorce a kalkulačka</h1>
+            <div class="section-with-image">
+                <div class="section-text">
+                    <p>Bazální metabolismus (BMR – Basal Metabolic Rate) je množství energie, které vaše tělo spotřebuje v absolutním klidu na udržení základních životních funkcí: dýchání, činnost srdce, mozku, jater, ledvin a udržení tělesné teploty. Tvoří <strong>60–70 % vašeho celkového denního energetického výdeje</strong> – je to tedy s přehledem největší položka vašeho kalorického rozpočtu.</p>
+                    <p>Znalost bazálního metabolismu je klíčová pro nastavení správného kalorického příjmu při hubnutí. Pokud jíte pod úroveň BMR, riskujete zpomalení metabolismu, ztrátu svalové hmoty a zdravotní problémy. V tomto článku vám ukážeme, jak si BMR vypočítat a jak ho využít v praxi.</p>
+                </div>
+                <div class="section-image">
+                    <img src="img/bazalni-metabolismus.webp" alt="Klidový energetický výdej těla – bazální metabolismus a jeho výpočet" width="400" height="400" loading="lazy">
+                </div>
+            </div>
+
+            <div class="ad-container">
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9561317089977080" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Vzorce -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2>Jak vypočítat bazální metabolismus</h2>
+            <p>Existuje několik ověřených vzorců pro výpočet BMR. Nejpoužívanější jsou dva:</p>
+
+            <h3>1. Mifflin-St Jeor (nejpřesnější pro většinu lidí)</h3>
+            <div class="formula-box">
+                <p><strong>Muži:</strong> BMR = 10 × váha (kg) + 6,25 × výška (cm) − 5 × věk + 5</p>
+                <p><strong>Ženy:</strong> BMR = 10 × váha (kg) + 6,25 × výška (cm) − 5 × věk − 161</p>
+            </div>
+
+            <h3>2. Harris-Benedict (revidovaný)</h3>
+            <div class="formula-box">
+                <p><strong>Muži:</strong> BMR = 88,362 + 13,397 × váha (kg) + 4,799 × výška (cm) − 5,677 × věk</p>
+                <p><strong>Ženy:</strong> BMR = 447,593 + 9,247 × váha (kg) + 3,098 × výška (cm) − 4,330 × věk</p>
+            </div>
+
+            <h3>Který vzorec použít?</h3>
+            <p>Pro většinu lidí je <strong>Mifflin-St Jeor přesnější</strong>, zejména pro osoby s nadváhou nebo obezitou. Harris-Benedict má tendenci BMR mírně nadhodnocovat. Oba vzorce jsou ale dostatečně přesné pro orientační výpočet.</p>
+
+            <h3>Příklady výpočtu</h3>
+            <table class="info-table">
+                <thead><tr><th>Osoba</th><th>Mifflin-St Jeor</th><th>Harris-Benedict</th></tr></thead>
+                <tbody>
+                    <tr><td>Žena, 70 kg, 165 cm, 35 let</td><td>1 376 kcal</td><td>1 439 kcal</td></tr>
+                    <tr><td>Muž, 85 kg, 180 cm, 40 let</td><td>1 780 kcal</td><td>1 841 kcal</td></tr>
+                    <tr><td>Žena, 60 kg, 170 cm, 25 let</td><td>1 338 kcal</td><td>1 413 kcal</td></tr>
+                    <tr><td>Muž, 100 kg, 175 cm, 50 let</td><td>1 849 kcal</td><td>1 934 kcal</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Section 3: Od BMR k TDEE -->
+    <section class="section">
+        <div class="container">
+            <h2>Od bazálního metabolismu k celkovému výdeji (TDEE)</h2>
+            <p>BMR říká, kolik kalorií spalujete v absolutním klidu. Ale vy přece neleříte celý den v posteli. Proto potřebujete spočítat <strong>TDEE</strong> (Total Daily Energy Expenditure) – celkový denní energetický výdej, který zahrnuje i pohyb.</p>
+
+            <h3>Výpočet TDEE</h3>
+            <div class="formula-box">
+                <p><strong>TDEE = BMR × koeficient aktivity</strong></p>
+            </div>
+
+            <table class="info-table">
+                <thead><tr><th>Úroveň aktivity</th><th>Koeficient</th><th>Příklad</th></tr></thead>
+                <tbody>
+                    <tr><td>Sedavá</td><td>1,2</td><td>Kancelářská práce, minimum pohybu</td></tr>
+                    <tr><td>Mírně aktivní</td><td>1,375</td><td>Lehké cvičení 1–3× týdně</td></tr>
+                    <tr><td>Středně aktivní</td><td>1,55</td><td>Cvičení 3–5× týdně</td></tr>
+                    <tr><td>Velmi aktivní</td><td>1,725</td><td>Intenzivní cvičení 6–7× týdně</td></tr>
+                    <tr><td>Extrémně aktivní</td><td>1,9</td><td>Fyzicky náročná práce + trénink</td></tr>
+                </tbody>
+            </table>
+
+            <h3>Příklad</h3>
+            <p>Žena, 70 kg, 165 cm, 35 let, středně aktivní:</p>
+            <ul>
+                <li>BMR (Mifflin-St Jeor) = 1 376 kcal</li>
+                <li>TDEE = 1 376 × 1,55 = <strong>2 133 kcal</strong></li>
+                <li>Pro hubnutí (deficit 400 kcal) = <strong>~1 730 kcal denně</strong></li>
+            </ul>
+            <p>Podrobněji o nastavení kalorického deficitu se dočtete v článku o <a href="pocitani-kalorii.html">počítání kalorií při hubnutí</a>.</p>
+
+            <div class="ad-container">
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9561317089977080" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Jak zvýšit BMR -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2>Jak zvýšit bazální metabolismus</h2>
+            <p>Bazální metabolismus můžete do určité míry ovlivnit. Hlavní pákou je <strong>složení těla</strong> – čím více svalové hmoty máte, tím vyšší je váš BMR.</p>
+
+            <h3>Ověřené způsoby</h3>
+            <ol>
+                <li><strong>Silový trénink</strong> – buduje svalovou hmotu, která spaluje energii i v klidu. Každý kg svalů navíc = ~13 kcal/den navíc. Více v článku o <a href="metabolismus.html">metabolismu</a>.</li>
+                <li><strong>Dostatečný příjem bílkovin</strong> – bílkoviny mají termický efekt 20–30 % (tělo spotřebuje energii na jejich trávení) a chrání svaly při hubnutí.</li>
+                <li><strong>Nepodkračujte BMR</strong> – pokud jíte méně kalorií, než je váš bazální metabolismus, tělo přepne do „úsporného režimu" a metabolismus zpomalí.</li>
+                <li><strong>Kvalitní spánek</strong> – 7–9 hodin. Nedostatek spánku snižuje BMR i leptin (hormon sytosti).</li>
+                <li><strong>Zvyšujte NEAT</strong> – denní pohyb mimo trénink (chůze, schody, stání) zvyšuje celkový výdej, i když přímo nemění BMR.</li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Section 5: BMR a hubnutí -->
+    <section class="section">
+        <div class="container">
+            <h2>Bazální metabolismus a hubnutí</h2>
+            <p>Pochopení BMR je pro hubnutí zásadní. Zde jsou klíčové zásady:</p>
+
+            <h3>Nikdy nejezte pod BMR</h3>
+            <p>Váš kalorický příjem při hubnutí by neměl klesnout pod hodnotu bazálního metabolismu. Pod touto hranicí tělo:</p>
+            <ul>
+                <li>Zpomaluje metabolismus (adaptivní termogeneze)</li>
+                <li>Spaluje svalovou hmotu místo tuku</li>
+                <li>Zvyšuje chuť k jídlu a hladinu ghrelinu</li>
+                <li>Zvyšuje riziko jo-jo efektu</li>
+            </ul>
+
+            <h3>Správné nastavení kalorického deficitu</h3>
+            <table class="info-table">
+                <thead><tr><th>Parametr</th><th>Doporučení</th></tr></thead>
+                <tbody>
+                    <tr><td>Minimální příjem</td><td>Nikdy pod BMR (obvykle 1 200–1 500 kcal u žen, 1 500–1 800 u mužů)</td></tr>
+                    <tr><td>Deficit</td><td>300–500 kcal pod TDEE</td></tr>
+                    <tr><td>Tempo hubnutí</td><td>0,5–1 kg týdně</td></tr>
+                    <tr><td>Bílkoviny</td><td>1,2–2 g/kg hmotnosti denně</td></tr>
+                </tbody>
+            </table>
+
+            <h3>Proč se váha zastaví</h3>
+            <p>Při hubnutí klesá vaše hmotnost – a s ní i BMR. Tělo lehčího člověka prostě potřebuje méně energie. Proto se hubnutí postupně zpomaluje a je nutné buď mírně snížit příjem, nebo zvýšit pohyb. Přepočítávejte si BMR přibližně každých 5 kg.</p>
+
+            <div class="ad-container">
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9561317089977080" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Shrnutí -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2>Shrnutí</h2>
+            <ul>
+                <li>Bazální metabolismus (BMR) = energie na udržení života v klidu = <strong>60–70 %</strong> celkového výdeje</li>
+                <li>Nejpřesnější vzorec: <strong>Mifflin-St Jeor</strong></li>
+                <li>TDEE = BMR × koeficient aktivity → základ pro nastavení kalorického příjmu</li>
+                <li>Při hubnutí nikdy <strong>nejezte pod BMR</strong></li>
+                <li>BMR zvýšíte hlavně <strong>silovým tréninkem a dostatkem bílkovin</strong></li>
+                <li>Přepočítávejte BMR každých ~5 kg úbytku</li>
+            </ul>
+            <p><a href="/">Spočítejte si své BMI</a> a zjistěte, kde stojíte. Pokud chcete pochopit metabolismus jako celek, přečtěte si náš článek <a href="metabolismus.html">Co je metabolismus</a>.</p>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="disclaimer">Tento článek slouží pouze k informativním účelům a nenahrazuje odborné lékařské vyšetření. Při jakýchkoli obavách o svou hmotnost nebo zdravotní stav se poraďte s lékařem.</p>
+            <p class="footer-operator">Provozovatel: CodeWhiskers | IČ: 05684447 | DIČ: CZ9057190912 | Jindice 115, 285 04 Rašovice-Uhlířské Janovice | hello@codewhiskers.app</p>
+            <p class="footer-copy">&copy; 2025 Ideální BMI | <a href="jak-snizit-bmi.html">Jak snížit BMI</a> | <a href="bmi-u-deti.html">BMI u dětí</a> | <a href="bmi-vs-jine-metody.html">BMI vs. jiné metody</a> | <a href="hubnuti-chuzi.html">Hubnutí chůzí</a> | <a href="hubnuti-po-40.html">Hubnutí po 40</a> | <a href="hubnuti-po-50.html">Hubnutí po 50</a> | <a href="pocitani-kalorii.html">Počítání kalorií</a> | <a href="hubnuti-po-porodu.html">Hubnutí po porodu</a> | <a href="nejlepsi-sport-na-hubnuti.html">Nejlepší sport na hubnutí</a> | <a href="tepova-frekvence-spalovani.html">Tepová frekvence</a> | <a href="metabolismus.html">Metabolismus</a> | <a href="bazalni-metabolismus.html">Bazální metabolismus</a> | <a href="stupne-obezity.html">Stupně obezity</a> | <a href="podminky.html">Obchodní podmínky</a> | <a href="ochrana-soukromi.html">Ochrana soukromí</a> | <a href="#" id="cookie-reopen" class="footer-cookie-link">Nastavení cookies</a></p>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookie-banner">
+        <div class="cookie-banner-inner">
+            <p class="cookie-text">Používáme cookies, abychom věděli, jak web vylepšit, a mohli vám zobrazovat relevantní reklamy. Můžete si vybrat, co povolíte.</p>
+            <div class="cookie-buttons">
+                <button class="cookie-btn cookie-btn-accept" id="cookie-accept-all">Povolit vše</button>
+                <button class="cookie-btn cookie-btn-settings" id="cookie-open-settings">Nastavení</button>
+                <button class="cookie-btn cookie-btn-reject" id="cookie-reject">Zamítnout vše</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Settings Panel -->
+    <div class="cookie-settings-overlay" id="cookie-settings">
+        <div class="cookie-settings-panel">
+            <div class="cookie-settings-header">
+                <h3>Nastavení soukromí</h3>
+                <button class="cookie-settings-close" id="cookie-close-settings" aria-label="Zavřít">&times;</button>
+            </div>
+            <div class="cookie-settings-body">
+                <div class="cookie-setting-item">
+                    <div class="cookie-setting-info">
+                        <strong>Nezbytné</strong>
+                        <span>Zajišťují základní funkce webu, např. platby. Nejdou vypnout.</span>
+                    </div>
+                    <div class="cookie-toggle-wrapper">
+                        <input type="checkbox" checked disabled class="cookie-toggle" id="cookie-necessary">
+                        <label for="cookie-necessary" class="cookie-toggle-label"></label>
+                    </div>
+                </div>
+                <div class="cookie-setting-item">
+                    <div class="cookie-setting-info">
+                        <strong>Analytické</strong>
+                        <span>Pomáhají nám zjistit, jak web používáte, abychom ho mohli zlepšovat.</span>
+                    </div>
+                    <div class="cookie-toggle-wrapper">
+                        <input type="checkbox" class="cookie-toggle" id="cookie-analytics">
+                        <label for="cookie-analytics" class="cookie-toggle-label"></label>
+                    </div>
+                </div>
+                <div class="cookie-setting-item">
+                    <div class="cookie-setting-info">
+                        <strong>Reklamní</strong>
+                        <span>Umožňují zobrazovat reklamy, které vás mohou zajímat.</span>
+                    </div>
+                    <div class="cookie-toggle-wrapper">
+                        <input type="checkbox" class="cookie-toggle" id="cookie-ads">
+                        <label for="cookie-ads" class="cookie-toggle-label"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="cookie-settings-footer">
+                <button class="cookie-btn cookie-btn-accept" id="cookie-settings-accept-all">Povolit vše</button>
+                <button class="cookie-btn cookie-btn-save" id="cookie-save-settings">Potvrdit moji volbu</button>
+                <button class="cookie-btn cookie-btn-reject" id="cookie-settings-reject">Zamítnout vše</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/cookies.js?v=6"></script>
+    <script>
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.getElementById('nav').classList.toggle('open');
+            this.classList.toggle('active');
+            var expanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !expanded);
+        });
+        document.querySelector('.nav-dropdown-toggle').addEventListener('click', function() {
+            this.closest('.nav-dropdown').classList.toggle('open');
+            var exp = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !exp);
+        });
+    </script>
+</body>
+</html>

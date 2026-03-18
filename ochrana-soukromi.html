@@ -9,7 +9,9 @@
         gtag('js', new Date());
         gtag('consent', 'default', {
             'analytics_storage': 'denied',
-            'ad_storage': 'denied'
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied'
         });
         (function() {
             try {
@@ -18,7 +20,9 @@
                     var c = JSON.parse(raw);
                     gtag('consent', 'update', {
                         'analytics_storage': c.analytics ? 'granted' : 'denied',
-                        'ad_storage': c.ads ? 'granted' : 'denied'
+                        'ad_storage': c.ads ? 'granted' : 'denied',
+                        'ad_user_data': c.ads ? 'granted' : 'denied',
+                        'ad_personalization': c.ads ? 'granted' : 'denied'
                     });
                 }
             } catch(e) {}
@@ -60,6 +64,21 @@
                 <a href="jak-snizit-bmi.html" class="nav-link">Jak snížit BMI</a>
                 <a href="bmi-u-deti.html" class="nav-link">BMI u dětí</a>
                 <a href="bmi-vs-jine-metody.html" class="nav-link">BMI vs. jiné metody</a>
+                <div class="nav-dropdown">
+                    <button class="nav-link nav-dropdown-toggle" aria-expanded="false">Články <span class="nav-arrow">▾</span></button>
+                    <div class="nav-dropdown-menu">
+                        <a href="hubnuti-chuzi.html" class="nav-dropdown-link">Hubnutí chůzí</a>
+                        <a href="hubnuti-po-40.html" class="nav-dropdown-link">Hubnutí po 40</a>
+                        <a href="hubnuti-po-50.html" class="nav-dropdown-link">Hubnutí po 50</a>
+                        <a href="hubnuti-po-porodu.html" class="nav-dropdown-link">Hubnutí po porodu</a>
+                        <a href="pocitani-kalorii.html" class="nav-dropdown-link">Počítání kalorií</a>
+                        <a href="nejlepsi-sport-na-hubnuti.html" class="nav-dropdown-link">Nejlepší sport na hubnutí</a>
+                        <a href="tepova-frekvence-spalovani.html" class="nav-dropdown-link">Tepová frekvence</a>
+                        <a href="metabolismus.html" class="nav-dropdown-link">Metabolismus</a>
+                        <a href="bazalni-metabolismus.html" class="nav-dropdown-link">Bazální metabolismus</a>
+                        <a href="stupne-obezity.html" class="nav-dropdown-link">Stupně obezity</a>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
@@ -181,7 +200,7 @@
         <div class="container">
             <p class="disclaimer">Tato kalkulačka slouží pouze k informativním účelům a nenahrazuje odborné lékařské vyšetření. Při jakýchkoli obavách o svou hmotnost nebo zdravotní stav se poraďte s lékařem.</p>
             <p class="footer-operator">Provozovatel: CodeWhiskers | IČ: 05684447 | DIČ: CZ9057190912 | Jindice 115, 285 04 Rašovice-Uhlířské Janovice | hello@codewhiskers.app</p>
-            <p class="footer-copy">&copy; 2025 Ideální BMI | <a href="jak-snizit-bmi.html">Jak snížit BMI</a> | <a href="bmi-u-deti.html">BMI u dětí</a> | <a href="bmi-vs-jine-metody.html">BMI vs. jiné metody</a> | <a href="podminky.html">Obchodní podmínky</a> | <a href="ochrana-soukromi.html">Ochrana soukromí</a> | <a href="#" id="cookie-reopen" class="footer-cookie-link">Nastavení cookies</a></p>
+            <p class="footer-copy">&copy; 2025 Ideální BMI | <a href="jak-snizit-bmi.html">Jak snížit BMI</a> | <a href="bmi-u-deti.html">BMI u dětí</a> | <a href="bmi-vs-jine-metody.html">BMI vs. jiné metody</a> | <a href="hubnuti-chuzi.html">Hubnutí chůzí</a> | <a href="hubnuti-po-40.html">Hubnutí po 40</a> | <a href="hubnuti-po-50.html">Hubnutí po 50</a> | <a href="pocitani-kalorii.html">Počítání kalorií</a> | <a href="hubnuti-po-porodu.html">Hubnutí po porodu</a> | <a href="nejlepsi-sport-na-hubnuti.html">Nejlepší sport na hubnutí</a> | <a href="tepova-frekvence-spalovani.html">Tepová frekvence</a> | <a href="metabolismus.html">Metabolismus</a> | <a href="bazalni-metabolismus.html">Bazální metabolismus</a> | <a href="stupne-obezity.html">Stupně obezity</a> | <a href="podminky.html">Obchodní podmínky</a> | <a href="ochrana-soukromi.html">Ochrana soukromí</a> | <a href="#" id="cookie-reopen" class="footer-cookie-link">Nastavení cookies</a></p>
         </div>
     </footer>
 
@@ -248,10 +267,15 @@
     <script src="js/cookies.js?v=6"></script>
     <script>
         document.getElementById('hamburger').addEventListener('click', function() {
-            document.getElementById('nav').classList.toggle('nav-open');
+            document.getElementById('nav').classList.toggle('open');
             this.classList.toggle('active');
             var expanded = this.getAttribute('aria-expanded') === 'true';
             this.setAttribute('aria-expanded', !expanded);
+        });
+        document.querySelector('.nav-dropdown-toggle').addEventListener('click', function() {
+            this.closest('.nav-dropdown').classList.toggle('open');
+            var exp = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !exp);
         });
     </script>
 </body>

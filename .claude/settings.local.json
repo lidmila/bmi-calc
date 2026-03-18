@@ -11,7 +11,10 @@
       "Bash(echo:*)",
       "Bash(do echo:*)",
       "Bash(grep:*)",
-      "Bash(sed:*)"
+      "Bash(sed:*)",
+      "Bash(python3 -c \":*)",
+      "Bash(python -c \":*)",
+      "Bash(pip install:*)"
     ]
   }
 }
