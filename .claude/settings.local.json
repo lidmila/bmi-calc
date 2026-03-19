@@ -15,7 +15,15 @@
       "Bash(python3 -c \":*)",
       "Bash(python -c \":*)",
       "Bash(pip install:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(for f:*)",
+      "Bash(xxd -l 4 \"$f\")",
+      "Bash(done)",
+      "Bash(ffmpeg -version)",
+      "Bash(magick -version)",
+      "Bash(pip show:*)",
+      "Bash(python -c \"from PIL import Image; print\\(''''Pillow available''''\\)\")",
+      "Bash(python:*)"
     ]
   }
 }
