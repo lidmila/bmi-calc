@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
 /* ============================
    BMI Kalkulačka – Ideální BMI
    Mobile-first responsive CSS
@@ -16,9 +18,9 @@ html {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    color: #333;
-    line-height: 1.6;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: #1e293b;
+    line-height: 1.7;
     background: #fff;
     -webkit-font-smoothing: antialiased;
 }
@@ -34,12 +36,12 @@ ins.adsbygoogle[data-ad-status="unfilled"] {
 }
 
 a {
-    color: #5d7912;
+    color: #0f766e;
     text-decoration: none;
 }
 
 a:hover {
-    color: #7d9321;
+    color: #0d9488;
     text-decoration: underline;
 }
 
@@ -56,16 +58,18 @@ a:hover {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: #fff;
-    border-bottom: 1px solid #e8e8e8;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
 }
 
 .header-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 60px;
+    height: 64px;
 }
 
 .logo {
@@ -73,7 +77,7 @@ a:hover {
     align-items: center;
     gap: 10px;
     text-decoration: none;
-    color: #1a1a1a;
+    color: #1e293b;
     font-weight: 700;
     font-size: 1.15rem;
 }
@@ -100,7 +104,7 @@ a:hover {
     display: block;
     width: 24px;
     height: 2px;
-    background: #1a1a1a;
+    background: #1e293b;
     border-radius: 2px;
     transition: transform 0.3s, opacity 0.3s;
 }
@@ -119,11 +123,11 @@ a:hover {
 .nav {
     display: none;
     position: absolute;
-    top: 60px;
+    top: 64px;
     left: 0;
     right: 0;
     background: #fff;
-    border-bottom: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e2e8f0;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     flex-direction: column;
     padding: 8px 0;
@@ -135,7 +139,7 @@ a:hover {
 
 .nav-link {
     padding: 12px 20px;
-    color: #333;
+    color: #1e293b;
     font-weight: 500;
     font-size: 0.95rem;
     text-decoration: none;
@@ -143,8 +147,8 @@ a:hover {
 }
 
 .nav-link:hover {
-    background: #f9faf5;
-    color: #5d7912;
+    background: #f0fdfa;
+    color: #0d9488;
     text-decoration: none;
 }
 
@@ -183,33 +187,33 @@ a:hover {
 
 .nav-dropdown-link {
     padding: 10px 20px 10px 36px;
-    color: #555;
+    color: #64748b;
     font-size: 0.9rem;
     text-decoration: none;
     transition: background 0.2s;
 }
 
 .nav-dropdown-link:hover {
-    background: #f9faf5;
-    color: #5d7912;
+    background: #f0fdfa;
+    color: #0d9488;
     text-decoration: none;
 }
 
 /* ---------- Hero ---------- */
 .hero {
-    background: linear-gradient(135deg, #f9faf5 0%, #e0e2aa33 100%);
-    padding: 40px 0 50px;
+    background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 40%, #f0f9ff 100%);
+    padding: 48px 0 56px;
 }
 
 .hero h1 {
     font-size: 1.75rem;
-    color: #1a1a1a;
+    color: #1e293b;
     line-height: 1.3;
     margin-bottom: 12px;
 }
 
 .hero-subtitle {
-    color: #666;
+    color: #64748b;
     font-size: 1rem;
     margin-bottom: 30px;
     max-width: 640px;
@@ -218,15 +222,16 @@ a:hover {
 /* ---------- Calculator Card ---------- */
 .calc-card {
     background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08), 0 1px 4px rgba(0,0,0,0.04);
     overflow: hidden;
 }
 
 /* Tabs */
 .calc-tabs {
     display: flex;
-    border-bottom: 2px solid #eee;
+    border-bottom: 2px solid #e2e8f0;
 }
 
 .calc-tab {
@@ -236,7 +241,7 @@ a:hover {
     border: none;
     font-size: 0.95rem;
     font-weight: 600;
-    color: #666;
+    color: #64748b;
     cursor: pointer;
     border-bottom: 3px solid transparent;
     margin-bottom: -2px;
@@ -244,12 +249,12 @@ a:hover {
 }
 
 .calc-tab:hover {
-    color: #7d9321;
+    color: #0d9488;
 }
 
 .calc-tab.active {
-    color: #9ead2f;
-    border-bottom-color: #9ead2f;
+    color: #0d9488;
+    border-bottom-color: #0d9488;
 }
 
 /* Panels */
@@ -278,24 +283,24 @@ a:hover {
 .form-group label {
     font-size: 0.875rem;
     font-weight: 600;
-    color: #1a1a1a;
+    color: #1e293b;
     margin-bottom: 6px;
 }
 
 .form-group .optional {
     font-weight: 400;
-    color: #999;
+    color: #94a3b8;
     font-size: 0.8rem;
 }
 
 .form-group input,
 .form-group select {
     padding: 10px 12px;
-    border: 1.5px solid #ddd;
+    border: 1.5px solid #e2e8f0;
     border-radius: 8px;
     font-size: 1rem;
-    color: #333;
-    background: #fff;
+    color: #1e293b;
+    background: #f8fafc;
     transition: border-color 0.2s, box-shadow 0.2s;
     -webkit-appearance: none;
 }
@@ -303,8 +308,8 @@ a:hover {
 .form-group input:focus,
 .form-group select:focus {
     outline: none;
-    border-color: #9ead2f;
-    box-shadow: 0 0 0 3px rgba(158, 173, 47, 0.15);
+    border-color: #0d9488;
+    box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.15);
 }
 
 .form-group input.invalid {
@@ -323,29 +328,32 @@ a:hover {
     display: block;
     width: 100%;
     padding: 14px;
-    background: #9ead2f;
+    background: linear-gradient(135deg, #f97316, #ea580c);
     color: #fff;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 1.05rem;
     font-weight: 700;
     cursor: pointer;
-    transition: background 0.2s, transform 0.1s;
+    transition: transform 0.15s, box-shadow 0.15s;
     margin-top: 8px;
+    box-shadow: 0 4px 14px rgba(249,115,22,0.35);
 }
 
 .btn-calculate:hover {
-    background: #7d9321;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(249,115,22,0.4);
 }
 
 .btn-calculate:active {
     transform: scale(0.98);
+    box-shadow: 0 2px 8px rgba(249,115,22,0.3);
 }
 
 /* ---------- Result ---------- */
 .calc-result {
     padding: 24px 20px;
-    border-top: 1px solid #eee;
+    border-top: 1px solid #e2e8f0;
     animation: slideDown 0.4s ease-out;
 }
 
@@ -368,7 +376,7 @@ a:hover {
 .result-label {
     display: block;
     font-size: 0.85rem;
-    color: #666;
+    color: #64748b;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-bottom: 4px;
@@ -378,7 +386,7 @@ a:hover {
     display: block;
     font-size: 3rem;
     font-weight: 800;
-    color: #1a1a1a;
+    color: #1e293b;
     line-height: 1.1;
 }
 
@@ -438,7 +446,7 @@ a:hover {
     top: -6px;
     width: 4px;
     height: 34px;
-    background: #1a1a1a;
+    background: #1e293b;
     border-radius: 2px;
     transform: translateX(-50%);
     transition: left 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -451,7 +459,7 @@ a:hover {
     transform: translateX(-50%);
     font-size: 0.75rem;
     font-weight: 700;
-    color: #1a1a1a;
+    color: #1e293b;
     white-space: nowrap;
 }
 
@@ -460,7 +468,7 @@ a:hover {
     justify-content: space-between;
     margin-top: 6px;
     font-size: 0.7rem;
-    color: #999;
+    color: #94a3b8;
     padding: 0 2px;
 }
 
@@ -471,11 +479,11 @@ a:hover {
 
 .result-details .detail-item {
     padding: 10px 14px;
-    background: #f9faf5;
+    background: #f0fdfa;
     border-radius: 8px;
     margin-bottom: 8px;
     font-size: 0.9rem;
-    border-left: 3px solid #9ead2f;
+    border-left: 3px solid #0d9488;
 }
 
 .result-details .detail-item.warning {
@@ -489,7 +497,7 @@ a:hover {
 }
 
 .result-details .detail-item strong {
-    color: #1a1a1a;
+    color: #1e293b;
 }
 
 /* ---------- Sections ---------- */
@@ -498,26 +506,26 @@ a:hover {
 }
 
 .section-alt {
-    background: #f9faf5;
+    background: #f8fafc;
 }
 
 .section h2 {
     font-size: 1.5rem;
-    color: #1a1a1a;
+    color: #1e293b;
     margin-bottom: 16px;
     line-height: 1.3;
 }
 
 .section h3 {
     font-size: 1.15rem;
-    color: #1a1a1a;
+    color: #1e293b;
     margin-top: 28px;
     margin-bottom: 10px;
 }
 
 .section p {
     margin-bottom: 14px;
-    color: #333;
+    color: #1e293b;
 }
 
 .section ol,
@@ -632,8 +640,8 @@ a:hover {
 
 /* ---------- Formula Box ---------- */
 .formula-box {
-    background: #f9faf5;
-    border: 2px solid #bfc76c;
+    background: #f0fdfa;
+    border: 2px solid #99f6e4;
     border-radius: 10px;
     padding: 20px;
     margin: 20px 0;
@@ -643,7 +651,7 @@ a:hover {
 .formula {
     font-size: 1.2rem;
     font-weight: 700;
-    color: #5d7912;
+    color: #0f766e;
     margin-bottom: 0;
 }
 
@@ -664,11 +672,11 @@ a:hover {
 .bmi-table td {
     padding: 12px 14px;
     text-align: left;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .bmi-table thead th {
-    background: #5d7912;
+    background: #0f766e;
     color: #fff;
     font-weight: 600;
     font-size: 0.85rem;
@@ -684,8 +692,12 @@ a:hover {
     border-radius: 0 8px 0 0;
 }
 
+.bmi-table tbody tr {
+    transition: background 0.15s ease;
+}
+
 .bmi-table tbody tr:hover {
-    background: #f9faf5;
+    background: #f0fdfa;
 }
 
 /* BMI table row accents */
@@ -735,7 +747,7 @@ a:hover {
 
 #calculator-deti .calc-deti-heading {
     font-size: 1.15rem;
-    color: #1a1a1a;
+    color: #1e293b;
     padding: 20px 20px 0;
     margin-bottom: 0;
     margin-top: 0;
@@ -746,7 +758,7 @@ a:hover {
 }
 
 #calculator-deti .calc-result {
-    border-top: 1px solid #eee;
+    border-top: 1px solid #e2e8f0;
 }
 
 /* ---------- Info Box ---------- */
@@ -761,7 +773,7 @@ a:hover {
 .info-box p {
     margin-bottom: 0;
     font-size: 0.9rem;
-    color: #333;
+    color: #1e293b;
 }
 
 /* ---------- FAQ ---------- */
@@ -770,11 +782,11 @@ a:hover {
 }
 
 .faq-item {
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .faq-item:first-child {
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid #e2e8f0;
 }
 
 .faq-question {
@@ -789,23 +801,23 @@ a:hover {
     text-align: left;
     font-size: 1rem;
     font-weight: 600;
-    color: #1a1a1a;
+    color: #1e293b;
     gap: 12px;
 }
 
 .faq-question:hover {
-    color: #5d7912;
+    color: #0d9488;
 }
 
 .faq-icon {
     flex-shrink: 0;
     transition: transform 0.3s;
-    color: #999;
+    color: #94a3b8;
 }
 
 .faq-question[aria-expanded="true"] .faq-icon {
     transform: rotate(180deg);
-    color: #9ead2f;
+    color: #0d9488;
 }
 
 .faq-answer {
@@ -816,16 +828,16 @@ a:hover {
 
 .faq-answer p {
     padding-bottom: 16px;
-    color: #555;
+    color: #64748b;
     font-size: 0.95rem;
     line-height: 1.7;
 }
 
 /* ---------- Footer ---------- */
 .footer {
-    background: #1a1a1a;
-    color: #aaa;
-    padding: 30px 0;
+    background: #0f172a;
+    color: #94a3b8;
+    padding: 40px 0;
     text-align: center;
     font-size: 0.85rem;
 }
@@ -836,25 +848,25 @@ a:hover {
     margin-left: auto;
     margin-right: auto;
     line-height: 1.5;
-    color: #999;
+    color: #94a3b8;
 }
 
 .footer-operator {
     margin-bottom: 12px;
     font-size: 0.8rem;
-    color: #999;
+    color: #94a3b8;
 }
 
 .footer-copy {
-    color: #666;
+    color: #64748b;
 }
 
 .footer-copy a {
-    color: #bfc76c;
+    color: #2dd4bf;
 }
 
 .footer-copy a:hover {
-    color: #e0e2aa;
+    color: #5eead4;
 }
 
 /* ---------- Support Section ---------- */
@@ -920,14 +932,14 @@ a:hover {
     .nav-dropdown-toggle {
         padding: 8px 14px;
         border-radius: 6px;
-        color: #333;
+        color: #1e293b;
         font-weight: 500;
         font-size: 0.95rem;
     }
 
     .nav-dropdown-toggle:hover {
-        background: #f9faf5;
-        color: #5d7912;
+        background: #f0fdfa;
+        color: #0d9488;
     }
 
     .nav-dropdown-menu {
@@ -935,7 +947,7 @@ a:hover {
         top: 100%;
         right: 0;
         background: #fff;
-        border: 1px solid #e8e8e8;
+        border: 1px solid #e2e8f0;
         border-radius: 8px;
         box-shadow: 0 4px 16px rgba(0,0,0,0.1);
         min-width: 260px;
@@ -993,7 +1005,7 @@ a:hover {
     right: 0;
     z-index: 9999;
     background: #fff;
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid #e2e8f0;
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
     transform: translateY(100%);
     transition: transform 0.35s ease;
@@ -1014,7 +1026,7 @@ a:hover {
 
 .cookie-text {
     font-size: 0.9rem;
-    color: #333;
+    color: #1e293b;
     line-height: 1.5;
     margin: 0;
 }
@@ -1041,36 +1053,36 @@ a:hover {
 }
 
 .cookie-btn-accept {
-    background: #9ead2f;
+    background: #0d9488;
     color: #fff;
     padding: 12px 28px;
     font-size: 0.95rem;
 }
 
 .cookie-btn-accept:hover {
-    background: #7d9321;
+    background: #0f766e;
 }
 
 .cookie-btn-settings {
     background: transparent;
-    color: #5d7912;
-    border: 1.5px solid #5d7912;
+    color: #0f766e;
+    border: 1.5px solid #0f766e;
 }
 
 .cookie-btn-settings:hover {
-    background: #f9faf5;
+    background: #f0fdfa;
 }
 
 .cookie-btn-reject {
     background: transparent;
-    color: #999;
+    color: #94a3b8;
     font-weight: 400;
     font-size: 0.82rem;
     padding: 8px 12px;
 }
 
 .cookie-btn-reject:hover {
-    color: #555;
+    color: #64748b;
 }
 
 /* ---------- Settings Overlay ---------- */
@@ -1098,10 +1110,10 @@ a:hover {
 
 .cookie-settings-panel {
     background: #fff;
-    border-radius: 14px;
+    border-radius: 18px;
     width: 100%;
     max-width: 480px;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.18);
     overflow: hidden;
     transform: translateY(20px);
     transition: transform 0.25s ease;
@@ -1116,12 +1128,12 @@ a:hover {
     align-items: center;
     justify-content: space-between;
     padding: 18px 22px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .cookie-settings-header h3 {
     font-size: 1.1rem;
-    color: #1a1a1a;
+    color: #1e293b;
     margin: 0;
 }
 
@@ -1129,14 +1141,14 @@ a:hover {
     background: none;
     border: none;
     font-size: 1.6rem;
-    color: #999;
+    color: #94a3b8;
     cursor: pointer;
     padding: 0 4px;
     line-height: 1;
 }
 
 .cookie-settings-close:hover {
-    color: #333;
+    color: #1e293b;
 }
 
 .cookie-settings-body {
@@ -1152,7 +1164,7 @@ a:hover {
 }
 
 .cookie-setting-item + .cookie-setting-item {
-    border-top: 1px solid #f0f0f0;
+    border-top: 1px solid #f1f5f9;
 }
 
 .cookie-setting-info {
@@ -1164,12 +1176,12 @@ a:hover {
 
 .cookie-setting-info strong {
     font-size: 0.95rem;
-    color: #1a1a1a;
+    color: #1e293b;
 }
 
 .cookie-setting-info span {
     font-size: 0.82rem;
-    color: #888;
+    color: #94a3b8;
 }
 
 /* ---------- Toggle Switch ---------- */
@@ -1193,7 +1205,7 @@ a:hover {
     right: 0;
     bottom: 0;
     left: 0;
-    background: #ccc;
+    background: #cbd5e1;
     border-radius: 13px;
     cursor: pointer;
     transition: background 0.25s;
@@ -1213,7 +1225,7 @@ a:hover {
 }
 
 .cookie-toggle:checked + .cookie-toggle-label {
-    background: #9ead2f;
+    background: #0d9488;
 }
 
 .cookie-toggle:checked + .cookie-toggle-label::after {
@@ -1221,7 +1233,7 @@ a:hover {
 }
 
 .cookie-toggle:disabled + .cookie-toggle-label {
-    background: #9ead2f;
+    background: #0d9488;
     opacity: 0.6;
     cursor: not-allowed;
 }
@@ -1229,7 +1241,7 @@ a:hover {
 /* ---------- Settings Footer ---------- */
 .cookie-settings-footer {
     padding: 14px 22px;
-    border-top: 1px solid #eee;
+    border-top: 1px solid #e2e8f0;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
@@ -1237,7 +1249,7 @@ a:hover {
 }
 
 .cookie-btn-save {
-    background: #9ead2f;
+    background: #0d9488;
     color: #fff;
 }
 
@@ -1272,7 +1284,7 @@ a:hover {
 }
 
 .info-table thead tr {
-    background: #5d7912;
+    background: #0f766e;
     color: #fff;
     text-align: left;
 }
@@ -1286,8 +1298,8 @@ a:hover {
 
 .info-table td {
     padding: 11px 16px;
-    border-bottom: 1px solid #eee;
-    color: #333;
+    border-bottom: 1px solid #e2e8f0;
+    color: #1e293b;
 }
 
 .info-table tbody tr:last-child td {
@@ -1295,16 +1307,20 @@ a:hover {
 }
 
 .info-table tbody tr:nth-child(even) {
-    background: #f9faf5;
+    background: #f8fafc;
+}
+
+.info-table tbody tr {
+    transition: background 0.15s ease;
 }
 
 .info-table tbody tr:hover {
-    background: #f0f3e3;
+    background: #f0fdfa;
 }
 
 .table-note {
     font-size: 0.85rem;
-    color: #888;
+    color: #94a3b8;
     margin-top: 8px;
     font-style: italic;
 }
@@ -1337,16 +1353,16 @@ a:hover {
 
 /* ---------- Blog Listing ---------- */
 .blog-filters { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:28px; }
-.blog-filter-btn { padding:8px 18px; border:1.5px solid #ddd; border-radius:20px; background:#fff; color:#555; font-size:0.9rem; font-weight:500; cursor:pointer; transition:all 0.2s; font-family:inherit; }
-.blog-filter-btn:hover { border-color:#9ead2f; color:#5d7912; background:#f9faf5; }
-.blog-filter-btn.active { background:#9ead2f; color:#fff; border-color:#9ead2f; }
+.blog-filter-btn { padding:8px 18px; border:1.5px solid #e2e8f0; border-radius:20px; background:#fff; color:#64748b; font-size:0.9rem; font-weight:500; cursor:pointer; transition:all 0.2s; font-family:inherit; }
+.blog-filter-btn:hover { border-color:#0d9488; color:#0f766e; background:#f0fdfa; }
+.blog-filter-btn.active { background:#0d9488; color:#fff; border-color:#0d9488; }
 
 .blog-grid { display:grid; grid-template-columns:1fr; gap:24px; }
-.blog-card { background:#fff; border-radius:12px; box-shadow:0 2px 16px rgba(0,0,0,0.08); overflow:hidden; transition:transform 0.2s, box-shadow 0.2s; }
-.blog-card:hover { transform:translateY(-3px); box-shadow:0 6px 24px rgba(0,0,0,0.12); }
+.blog-card { background:#fff; border-radius:16px; border:1px solid #f1f5f9; box-shadow:0 2px 16px rgba(0,0,0,0.06); overflow:hidden; transition:transform 0.2s, box-shadow 0.2s; }
+.blog-card:hover { transform:translateY(-4px); box-shadow:0 8px 30px rgba(0,0,0,0.12); }
 .blog-card-link { display:block; text-decoration:none; color:inherit; }
 .blog-card-link:hover { text-decoration:none; color:inherit; }
-.blog-card-image { width:100%; aspect-ratio:16/9; overflow:hidden; background:#f9faf5; }
+.blog-card-image { width:100%; aspect-ratio:16/9; overflow:hidden; background:#f8fafc; }
 .blog-card-image img { width:100%; height:100%; object-fit:cover; transition:transform 0.3s; }
 .blog-card:hover .blog-card-image img { transform:scale(1.05); }
 .blog-card-body { padding:20px; }
@@ -1356,13 +1372,50 @@ a:hover {
 .cat-sport { background:#e0f2fe; color:#0369a1; }
 .cat-metabolismus { background:#f3e5f5; color:#7b1fa2; }
 .cat-bmi { background:#e0f7fa; color:#00838f; }
-.blog-card-title { font-size:1.15rem; color:#1a1a1a; margin-bottom:8px; line-height:1.35; }
-.blog-card-desc { font-size:0.9rem; color:#666; line-height:1.55; margin-bottom:12px; }
-.blog-card-cta { font-size:0.88rem; font-weight:600; color:#5d7912; transition:color 0.2s; }
-.blog-card:hover .blog-card-cta { color:#9ead2f; }
+.blog-card-title { font-size:1.15rem; color:#1e293b; margin-bottom:8px; line-height:1.35; }
+.blog-card-desc { font-size:0.9rem; color:#64748b; line-height:1.55; margin-bottom:12px; }
+.blog-card-cta { font-size:0.88rem; font-weight:600; color:#0f766e; transition:color 0.2s; }
+.blog-card:hover .blog-card-cta { color:#0d9488; }
 
-a.nav-dropdown-toggle { text-decoration:none; color:#333; }
+a.nav-dropdown-toggle { text-decoration:none; color:#1e293b; }
 a.nav-dropdown-toggle:hover { text-decoration:none; }
 
 @media (min-width:600px) { .blog-grid { grid-template-columns:1fr 1fr; } .blog-card-title { font-size:1.05rem; } }
 @media (min-width:900px) { .blog-grid { grid-template-columns:1fr 1fr 1fr; } }
+
+/* ---------- Selection & Focus ---------- */
+::selection {
+    background: #99f6e4;
+    color: #0f172a;
+}
+
+:focus-visible {
+    outline: 2px solid #0d9488;
+    outline-offset: 2px;
+}
+
+/* ---------- Scrollbar Styling ---------- */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* ---------- Backdrop-filter support ---------- */
+@supports not (backdrop-filter: blur(8px)) {
+    .header {
+        background: #fff;
+    }
+}

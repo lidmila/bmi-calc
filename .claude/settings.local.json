@@ -26,7 +26,8 @@
       "Bash(python:*)",
       "Bash(magick --version)",
       "Bash(python3 -c \"from PIL import Image; print\\(''pillow ok''\\)\")",
-      "Bash(cd:*)"
+      "Bash(cd:*)",
+      "Bash(do sed:*)"
     ]
   }
 }
