@@ -44,10 +44,13 @@
     // Dropdown toggle
     var dropdownToggle = document.querySelector('.nav-dropdown-toggle');
     if (dropdownToggle) {
-        dropdownToggle.addEventListener('click', function () {
-            this.closest('.nav-dropdown').classList.toggle('open');
-            var exp = this.getAttribute('aria-expanded') === 'true';
-            this.setAttribute('aria-expanded', !exp);
+        dropdownToggle.addEventListener('click', function (e) {
+            if (window.innerWidth < 800) {
+                e.preventDefault();
+                this.closest('.nav-dropdown').classList.toggle('open');
+                var exp = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', !exp);
+            }
         });
     }
 

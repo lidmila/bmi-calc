@@ -1258,3 +1258,35 @@ a:hover {
         flex-shrink: 0;
     }
 }
+
+/* ---------- Blog Listing ---------- */
+.blog-filters { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:28px; }
+.blog-filter-btn { padding:8px 18px; border:1.5px solid #ddd; border-radius:20px; background:#fff; color:#555; font-size:0.9rem; font-weight:500; cursor:pointer; transition:all 0.2s; font-family:inherit; }
+.blog-filter-btn:hover { border-color:#9ead2f; color:#5d7912; background:#f9faf5; }
+.blog-filter-btn.active { background:#9ead2f; color:#fff; border-color:#9ead2f; }
+
+.blog-grid { display:grid; grid-template-columns:1fr; gap:24px; }
+.blog-card { background:#fff; border-radius:12px; box-shadow:0 2px 16px rgba(0,0,0,0.08); overflow:hidden; transition:transform 0.2s, box-shadow 0.2s; }
+.blog-card:hover { transform:translateY(-3px); box-shadow:0 6px 24px rgba(0,0,0,0.12); }
+.blog-card-link { display:block; text-decoration:none; color:inherit; }
+.blog-card-link:hover { text-decoration:none; color:inherit; }
+.blog-card-image { width:100%; aspect-ratio:16/9; overflow:hidden; background:#f9faf5; }
+.blog-card-image img { width:100%; height:100%; object-fit:cover; transition:transform 0.3s; }
+.blog-card:hover .blog-card-image img { transform:scale(1.05); }
+.blog-card-body { padding:20px; }
+.blog-card-category { display:inline-block; padding:3px 12px; border-radius:12px; font-size:0.78rem; font-weight:600; text-transform:uppercase; letter-spacing:0.3px; margin-bottom:10px; }
+.cat-hubnuti { background:#fff3e0; color:#e65100; }
+.cat-vyziva { background:#e8f5e9; color:#2e7d32; }
+.cat-sport { background:#e0f2fe; color:#0369a1; }
+.cat-metabolismus { background:#f3e5f5; color:#7b1fa2; }
+.cat-bmi { background:#e0f7fa; color:#00838f; }
+.blog-card-title { font-size:1.15rem; color:#1a1a1a; margin-bottom:8px; line-height:1.35; }
+.blog-card-desc { font-size:0.9rem; color:#666; line-height:1.55; margin-bottom:12px; }
+.blog-card-cta { font-size:0.88rem; font-weight:600; color:#5d7912; transition:color 0.2s; }
+.blog-card:hover .blog-card-cta { color:#9ead2f; }
+
+a.nav-dropdown-toggle { text-decoration:none; color:#333; }
+a.nav-dropdown-toggle:hover { text-decoration:none; }
+
+@media (min-width:600px) { .blog-grid { grid-template-columns:1fr 1fr; } .blog-card-title { font-size:1.05rem; } }
+@media (min-width:900px) { .blog-grid { grid-template-columns:1fr 1fr 1fr; } }
