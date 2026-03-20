@@ -591,12 +591,12 @@ a:hover {
         flex: 1;
     }
 
-    .section-image {
+    .section-with-image .section-image {
         flex-shrink: 0;
         width: 280px;
     }
 
-    .section-image img {
+    .section-with-image .section-image img {
         max-width: 100%;
     }
 }
@@ -636,7 +636,7 @@ a:hover {
 }
 
 @media (min-width: 900px) {
-    .section-image {
+    .section-with-image .section-image {
         width: 340px;
     }
 }
