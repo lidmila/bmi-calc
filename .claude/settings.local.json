@@ -28,7 +28,9 @@
       "Bash(python3 -c \"from PIL import Image; print\\(''pillow ok''\\)\")",
       "Bash(cd:*)",
       "Bash(do sed:*)",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(while read:*)",
+      "Bash(git show:*)"
     ]
   }
 }
