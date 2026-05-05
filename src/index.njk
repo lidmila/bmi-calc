@@ -97,7 +97,7 @@ jsonld:
 
     {# stats ticker, marquee-like, bottom of hero #}
     <div class="mt-16 border-y-2 border-ink/10 py-5 overflow-hidden">
-      <div class="flex items-center gap-12 text-sm font-semibold text-ink/70 whitespace-nowrap animate-ticker">
+      <div class="flex items-center gap-12 text-sm font-semibold text-ink/70 dark:text-slate-300 whitespace-nowrap animate-ticker">
         <span class="flex items-center gap-2"><span class="font-display text-2xl text-flame-600">200k+</span> spočítaných BMI</span>
         <span class="opacity-40">★</span>
         <span class="flex items-center gap-2"><span class="font-display text-2xl text-brand-700">3</span> režimy výpočtu</span>
@@ -145,31 +145,31 @@ jsonld:
       <div data-tab-panel="basic">
         <form id="form-basic" novalidate class="grid gap-4 sm:grid-cols-2">
           <div>
-            <label class="label" for="basic-height">Výška <span class="text-ink/40 font-normal">(cm)</span></label>
+            <label class="label" for="basic-height">Výška <span class="text-ink/40 dark:text-slate-500 font-normal">(cm)</span></label>
             <input class="input" type="number" id="basic-height" min="100" max="250" step="1" placeholder="např. 175" required>
           </div>
           <div>
-            <label class="label" for="basic-weight">Hmotnost <span class="text-ink/40 font-normal">(kg)</span></label>
+            <label class="label" for="basic-weight">Hmotnost <span class="text-ink/40 dark:text-slate-500 font-normal">(kg)</span></label>
             <input class="input" type="number" id="basic-weight" min="20" max="300" step="0.1" placeholder="např. 72" required>
           </div>
           <div class="sm:col-span-2 flex flex-wrap items-center gap-3">
             <button type="submit" class="btn-primary">Spočítat BMI →</button>
-            <p class="text-sm text-ink/60 italic">…nebo prostě piště, počítá se živě.</p>
+            <p class="text-sm text-ink/60 dark:text-slate-400 italic">…nebo prostě piště, počítá se živě.</p>
           </div>
         </form>
       </div>
 
       <div data-tab-panel="advanced" class="hidden">
         <form id="form-advanced" novalidate class="grid gap-4 sm:grid-cols-2">
-          <div><label class="label" for="adv-height">Výška <span class="text-ink/40 font-normal">(cm)</span></label><input class="input" type="number" id="adv-height" min="100" max="250" step="1" placeholder="např. 175" required></div>
-          <div><label class="label" for="adv-weight">Hmotnost <span class="text-ink/40 font-normal">(kg)</span></label><input class="input" type="number" id="adv-weight" min="20" max="300" step="0.1" placeholder="např. 72" required></div>
+          <div><label class="label" for="adv-height">Výška <span class="text-ink/40 dark:text-slate-500 font-normal">(cm)</span></label><input class="input" type="number" id="adv-height" min="100" max="250" step="1" placeholder="např. 175" required></div>
+          <div><label class="label" for="adv-weight">Hmotnost <span class="text-ink/40 dark:text-slate-500 font-normal">(kg)</span></label><input class="input" type="number" id="adv-weight" min="20" max="300" step="0.1" placeholder="např. 72" required></div>
           <div><label class="label" for="adv-gender">Pohlaví</label>
             <select class="input" id="adv-gender" required>
               <option value="">Vyberte…</option><option value="male">Muž</option><option value="female">Žena</option>
             </select>
           </div>
-          <div><label class="label" for="adv-age">Věk <span class="text-ink/40 font-normal">(roky)</span></label><input class="input" type="number" id="adv-age" min="18" max="120" step="1" placeholder="např. 35" required></div>
-          <div class="sm:col-span-2"><label class="label" for="adv-waist">Obvod pasu <span class="text-ink/40 font-normal">(cm) – volitelné, zpřesní výsledek</span></label><input class="input" type="number" id="adv-waist" min="40" max="200" step="0.1" placeholder="např. 85"></div>
+          <div><label class="label" for="adv-age">Věk <span class="text-ink/40 dark:text-slate-500 font-normal">(roky)</span></label><input class="input" type="number" id="adv-age" min="18" max="120" step="1" placeholder="např. 35" required></div>
+          <div class="sm:col-span-2"><label class="label" for="adv-waist">Obvod pasu <span class="text-ink/40 dark:text-slate-500 font-normal">(cm) – volitelné, zpřesní výsledek</span></label><input class="input" type="number" id="adv-waist" min="40" max="200" step="0.1" placeholder="např. 85"></div>
           <div class="sm:col-span-2"><button type="submit" class="btn-primary">Spočítat podrobné BMI →</button></div>
         </form>
       </div>
@@ -181,10 +181,10 @@ jsonld:
               <option value="">Vyberte…</option><option value="male">Chlapec</option><option value="female">Dívka</option>
             </select>
           </div>
-          <div><label class="label" for="child-age-years">Věk <span class="text-ink/40 font-normal">(roky)</span></label><input class="input" type="number" id="child-age-years" min="2" max="19" step="1" placeholder="např. 10" required></div>
-          <div><label class="label" for="child-age-months">Měsíce <span class="text-ink/40 font-normal">(0–11)</span></label><input class="input" type="number" id="child-age-months" min="0" max="11" step="1" value="0"></div>
-          <div><label class="label" for="child-height">Výška <span class="text-ink/40 font-normal">(cm)</span></label><input class="input" type="number" id="child-height" min="50" max="200" step="0.1" placeholder="např. 140" required></div>
-          <div class="sm:col-span-2"><label class="label" for="child-weight">Hmotnost <span class="text-ink/40 font-normal">(kg)</span></label><input class="input" type="number" id="child-weight" min="5" max="150" step="0.1" placeholder="např. 35" required></div>
+          <div><label class="label" for="child-age-years">Věk <span class="text-ink/40 dark:text-slate-500 font-normal">(roky)</span></label><input class="input" type="number" id="child-age-years" min="2" max="19" step="1" placeholder="např. 10" required></div>
+          <div><label class="label" for="child-age-months">Měsíce <span class="text-ink/40 dark:text-slate-500 font-normal">(0–11)</span></label><input class="input" type="number" id="child-age-months" min="0" max="11" step="1" value="0"></div>
+          <div><label class="label" for="child-height">Výška <span class="text-ink/40 dark:text-slate-500 font-normal">(cm)</span></label><input class="input" type="number" id="child-height" min="50" max="200" step="0.1" placeholder="např. 140" required></div>
+          <div class="sm:col-span-2"><label class="label" for="child-weight">Hmotnost <span class="text-ink/40 dark:text-slate-500 font-normal">(kg)</span></label><input class="input" type="number" id="child-weight" min="5" max="150" step="0.1" placeholder="např. 35" required></div>
           <div class="sm:col-span-2"><button type="submit" class="btn-primary">Spočítat BMI dítěte →</button></div>
         </form>
       </div>
@@ -218,13 +218,13 @@ jsonld:
               </g>
             </svg>
             <p id="gauge-value-text" class="text-center font-display text-6xl font-bold text-ink dark:text-slate-50 -mt-2">–</p>
-            <p class="text-center text-xs uppercase tracking-[0.2em] text-ink/50 mt-1">Vaše BMI</p>
+            <p class="text-center text-xs uppercase tracking-[0.2em] text-ink/50 dark:text-slate-400 mt-1">Vaše BMI</p>
           </div>
 
           <div>
-            <p class="text-xs uppercase tracking-[0.2em] text-ink/50 mb-2">Hodnocení</p>
+            <p class="text-xs uppercase tracking-[0.2em] text-ink/50 dark:text-slate-400 mb-2">Hodnocení</p>
             <p id="result-value" class="hidden"></p>
-            <span id="result-category" class="badge bg-paper border border-ink/10 text-ink">–</span>
+            <span id="result-category" class="badge bg-paper border border-ink/10 text-ink dark:bg-slate-800 dark:text-slate-100 dark:border-slate-700">–</span>
             <div id="result-details" class="mt-4 text-pretty"></div>
             <div id="goal-box" class="mt-4"></div>
 
@@ -269,7 +269,7 @@ jsonld:
     <blockquote class="lg:col-span-10 pullquote">
       „BMI je užitečný kompas, ne mapa. Řekne vám, kterým směrem se podívat.
       Nikdy ne, čeho přesně se dotknout.<span class="text-flame-600 font-bold not-italic"> Doplňte ho obvodem pasu.</span>"
-      <footer class="mt-4 text-sm not-italic font-sans text-ink/60">– Konsensus WHO &amp; NIH</footer>
+      <footer class="mt-4 text-sm not-italic font-sans text-ink/60 dark:text-slate-400">– Konsensus WHO &amp; NIH</footer>
     </blockquote>
   </div>
 </section>
@@ -281,7 +281,7 @@ jsonld:
       <p class="text-xs uppercase tracking-[0.25em] text-flame-600 font-bold">Více čísel pro celkový obrázek</p>
       <h2 class="mt-2 font-display text-4xl sm:text-5xl font-bold">Spočítejte si <span class="italic text-flame-600">i víc</span></h2>
     </div>
-    <p class="max-w-md text-ink/70 text-pretty">BMI je jeden údaj. Tyto kalkulačky vám dají úplnější obrázek o tom, jak na tom skutečně jste.</p>
+    <p class="max-w-md text-ink/70 dark:text-slate-300 text-pretty">BMI je jeden údaj. Tyto kalkulačky vám dají úplnější obrázek o tom, jak na tom skutečně jste.</p>
   </div>
 
   <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

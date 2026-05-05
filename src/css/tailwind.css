@@ -51,7 +51,8 @@
     @apply btn bg-flame-500 text-white shadow-stamp hover:shadow-stampLg hover:-translate-x-0.5 hover:-translate-y-0.5;
   }
   .btn-secondary {
-    @apply btn bg-paper text-ink border-2 border-ink hover:bg-brand-50;
+    @apply btn bg-paper text-ink border-2 border-ink hover:bg-brand-50
+           dark:bg-slate-900 dark:text-slate-100 dark:border-slate-200 dark:hover:bg-slate-800;
   }
   .btn-ghost {
     @apply btn text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800;
@@ -68,7 +69,8 @@
     @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold;
   }
   .badge-trust {
-    @apply badge bg-paper text-ink border border-ink/15;
+    @apply badge bg-paper text-ink border border-ink/15
+           dark:bg-slate-900 dark:text-slate-100 dark:border-slate-700;
   }
   .input {
     @apply w-full rounded-xl border-2 border-ink/15 bg-paper px-4 py-3 text-base font-medium
@@ -88,7 +90,12 @@
   }
   .nav-link {
     @apply relative px-3 py-2 text-sm font-semibold text-ink/80 hover:text-ink transition
-           dark:text-slate-200 dark:hover:text-white;
+           dark:text-slate-300 dark:hover:text-white;
+  }
+
+  /* Drop cap auto-adjusts in dark for readability */
+  .dropcap::first-letter {
+    @apply font-display font-bold float-left text-7xl leading-[0.85] mt-1 mr-3 text-flame-600 dark:text-flame-400;
   }
 
   /* === Distinctive flourishes === */
@@ -135,10 +142,7 @@
     transform: rotate(-4deg);
   }
 
-  /* Drop cap for first paragraph */
-  .dropcap::first-letter {
-    @apply font-display font-bold float-left text-7xl leading-[0.85] mt-1 mr-3 text-flame-600;
-  }
+  /* Drop cap defined above with dark variant */
 
   /* Pull quote – large serif italic, with oversized opening glyph */
   .pullquote {
@@ -154,7 +158,8 @@
 
   /* Tag pills with a "ticked off" feel for category */
   .pill-cat {
-    @apply inline-flex items-center gap-1 rounded-full border-2 border-ink/15 bg-paper px-3 py-1 text-xs font-bold uppercase tracking-wider text-ink;
+    @apply inline-flex items-center gap-1 rounded-full border-2 border-ink/15 bg-paper px-3 py-1 text-xs font-bold uppercase tracking-wider text-ink
+           dark:bg-slate-900 dark:text-slate-100 dark:border-slate-700;
   }
 
   .gauge-track { stroke: theme(colors.slate.200); }
