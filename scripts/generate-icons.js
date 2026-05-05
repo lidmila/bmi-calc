@@ -7,7 +7,9 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
-const SRC = path.join(ROOT, "src", "img", "logo.png");
+// Prefer transparent version if it exists; falls back to the regular logo.
+const TRANSPARENT = path.join(ROOT, "src", "img", "logo-transparent.png");
+const SRC = fs.existsSync(TRANSPARENT) ? TRANSPARENT : path.join(ROOT, "src", "img", "logo.png");
 const OUT = path.join(ROOT, "src", "img");
 
 // Brand colors
