@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://idealnibmi.com/sitemap.xml

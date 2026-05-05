@@ -1,7 +1,7 @@
 node_modules/
+_site/
 .DS_Store
 *.log
 .env
 .env.local
-# _site/ is the build output and IS committed so Cloudflare deploys it as-is.
-# Run `npm run build` before committing so _site reflects current src.
+.wrangler/
