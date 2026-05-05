@@ -46,7 +46,7 @@ async function main() {
           <stop offset="1" stop-color="#fffaf3" stop-opacity="0"/>
         </radialGradient>
         <radialGradient id="g2" cx="90%" cy="100%" r="50%">
-          <stop offset="0" stop-color="#fed7aa" stop-opacity="0.65"/>
+          <stop offset="0" stop-color="#ffb8a8" stop-opacity="0.6"/>
           <stop offset="1" stop-color="#fffaf3" stop-opacity="0"/>
         </radialGradient>
       </defs>
@@ -54,12 +54,12 @@ async function main() {
       <rect width="1200" height="630" fill="url(#g1)"/>
       <rect width="1200" height="630" fill="url(#g2)"/>
       <text x="600" y="430" font-family="Georgia, 'Times New Roman', serif" font-size="86" font-weight="700" text-anchor="middle" fill="#0b1420">
-        Ideální <tspan fill="#ea580c" font-style="italic">BMI</tspan>
+        Ideální <tspan fill="#e85a47" font-style="italic">BMI</tspan>
       </text>
       <text x="600" y="490" font-family="-apple-system, Arial, sans-serif" font-size="28" text-anchor="middle" fill="#0b1420" opacity="0.7">
         Přesný výpočet BMI online · zdarma
       </text>
-      <line x1="500" y1="525" x2="700" y2="525" stroke="#ea580c" stroke-width="3" stroke-linecap="round"/>
+      <line x1="500" y1="525" x2="700" y2="525" stroke="#e85a47" stroke-width="3" stroke-linecap="round"/>
     </svg>
   `);
 

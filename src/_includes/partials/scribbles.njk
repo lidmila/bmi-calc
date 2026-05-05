@@ -1,13 +1,13 @@
 {# Hand-drawn SVG snippets — used inline. Pass as macros or use {% include %} variants. #}
 
-{% macro squiggle(color="#f97316") %}
+{% macro squiggle(color="#e85a47") %}
 <svg viewBox="0 0 220 12" preserveAspectRatio="none" aria-hidden="true">
   <path d="M2 8 Q 22 -2, 44 6 T 88 6 T 132 6 T 176 6 T 218 6"
         fill="none" stroke="{{ color }}" stroke-width="3" stroke-linecap="round"/>
 </svg>
 {% endmacro %}
 
-{% macro circle(color="#f97316") %}
+{% macro circle(color="#e85a47") %}
 <svg viewBox="0 0 200 80" class="absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true">
   <path d="M 30 40 C 30 15, 95 8, 150 14 S 195 50, 170 65 S 80 75, 35 60 S 28 45, 30 40 Z"
         fill="none" stroke="{{ color }}" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 4" opacity="0.85"/>
@@ -21,7 +21,7 @@
 </svg>
 {% endmacro %}
 
-{% macro star(color="#f97316", className="") %}
+{% macro star(color="#e85a47", className="") %}
 <svg viewBox="0 0 32 32" class="{{ className }}" fill="{{ color }}" aria-hidden="true">
   <path d="M16 2 L18 12 L28 14 L20 20 L23 30 L16 24 L9 30 L12 20 L4 14 L14 12 Z" stroke="{{ color }}" stroke-width="0" stroke-linejoin="round"/>
 </svg>
