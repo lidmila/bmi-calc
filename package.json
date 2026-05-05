@@ -10,7 +10,10 @@
     "build": "npm run clean && npm run build:eleventy && npm run build:css",
     "watch:css": "tailwindcss -i ./src/css/tailwind.css -o ./_site/css/app.css --watch",
     "watch:eleventy": "eleventy --serve --quiet",
-    "dev": "npm-run-all build:eleventy --parallel watch:css watch:eleventy"
+    "dev": "npm-run-all build:eleventy --parallel watch:css watch:eleventy",
+    "cf:deployments": "wrangler pages deployment list --project-name=bmi-calc",
+    "cf:tail": "wrangler pages deployment tail --project-name=bmi-calc",
+    "cf:whoami": "wrangler whoami"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
@@ -19,6 +22,7 @@
     "npm-run-all": "^4.1.5",
     "rimraf": "^5.0.10",
     "sharp": "^0.34.5",
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^3.4.17",
+    "wrangler": "^4.87.0"
   }
 }
