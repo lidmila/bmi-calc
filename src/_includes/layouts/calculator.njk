@@ -16,4 +16,11 @@ layout: layouts/base.njk
     <div class="absolute left-1/2 -translate-x-1/2 -top-3 w-32 h-7 bg-flame-300/60 -rotate-2 z-10 pointer-events-none" aria-hidden="true"></div>
     {{ content | safe }}
   </div>
+
+  {# AdSense slot at bottom of calculator page #}
+  <div class="max-w-3xl mx-auto mt-12">
+    {% set slot = "9044571605" %}
+    {% set format = "auto" %}
+    {% include "partials/ad.njk" %}
+  </div>
 </section>

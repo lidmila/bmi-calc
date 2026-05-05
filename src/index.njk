@@ -386,6 +386,8 @@ jsonld:
 </section>
 
 {# ==================== Ad slot – placed AFTER calculator and content ==================== #}
+{% set slot = "9044571605" %}
+{% set format = "auto" %}
 {% include "partials/ad.njk" %}
 
 {# ==================== FAQ – magazine ==================== #}
@@ -436,6 +438,11 @@ jsonld:
 {"@type":"Question","name":"Proč je důležitý obvod pasu?","acceptedAnswer":{"@type":"Answer","text":"Měří viscerální tuk, který je rizikovější. WHO upozorňuje >94 cm muži, >80 cm ženy."}}
 ]}
 </script>
+
+{# ==================== Second ad slot – matched content ==================== #}
+{% set slot = "8621890039" %}
+{% set format = "autorelaxed" %}
+{% include "partials/ad.njk" %}
 
 {# ==================== Support – editorial CTA ==================== #}
 <section class="container-x py-16">

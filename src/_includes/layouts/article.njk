@@ -47,6 +47,13 @@ layout: layouts/base.njk
     {{ content | safe }}
   </div>
 
+  {# In-article AdSense slot — placed after content, before sources/CTA #}
+  <div class="max-w-3xl mx-auto">
+    {% set slot = "4874216718" %}
+    {% set format = "in-article" %}
+    {% include "partials/ad.njk" %}
+  </div>
+
   {% if sources %}
     <aside class="max-w-3xl mx-auto mt-12 rounded-3xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/40 p-6">
       <h2 class="font-display text-xl font-bold text-slate-900 dark:text-slate-100">Zdroje</h2>
