@@ -6,7 +6,7 @@ Tento web je nově plně responsivní s podporou dark mode a Tailwind CSS. Aby v
 
 | Soubor | Rozměr | Účel |
 |---|---|---|
-| `og-default.png` | 1200×630 | OpenGraph náhled pro homepage při sdílení na FB / X / LinkedIn. Aktuálně se používá 40×40 ikona — sdílí se rozplizle. |
+| `og-default.png` | 1200×630 | OpenGraph náhled pro homepage při sdílení na FB / X / LinkedIn. Aktuálně se používá 40×40 ikona – sdílí se rozplizle. |
 | `favicon.svg` | vektor | Moderní favicon (SVG zvládá tmavý režim přes `<style>` v SVG). |
 | `favicon-32.png` | 32×32 | Fallback pro starší prohlížeče. |
 | `favicon-192.png` | 192×192 | Android instalace. |

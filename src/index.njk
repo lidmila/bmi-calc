@@ -31,7 +31,7 @@ jsonld:
 ---
 {% from "partials/scribbles.njk" import squiggle, arrow, star, dotsBlob %}
 
-{# ==================== HERO — editorial ==================== #}
+{# ==================== HERO – editorial ==================== #}
 <section class="relative overflow-hidden">
   {# decorative blobs #}
   <div class="absolute -top-24 -left-24 h-80 w-80 rounded-full bg-brand-200/40 blur-3xl" aria-hidden="true"></div>
@@ -58,7 +58,7 @@ jsonld:
 
         <p class="mt-7 max-w-xl text-lg sm:text-xl text-ink/80 dark:text-slate-300 text-pretty dropcap">
           Zadáte výšku, váhu a podle chuti i věk či obvod pasu. Vrátíme vám číslo,
-          kontext podle WHO, doporučený rozsah pro váš věk — a co s tím dál. Bez registrace, bez e-mailu, bez kecu.
+          kontext podle WHO, doporučený rozsah pro váš věk a srozumitelné vysvětlení, co s tím dál. Bez registrace a bez e-mailu.
         </p>
 
         <div class="mt-9 flex flex-wrap items-center gap-3">
@@ -74,20 +74,20 @@ jsonld:
         </ul>
       </div>
 
-      {# Hero illustration placeholder — uses logo until custom illustration is delivered #}
+      {# Hero illustration placeholder – uses logo until custom illustration is delivered #}
       <div class="lg:col-span-5 relative">
         <div class="relative max-w-sm mx-auto">
           {# floating sticker #}
           <div class="absolute -top-6 -left-6 sticker animate-floaty z-10">Zdarma · bez registrace</div>
 
-          {# placeholder card — dashed border signals "to be replaced with custom art" #}
+          {# placeholder card – dashed border signals "to be replaced with custom art" #}
           <div class="rounded-[28px] bg-paper border-2 border-dashed border-ink/25 p-8 sm:p-10 tilt-r-2 relative shadow-card">
-            <img src="/img/logo.png" alt="BMI Kalkulačka — ilustrace"
+            <img src="/img/logo.png" alt="BMI Kalkulačka – ilustrace"
                  width="320" height="320"
                  class="mx-auto w-full max-w-[280px] h-auto animate-floaty">
 
             <p class="text-center mt-4 font-display italic text-ink/50 text-sm">
-              Placeholder — sem přijde ilustrace na míru
+              Placeholder – sem přijde ilustrace na míru
             </p>
           </div>
 
@@ -174,7 +174,7 @@ jsonld:
             </select>
           </div>
           <div><label class="label" for="adv-age">Věk <span class="text-ink/40 font-normal">(roky)</span></label><input class="input" type="number" id="adv-age" min="18" max="120" step="1" placeholder="např. 35" required></div>
-          <div class="sm:col-span-2"><label class="label" for="adv-waist">Obvod pasu <span class="text-ink/40 font-normal">(cm) — volitelné, zpřesní výsledek</span></label><input class="input" type="number" id="adv-waist" min="40" max="200" step="0.1" placeholder="např. 85"></div>
+          <div class="sm:col-span-2"><label class="label" for="adv-waist">Obvod pasu <span class="text-ink/40 font-normal">(cm) – volitelné, zpřesní výsledek</span></label><input class="input" type="number" id="adv-waist" min="40" max="200" step="0.1" placeholder="např. 85"></div>
           <div class="sm:col-span-2"><button type="submit" class="btn-primary">Spočítat podrobné BMI →</button></div>
         </form>
       </div>
@@ -247,7 +247,7 @@ jsonld:
   </div>
 </section>
 
-{# ==================== HOW IT WORKS — three steps ==================== #}
+{# ==================== HOW IT WORKS – three steps ==================== #}
 <section class="container-x py-12 lg:py-16">
   <div class="grid gap-10 lg:grid-cols-3">
     {% set steps = [
@@ -274,7 +274,7 @@ jsonld:
     <blockquote class="lg:col-span-10 pullquote">
       „BMI je užitečný kompas, ne mapa. Řekne vám, kterým směrem se podívat.
       Nikdy ne, čeho přesně se dotknout.<span class="text-flame-600 font-bold not-italic"> Doplňte ho obvodem pasu.</span>"
-      <footer class="mt-4 text-sm not-italic font-sans text-ink/60">— Konsensus WHO &amp; NIH</footer>
+      <footer class="mt-4 text-sm not-italic font-sans text-ink/60">– Konsensus WHO &amp; NIH</footer>
     </blockquote>
   </div>
 </section>
@@ -311,7 +311,7 @@ jsonld:
   </div>
 </section>
 
-{# ==================== BMI table — magazine style ==================== #}
+{# ==================== BMI table – magazine style ==================== #}
 <section id="bmi-tabulka" class="py-16 bg-ink text-paper relative overflow-hidden">
   <div class="absolute inset-0 bg-noise opacity-40 pointer-events-none" aria-hidden="true"></div>
   <div class="container-x relative">
@@ -356,21 +356,21 @@ jsonld:
     </div>
 
     <p class="mt-8 text-sm text-paper/60 italic max-w-2xl">
-      Pozn. — pro sportovce s velkou svalovou hmotou nebo pro seniory hodnoty nadhodnocují.
+      Pozn. – pro sportovce s velkou svalovou hmotou nebo pro seniory hodnoty nadhodnocují.
       Doplňte si proto <a href="/kalkulacka-whtr/" class="underline text-flame-400 hover:text-flame-300">obvod pasu k výšce</a>.
     </p>
   </div>
 </section>
 
-{# ==================== What is BMI — editorial 2-col ==================== #}
+{# ==================== What is BMI – editorial 2-col ==================== #}
 <section id="co-je-bmi" class="container-x py-16">
   <div class="grid gap-12 lg:grid-cols-12 items-start">
     <div class="lg:col-span-7">
-      <p class="text-xs uppercase tracking-[0.25em] text-flame-600 font-bold">1832 — dnes</p>
+      <p class="text-xs uppercase tracking-[0.25em] text-flame-600 font-bold">1832 – dnes</p>
       <h2 class="mt-2 font-display text-4xl sm:text-5xl font-bold">Co je <span class="marker-flame">BMI</span> a co určitě <span class="italic">není</span></h2>
 
       <div class="mt-6 space-y-4 text-lg text-ink/80 dark:text-slate-300 text-pretty">
-        <p><strong>Body Mass Index</strong> — čistý poměr vaší hmotnosti a druhé mocniny výšky. Vyvinul ho belgický matematik Adolphe Quetelet už v roce 1832 a dodnes ho jako orientační screening používá WHO i lékaři po celém světě.</p>
+        <p><strong>Body Mass Index</strong> – čistý poměr vaší hmotnosti a druhé mocniny výšky. Vyvinul ho belgický matematik Adolphe Quetelet už v roce 1832 a dodnes ho jako orientační screening používá WHO i lékaři po celém světě.</p>
         <p>BMI vám ale neřekne všechno. Nerozliší tuk od svalů. Neví o rozložení tuku v těle. Neumí zohlednit kostní stavbu ani etnický původ. Proto ho doporučujeme kombinovat s <a href="/kalkulacka-whtr/" class="text-flame-600 underline decoration-2 underline-offset-2 hover:text-flame-700">obvodem pasu</a> a u extrémních hodnot s odborným vyšetřením.</p>
       </div>
     </div>
@@ -390,10 +390,10 @@ jsonld:
   </div>
 </section>
 
-{# ==================== Ad slot — placed AFTER calculator and content ==================== #}
+{# ==================== Ad slot – placed AFTER calculator and content ==================== #}
 {% include "partials/ad.njk" %}
 
-{# ==================== FAQ — magazine ==================== #}
+{# ==================== FAQ – magazine ==================== #}
 <section id="faq" class="py-16 bg-paper">
   <div class="container-x max-w-3xl">
     <div class="text-center">
@@ -442,7 +442,7 @@ jsonld:
 ]}
 </script>
 
-{# ==================== Support — editorial CTA ==================== #}
+{# ==================== Support – editorial CTA ==================== #}
 <section class="container-x py-16">
   <div class="card relative overflow-hidden p-8 sm:p-12">
     <div class="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-flame-200/50 blur-2xl" aria-hidden="true"></div>
@@ -451,7 +451,7 @@ jsonld:
         <p class="text-xs uppercase tracking-[0.25em] text-flame-600 font-bold">Líbí se vám to?</p>
         <h2 class="mt-2 font-display text-3xl sm:text-4xl font-bold">Hodili byste nám <span class="italic text-flame-600">pár korun</span> na kafe?</h2>
         <p class="mt-3 text-ink/70 dark:text-slate-400 text-pretty">
-          Tahle kalkulačka je zdarma a bez dotěrných reklam. Pokud vám pomohla, díky za jakýkoli příspěvek — drží to projekt naživu.
+          Tahle kalkulačka je zdarma a bez dotěrných reklam. Pokud vám pomohla, díky za jakýkoli příspěvek – drží to projekt naživu.
         </p>
       </div>
       <div class="lg:col-span-5 flex justify-center lg:justify-end">

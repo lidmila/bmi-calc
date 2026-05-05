@@ -93,7 +93,7 @@
 
   /* === Distinctive flourishes === */
 
-  /* Marker highlight — yellow stripe behind text */
+  /* Marker highlight – yellow stripe behind text */
   .marker {
     @apply relative inline-block;
     background-image: linear-gradient(180deg, transparent 55%, rgba(251,191,36,0.55) 55%, rgba(251,191,36,0.55) 92%, transparent 92%);
@@ -103,7 +103,7 @@
     background-image: linear-gradient(180deg, transparent 55%, rgba(253,186,116,0.65) 55%, rgba(253,186,116,0.65) 92%, transparent 92%);
   }
 
-  /* Hand-drawn scribble underline — wraps a span, animates on first paint */
+  /* Hand-drawn scribble underline – wraps a span, animates on first paint */
   .scribble {
     @apply relative inline-block;
   }
@@ -121,7 +121,7 @@
     animation: squiggle 1s ease-out 0.4s forwards;
   }
 
-  /* Number stamp — rotated badge for steps and stats */
+  /* Number stamp – rotated badge for steps and stats */
   .stamp {
     @apply inline-flex h-12 w-12 items-center justify-center rounded-full bg-ink text-paper font-display font-bold text-lg shadow-stamp;
     transform: rotate(-6deg);
@@ -129,7 +129,7 @@
   .stamp-flame { @apply bg-flame-500 text-white; }
   .stamp-brand { @apply bg-brand-gradient text-white; }
 
-  /* Sticker — corner element rotated, with offset shadow */
+  /* Sticker – corner element rotated, with offset shadow */
   .sticker {
     @apply inline-flex items-center gap-1 rounded-full bg-flame-500 text-white px-3 py-1 text-xs font-bold uppercase tracking-wider shadow-stamp;
     transform: rotate(-4deg);
@@ -140,7 +140,7 @@
     @apply font-display font-bold float-left text-7xl leading-[0.85] mt-1 mr-3 text-flame-600;
   }
 
-  /* Pull quote — large serif italic, with oversized opening glyph */
+  /* Pull quote – large serif italic, with oversized opening glyph */
   .pullquote {
     @apply relative my-12 px-6 py-2 text-2xl sm:text-3xl font-display italic text-balance text-ink/90 dark:text-slate-100/90 max-w-2xl;
     border-left: 4px solid theme(colors.flame.500);
@@ -183,7 +183,7 @@
     height: 14px;
   }
 
-  /* Paper tape strip — for sticker effect */
+  /* Paper tape strip – for sticker effect */
   .tape::before {
     content: "";
     position: absolute;

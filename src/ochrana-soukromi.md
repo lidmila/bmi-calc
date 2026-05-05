@@ -50,7 +50,7 @@ Používáme **Google AdSense** (ca-pub-9561317089977080) pro zobrazování rekl
 ### 3.4 Správa souhlasu
 Při první návštěvě se zobrazí banner s volbou. Souhlas lze kdykoli změnit kliknutím na odkaz „Nastavení cookies" v patičce.
 
-## 4. Platební služby — Stripe
+## 4. Platební služby – Stripe
 
 Pro dobrovolné příspěvky používáme bránu **Stripe** (Stripe, Inc., 354 Oyster Point Blvd, South San Francisco, CA 94080, USA). Stripe zpracovává platební údaje jako **samostatný správce**. Provozovatel idealnibmi.com **nemá přístup** k platebním údajům. Viz [Zásady ochrany Stripe](https://stripe.com/privacy).
 
@@ -60,8 +60,8 @@ Web může obsahovat partnerské odkazy. Při kliknutí může partner zpracovat
 
 ## 6. Právní základ zpracování
 
-- **Souhlas** (čl. 6 odst. 1 písm. a) GDPR) — analytické cookies (Google Analytics) a reklamní cookies (Google AdSense)
-- **Oprávněný zájem** (čl. 6 odst. 1 písm. f) GDPR) — uložení preference souhlasu s cookies
+- **Souhlas** (čl. 6 odst. 1 písm. a) GDPR) – analytické cookies (Google Analytics) a reklamní cookies (Google AdSense)
+- **Oprávněný zájem** (čl. 6 odst. 1 písm. f) GDPR) – uložení preference souhlasu s cookies
 
 ## 7. Doba uchovávání
 
