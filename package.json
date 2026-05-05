@@ -10,7 +10,8 @@
     "build": "npm run clean && npm run build:eleventy && npm run build:css",
     "watch:css": "tailwindcss -i ./src/css/tailwind.css -o ./_site/css/app.css --watch",
     "watch:eleventy": "eleventy --serve --quiet",
-    "dev": "npm-run-all build:eleventy --parallel watch:css watch:eleventy"
+    "dev": "npm-run-all build:eleventy --parallel watch:css watch:eleventy",
+    "deploy": "npm run build && wrangler deploy"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",

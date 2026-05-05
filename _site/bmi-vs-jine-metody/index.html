@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="cs" class="scroll-smooth">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-361YSTSGFC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('consent', 'default', {
+    'analytics_storage': 'denied',
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied'
+  });
+  (function() {
+    try {
+      var raw = localStorage.getItem('cookie_consent');
+      if (raw) {
+        var c = JSON.parse(raw);
+        gtag('consent', 'update', {
+          'analytics_storage': c.analytics ? 'granted' : 'denied',
+          'ad_storage': c.ads ? 'granted' : 'denied',
+          'ad_user_data': c.ads ? 'granted' : 'denied',
+          'ad_personalization': c.ads ? 'granted' : 'denied'
+        });
+      }
+    } catch(e) {}
+  })();
+  gtag('config', 'G-361YSTSGFC');
+  // Dark mode FOUC guard – set class before paint
+  (function() {
+    try {
+      var d = localStorage.getItem('theme');
+      if (d === 'dark' || (!d && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+    } catch(e) {}
+  })();
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9561317089977080" crossorigin="anonymous"></script>
+<meta name="google-site-verification" content="rRDlr3yOBQlZS4ZTvVlBEnPMkeGqleIC22zFe0q0wLQ">
+<meta name="google-adsense-account" content="ca-pub-9561317089977080">
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BMI vs. jiné metody měření tělesného složení | Ideální BMI</title>
+<meta name="description" content="Srovnání BMI s dalšími metodami: tělesný tuk, obvod pasu, WHR, DEXA, BIA. Kdy BMI nestačí a jaké metody zvolit.">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0d9488">
+<link rel="canonical" href="https://idealnibmi.com/bmi-vs-jine-metody/">
+<link rel="alternate" hreflang="cs" href="https://idealnibmi.com/bmi-vs-jine-metody/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="BMI vs. jiné metody měření tělesného složení">
+<meta property="og:description" content="Srovnání BMI s dalšími metodami: tělesný tuk, obvod pasu, WHR, DEXA, BIA. Kdy BMI nestačí a jaké metody zvolit.">
+<meta property="og:image" content="https://idealnibmi.com/img/og-bmi-vs-jine-metody.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://idealnibmi.com/bmi-vs-jine-metody/">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:site_name" content="Ideální BMI">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BMI vs. jiné metody měření tělesného složení">
+<meta name="twitter:description" content="Srovnání BMI s dalšími metodami: tělesný tuk, obvod pasu, WHR, DEXA, BIA. Kdy BMI nestačí a jaké metody zvolit.">
+<meta name="twitter:image" content="https://idealnibmi.com/img/og-bmi-vs-jine-metody.png">
+
+<!-- Favicons -->
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/img/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap">
+
+<link rel="stylesheet" href="/css/app.css">
+
+  
+</head>
+<body class="min-h-screen flex flex-col">
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-white focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-card">Přeskočit na obsah</a>
+
+  <header class="sticky top-0 z-40 border-b-2 border-ink/10 bg-paper/85 backdrop-blur-md
+                dark:bg-slate-950/80 dark:border-slate-800">
+  <div class="container-x flex h-16 items-center justify-between gap-4">
+    <a href="/" class="flex items-center gap-2.5 group" aria-label="Ideální BMI – domovská stránka">
+      <img src="/img/logo.png" alt="" width="40" height="40" class="h-10 w-10 transition group-hover:rotate-[-6deg]">
+      <span class="font-display text-xl font-bold text-ink dark:text-slate-50">
+        Ideální <span class="italic text-flame-600">BMI</span>
+      </span>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-1" aria-label="Hlavní navigace">
+      
+        
+          <a href="/" class="nav-link">Kalkulačka BMI</a>
+        
+      
+        
+          <div class="relative group">
+            <button class="nav-link inline-flex items-center gap-1" aria-haspopup="true" aria-expanded="false">
+              Kalkulačky
+              <svg class="h-3.5 w-3.5 transition group-hover:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="absolute left-0 top-full pt-2 hidden group-hover:block group-focus-within:block">
+              <div class="w-64 rounded-2xl border-2 border-ink/10 bg-paper p-2 shadow-stampLg
+                          dark:bg-slate-900 dark:border-slate-800">
+                
+                  <a href="/" class="block rounded-lg px-3 py-2 text-sm font-medium text-ink/80 hover:bg-flame-50 hover:text-flame-700
+                                                dark:text-slate-200 dark:hover:bg-slate-800 dark:hover:text-flame-300">
+                    BMI kalkulačka
+                  </a>
+                
+                  <a href="/kalkulacka-bmr/" class="block rounded-lg px-3 py-2 text-sm font-medium text-ink/80 hover:bg-flame-50 hover:text-flame-700
+                                                dark:text-slate-200 dark:hover:bg-slate-800 dark:hover:text-flame-300">
+                    BMR / TDEE kalkulačka
+                  </a>
+                
+                  <a href="/kalkulacka-idealni-vaha/" class="block rounded-lg px-3 py-2 text-sm font-medium text-ink/80 hover:bg-flame-50 hover:text-flame-700
+                                                dark:text-slate-200 dark:hover:bg-slate-800 dark:hover:text-flame-300">
+                    Ideální váha
+                  </a>
+                
+                  <a href="/kalkulacka-whtr/" class="block rounded-lg px-3 py-2 text-sm font-medium text-ink/80 hover:bg-flame-50 hover:text-flame-700
+                                                dark:text-slate-200 dark:hover:bg-slate-800 dark:hover:text-flame-300">
+                    Obvod pasu k výšce (WHtR)
+                  </a>
+                
+                  <a href="/kalkulacka-deficit/" class="block rounded-lg px-3 py-2 text-sm font-medium text-ink/80 hover:bg-flame-50 hover:text-flame-700
+                                                dark:text-slate-200 dark:hover:bg-slate-800 dark:hover:text-flame-300">
+                    Kalorický deficit
+                  </a>
+                
+                  <a href="/kalkulacka-tep/" class="block rounded-lg px-3 py-2 text-sm font-medium text-ink/80 hover:bg-flame-50 hover:text-flame-700
+                                                dark:text-slate-200 dark:hover:bg-slate-800 dark:hover:text-flame-300">
+                    Tepové zóny
+                  </a>
+                
+              </div>
+            </div>
+          </div>
+        
+      
+        
+          <div class="relative group">
+            <button class="nav-link inline-flex items-center gap-1" aria-haspopup="true" aria-expanded="false">
+              Průvodci
+              <svg class="h-3.5 w-3.5 transition group-hover:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="absolute left-0 top-full pt-2 hidden group-hover:block group-focus-within:block">
+              <div class="w-64 rounded-2xl border-2 border-ink/10 bg-paper p-2 shadow-stampLg
+                          dark:bg-slate-900 dark:border-slate-800">
+                
+                  <a href="/jak-snizit-bmi/" class="block rounded-lg px-3 py-2 text-sm font-medium text-ink/80 hover:bg-flame-50 hover:text-flame-700
+                                                dark:text-slate-200 dark:hover:bg-slate-800 dark:hover:text-flame-300">
+                    Jak snížit BMI
+                  </a>
+                
+                  <a href="/bmi-u-deti/" class="block rounded-lg px-3 py-2 text-sm font-medium text-ink/80 hover:bg-flame-50 hover:text-flame-700
+                                                dark:text-slate-200 dark:hover:bg-slate-800 dark:hover:text-flame-300">
+                    BMI u dětí
+                  </a>
+                
+                  <a href="/bmi-vs-jine-metody/" class="block rounded-lg px-3 py-2 text-sm font-medium text-ink/80 hover:bg-flame-50 hover:text-flame-700
+                                                dark:text-slate-200 dark:hover:bg-slate-800 dark:hover:text-flame-300">
+                    BMI vs. jiné metody
+                  </a>
+                
+                  <a href="/stupne-obezity/" class="block rounded-lg px-3 py-2 text-sm font-medium text-ink/80 hover:bg-flame-50 hover:text-flame-700
+                                                dark:text-slate-200 dark:hover:bg-slate-800 dark:hover:text-flame-300">
+                    Stupně obezity
+                  </a>
+                
+              </div>
+            </div>
+          </div>
+        
+      
+        
+          <a href="/blog/" class="nav-link">Blog</a>
+        
+      
+        
+          <a href="/metodika/" class="nav-link">Metodika</a>
+        
+      
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <button id="theme-toggle" class="btn-ghost h-10 w-10 !p-0" aria-label="Přepnout vzhled">
+        <svg class="h-5 w-5 hidden dark:inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke-linecap="round"/></svg>
+        <svg class="h-5 w-5 dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke-linejoin="round"/></svg>
+      </button>
+      <a href="/#kalkulacka" class="hidden sm:inline-flex btn-primary !py-2 !px-4 text-sm">Spočítat BMI →</a>
+
+      <button id="mobile-menu-toggle" class="lg:hidden btn-ghost h-10 w-10 !p-0" aria-label="Otevřít menu" aria-expanded="false">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="lg:hidden hidden border-t-2 border-ink/10 bg-paper dark:bg-slate-950 dark:border-slate-800">
+    <nav class="container-x py-3 flex flex-col gap-1" aria-label="Mobilní navigace">
+      
+        
+          <a href="/" class="rounded-lg px-3 py-2 text-sm font-semibold text-ink hover:bg-white/60 dark:text-slate-100 dark:hover:bg-slate-800">Kalkulačka BMI</a>
+        
+      
+        
+          <details class="group">
+            <summary class="flex cursor-pointer items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-ink hover:bg-white/60 dark:text-slate-100 dark:hover:bg-slate-800">
+              <span>Kalkulačky</span>
+              <svg class="h-4 w-4 transition group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <div class="ml-3 mt-1 flex flex-col gap-0.5">
+              
+                <a href="/" class="rounded-lg px-3 py-2 text-sm font-medium text-ink/70 hover:bg-flame-50 hover:text-flame-700 dark:text-slate-300 dark:hover:bg-slate-800">BMI kalkulačka</a>
+              
+                <a href="/kalkulacka-bmr/" class="rounded-lg px-3 py-2 text-sm font-medium text-ink/70 hover:bg-flame-50 hover:text-flame-700 dark:text-slate-300 dark:hover:bg-slate-800">BMR / TDEE kalkulačka</a>
+              
+                <a href="/kalkulacka-idealni-vaha/" class="rounded-lg px-3 py-2 text-sm font-medium text-ink/70 hover:bg-flame-50 hover:text-flame-700 dark:text-slate-300 dark:hover:bg-slate-800">Ideální váha</a>
+              
+                <a href="/kalkulacka-whtr/" class="rounded-lg px-3 py-2 text-sm font-medium text-ink/70 hover:bg-flame-50 hover:text-flame-700 dark:text-slate-300 dark:hover:bg-slate-800">Obvod pasu k výšce (WHtR)</a>
+              
+                <a href="/kalkulacka-deficit/" class="rounded-lg px-3 py-2 text-sm font-medium text-ink/70 hover:bg-flame-50 hover:text-flame-700 dark:text-slate-300 dark:hover:bg-slate-800">Kalorický deficit</a>
+              
+                <a href="/kalkulacka-tep/" class="rounded-lg px-3 py-2 text-sm font-medium text-ink/70 hover:bg-flame-50 hover:text-flame-700 dark:text-slate-300 dark:hover:bg-slate-800">Tepové zóny</a>
+              
+            </div>
+          </details>
+        
+      
+        
+          <details class="group">
+            <summary class="flex cursor-pointer items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-ink hover:bg-white/60 dark:text-slate-100 dark:hover:bg-slate-800">
+              <span>Průvodci</span>
+              <svg class="h-4 w-4 transition group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <div class="ml-3 mt-1 flex flex-col gap-0.5">
+              
+                <a href="/jak-snizit-bmi/" class="rounded-lg px-3 py-2 text-sm font-medium text-ink/70 hover:bg-flame-50 hover:text-flame-700 dark:text-slate-300 dark:hover:bg-slate-800">Jak snížit BMI</a>
+              
+                <a href="/bmi-u-deti/" class="rounded-lg px-3 py-2 text-sm font-medium text-ink/70 hover:bg-flame-50 hover:text-flame-700 dark:text-slate-300 dark:hover:bg-slate-800">BMI u dětí</a>
+              
+                <a href="/bmi-vs-jine-metody/" class="rounded-lg px-3 py-2 text-sm font-medium text-ink/70 hover:bg-flame-50 hover:text-flame-700 dark:text-slate-300 dark:hover:bg-slate-800">BMI vs. jiné metody</a>
+              
+                <a href="/stupne-obezity/" class="rounded-lg px-3 py-2 text-sm font-medium text-ink/70 hover:bg-flame-50 hover:text-flame-700 dark:text-slate-300 dark:hover:bg-slate-800">Stupně obezity</a>
+              
+            </div>
+          </details>
+        
+      
+        
+          <a href="/blog/" class="rounded-lg px-3 py-2 text-sm font-semibold text-ink hover:bg-white/60 dark:text-slate-100 dark:hover:bg-slate-800">Blog</a>
+        
+      
+        
+          <a href="/metodika/" class="rounded-lg px-3 py-2 text-sm font-semibold text-ink hover:bg-white/60 dark:text-slate-100 dark:hover:bg-slate-800">Metodika</a>
+        
+      
+    </nav>
+  </div>
+</header>
+
+
+  <main id="main" class="flex-1">
+    
+<article class="container-x py-10 lg:py-14">
+  <header class="max-w-3xl mx-auto">
+    <nav class="text-sm text-slate-500 dark:text-slate-400 mb-4">
+      <a href="/" class="hover:text-brand-700">Domů</a>
+      <span class="mx-2">/</span>
+      <a href="/blog/" class="hover:text-brand-700">Blog</a>
+      <span class="mx-2">/</span>
+      <span>BMI vs. jiné metody měření tělesného složení</span>
+    </nav>
+    <div class="flex flex-wrap items-center gap-3 text-sm text-slate-500 dark:text-slate-400 mb-3">
+      <span class="badge bg-brand-50 text-brand-800 dark:bg-brand-900/40 dark:text-brand-200">BMI</span>
+      <span>Aktualizováno 5. květen 2026</span>
+      <span aria-hidden="true">·</span>
+      <span>9 min čtení</span>
+    </div>
+    <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-ink dark:text-slate-50 text-balance leading-[1.05]">BMI vs. jiné metody měření tělesného složení</h1>
+    <p class="mt-5 text-lg sm:text-xl text-ink/75 dark:text-slate-300 text-pretty max-w-2xl">Index tělesné hmotnosti, známý pod zkratkou BMI, patří mezi nejrozšířenější ukazatele pro rychlé posouzení, zda se hmotnost člověka pohybuje v rozmezí považovaném za zdravé.…</p>
+
+    
+
+    
+      <img src="/img/bmi-vs-jine-metody.webp" alt="BMI vs. jiné metody měření tělesného složení" width="1200" height="630"
+           class="mt-8 rounded-3xl w-full aspect-[16/9] object-cover shadow-card">
+    
+  </header>
+
+  <div class="prose prose-slate dark:prose-invert lg:prose-lg max-w-3xl mx-auto mt-10
+              prose-headings:font-display prose-headings:tracking-tight
+              prose-a:text-brand-700 hover:prose-a:text-brand-800
+              prose-strong:text-slate-900 dark:prose-strong:text-slate-100
+              prose-img:rounded-2xl">
+    <p>Jednoduchost BMI je ovšem zároveň jeho největší slabinou. Tento ukazatel totiž nerozlišuje, z čeho se tělesná hmotnost skládá. Neříká nám nic o poměru svalové a tukové tkáně, neodhalí rozložení tuku v těle a nezohledňuje ani faktory jako věk, pohlaví, etnicitu nebo fyzickou zdatnost. Člověk s výraznou svalovou hmotou může mít podle BMI nadváhu, přestože jeho procento tělesného tuku je velmi nízké. Naopak osoba s normálním BMI může skrývat nebezpečně vysoký podíl viscerálního tuku kolem vnitřních orgánů.</p>
+<p>V tomto článku podrobně porovnáme BMI s dalšími metodami hodnocení tělesného složení. Představíme měření procenta tělesného tuku, obvod pasu a poměr pas/boky, pokročilé laboratorní metody jako DEXA sken a hydrostatické vážení i běžně dostupnou bioimpedanční analýzu. U každé metody se zaměříme na princip fungování, přesnost, dostupnost a praktické využití, abyste si mohli zvolit ten nejlepší přístup pro vaši situaci.</p>
+<h2>Omezení BMI jako ukazatele zdraví</h2>
+<p>BMI bylo původně vyvinuto belgickým matematikem Adolphem Queteletem v 19. století jako statistický nástroj pro popis populačních trendů, nikoli jako diagnostický ukazatel pro jednotlivce. Přesto se během 20. století stalo základním nástrojem pro klasifikaci hmotnostních kategorií ve zdravotnictví. Pro pochopení jeho limitů je důležité vědět, co přesně BMI měří a co naopak opomíjí.</p>
+<p><strong>Nerozlišuje svalovou a tukovou tkáň.</strong> Svalová tkáň je přibližně o 18 % hustší než tuková tkáň. To znamená, že sportovci a lidé s vyšším podílem svalů mohou být podle BMI klasifikováni jako osoby s nadváhou, přestože jejich skutečné riziko metabolických onemocnění je nízké. Klasickým příkladem jsou kulturisté, vzpěrači nebo ragbisté, jejichž BMI často přesahuje hodnotu 30, ačkoliv mají tělesný tuk pod 15 %.</p>
+<p><strong>Nezohledňuje rozložení tuku.</strong> Medicínský výzkum posledních desetiletí jasně prokázal, že rozhodující není pouze celkové množství tuku, ale také místo jeho ukládání. Viscerální tuk, tedy tuk uložený kolem vnitřních orgánů v břišní dutině, představuje výrazně větší zdravotní riziko než podkožní tuk na stehnech či bocích. Dva lidé se stejným BMI mohou mít zcela odlišné zdravotní riziko v závislosti na tom, kde se jejich tuk nachází.</p>
+<p><strong>Nerespektuje věk, pohlaví a etnicitu.</strong> S přibývajícím věkem přirozeně dochází k úbytku svalové hmoty a nárůstu tukové tkáně, i když se celková hmotnost nemění. Ženy mají fyziologicky vyšší podíl tělesného tuku než muži. Výzkumy rovněž ukazují, že obyvatelé východní a jižní Asie čelí vyššímu metabolickému riziku při nižších hodnotách BMI než evropská populace. BMI žádný z těchto faktorů nezohledňuje, což může vést k falešně uklidňujícím nebo naopak zbytečně alarmujícím výsledkům.</p>
+<p><strong>Nezachycuje změny v průběhu času.</strong> Pokud člověk začne pravidelně cvičit, může současně nabírat svalovou hmotu a ztrácet tuk. Jeho BMI se přitom nemusí vůbec změnit, nebo se dokonce zvýší, přestože jeho zdravotní stav se objektivně zlepšil. Proto je důležité BMI chápat jako orientační hodnotu a doplňovat ji dalšími metodami měření.</p>
+<p>Zvláštní pozornost si zaslouží <a href="/bmi-u-deti/">hodnocení BMI u dětí a dospívajících</a>, kde je nutné používat věkově specifické percentily namísto pevných kategorií pro dospělé.</p>
+<img src="/img/mereni-tela.webp" alt="Měření obvodu pasu a kaliperometrie" loading="lazy">
+<h2>Procento tělesného tuku</h2>
+<p>Procento tělesného tuku je jedním z nejpřesnějších způsobů, jak posoudit skutečné tělesné složení. Na rozdíl od BMI přímo udává, jakou část celkové hmotnosti tvoří tuková tkáň. Tato hodnota má přímou souvislost se zdravotním rizikem, protože právě nadměrný tuk, nikoli samotná hmotnost, je spojený s rozvojem kardiovaskulárních onemocnění, cukrovky 2. typu, vysokého krevního tlaku a dalších civilizačních chorob.</p>
+<p>Zdravé rozmezí tělesného tuku se výrazně liší podle pohlaví. Ženy potřebují vyšší podíl tuku pro správnou funkci hormonálního systému, reprodukci a ochranu vnitřních orgánů. Následující tabulka uvádí orientační hodnoty pro různé kategorie:</p>
+<table>
+<thead><tr><th>Kategorie</th><th>Muži</th><th>Ženy</th></tr></thead>
+<tbody>
+<tr><td>Esenciální tuk</td><td>2–5 %</td><td>10–13 %</td></tr>
+<tr><td>Atletické rozmezí</td><td>6–13 %</td><td>14–20 %</td></tr>
+<tr><td>Fitness rozmezí</td><td>14–17 %</td><td>21–24 %</td></tr>
+<tr><td>Průměrné rozmezí</td><td>18–24 %</td><td>25–31 %</td></tr>
+<tr><td>Obezita</td><td>25 % a více</td><td>32 % a více</td></tr>
+</tbody>
+</table>
+<h3>Metody měření tělesného tuku</h3>
+<ul>
+<li><strong>Měření kožních řas kaliperem</strong> – speciální kleště změří tloušťku kožní řasy na několika místech těla (triceps, lopatka, kyčle, břicho). Přesnost: ±3–5 procentních bodů, závisí na zkušenosti měřící osoby.</li>
+<li><strong>Bioimpedanční analýza (BIA)</strong> – slabý elektrický proud procházející tělem měří odpor tkání. Tuková tkáň klade větší odpor než svalová. Dostupná v domácích váhách i profesionálních přístrojích.</li>
+<li><strong>DEXA sken</strong> – zlatý standard. Dva paprsky rentgenového záření přesně rozliší kostní, tukovou a beztukovou tkáň po jednotlivých segmentech těla.</li>
+<li><strong>Hydrostatické (podvodní) vážení</strong> – využívá Archimédova zákona. Velmi přesná metoda, ale prakticky náročná (nutnost úplného ponoření a maximálního výdechu).</li>
+</ul>
+<h2>Obvod pasu a poměr pas/boky (WHR)</h2>
+<p>Měření obvodu pasu je jednou z nejjednodušších a přitom nejúčinnějších metod, jak odhadnout množství viscerálního tuku, tedy tuku uloženého v břišní dutině kolem vnitřních orgánů. Právě viscerální tuk je z hlediska zdraví nejnebezpečnější, protože produkuje zánětlivé látky a hormony, které zvyšují riziko srdečních onemocnění, mozkové mrtvice, cukrovky 2. typu a některých typů rakoviny.</p>
+<h3>Prahové hodnoty obvodu pasu (WHO)</h3>
+<ul>
+<li><strong>Muži</strong> – zvýšené riziko: nad <strong>94 cm</strong>, výrazně zvýšené: nad <strong>102 cm</strong></li>
+<li><strong>Ženy</strong> – zvýšené riziko: nad <strong>80 cm</strong>, výrazně zvýšené: nad <strong>88 cm</strong></li>
+</ul>
+<p>Měření se provádí měřicí páskou v úrovni pupku, nejlépe ráno nalačno ve stoje při normálním výdechu.</p>
+<p>Ještě přesnější informaci o rozložení tuku poskytuje poměr pasu a boků, anglicky Waist-to-Hip Ratio (WHR). Tento ukazatel porovnává obvod pasu s obvodem boků a pomáhá rozlišit tzv. jablkový typ obezity (tuk se ukládá převážně v oblasti břicha) od hruškového typu (tuk na bocích a stehnech). Jablkový typ je spojený s výrazně vyšším rizikem metabolických komplikací.</p>
+<p><strong>WHR (Waist-to-Hip Ratio):</strong></p>
+<p>WHR = obvod pasu (cm) ÷ obvod boků (cm)</p>
+<p>Zvýšené riziko: muži > 0,90 | ženy > 0,85</p>
+<p>Výhodou měření obvodu pasu a WHR je jejich naprostá jednoduchost a nulové náklady. Stačí běžná krejčovská metr a výsledek získáte za pár sekund. Tyto ukazatele se navíc dobře hodí pro sledování pokroku při hubnutí, protože úbytek viscerálního tuku se na obvodu pasu projeví dříve než na hodnotě BMI. Studie ukazují, že kombinace BMI s obvodem pasu poskytuje výrazně lepší předpověď zdravotního rizika než samotné BMI. Proto řada lékařů a dietologů doporučuje měřit obvod pasu jako standardní součást preventivních prohlídek.</p>
+<p>Je ovšem třeba pamatovat na to, že ani obvod pasu nerozliší podkožní a viscerální tuk. Dva lidé se stejným obvodem pasu mohou mít odlišné množství viscerálního tuku. Pro přesné stanovení viscerálního tuku je nutné využít zobrazovací metody, jako je CT nebo MRI vyšetření.</p>
+<h2>DEXA sken a hydrostatické vážení</h2>
+<h3>DEXA sken (Dual-Energy X-ray Absorptiometry)</h3>
+<p>DEXA je dnes považován za referenční metodu měření tělesného složení. Původně vyvinut pro diagnostiku osteoporózy, dnes slouží ke komplexní analýze tělesného složení. Přístroj vysílá dva paprsky rentgenového záření o různé energii – kostní, tuková a beztuková tkáň je pohlcují různou měrou.</p>
+<ul>
+<li><strong>Výhody:</strong> regionální analýza (trup, paže, nohy), odhad viscerálního tuku, přesnost <strong>±1–2 procentní body</strong>, vyšetření trvá 10–20 minut</li>
+<li><strong>Nevýhody:</strong> omezená dostupnost, cena <strong>1 000–3 000 Kč</strong> v ČR, nízká dávka ionizujícího záření (srovnatelná s jedním dnem přirozeného pozadí)</li>
+</ul>
+<h3>Hydrostatické (podvodní) vážení</h3>
+<p>Dříve zlatý standard, dnes nahrazený DEXA skenem. Vychází z Archimédova zákona – člověk je zvážen na vzduchu a po ponoření do vody. Tuková tkáň je méně hustá než voda, svalová a kostní tkáň jsou hustější, takže z rozdílu hmotností se přesně vypočítá hustota těla a podíl tuku.</p>
+<ul>
+<li><strong>Výhody:</strong> vysoká přesnost <strong>±1,5–2 procentní body</strong>, srovnatelná s DEXA</li>
+<li><strong>Nevýhody:</strong> nutnost úplného ponoření a maximálního výdechu, dostupnost pouze v několika specializovaných zařízeních (univerzity, sportovní výzkumná centra)</li>
+</ul>
+<h2>Bioimpedanční analýza (BIA)</h2>
+<h3>Jak BIA funguje</h3>
+<p>Přístrojem prochází velmi slabý elektrický proud (zcela bezpečný a nebolestivý), který tělem putuje různou rychlostí v závislosti na typu tkáně. <strong>Svalová tkáň</strong> (bohatá na vodu a elektrolyty) klade nízký odpor, zatímco <strong>tuková tkáň</strong> klade odpor vyšší. Z naměřené impedance přístroj vypočítá odhad tělesného tuku, beztukové hmoty a celkové tělesné vody.</p>
+<h3>Domácí vs. profesionální přístroje</h3>
+<ul>
+<li><strong>Domácí váhy</strong> – měří proud jen přes nohy, omezená přesnost (nezachytí horní část těla)</li>
+<li><strong>Profesionální segmentální BIA</strong> – 8 elektrod na chodidlech i rukách, měří 5 segmentů těla (obě paže, obě nohy, trup), podstatně přesnější výsledky</li>
+</ul>
+<h3>Přesnost a omezení</h3>
+<p>Přesnost BIA je silně ovlivněna stavem hydratace. Profesionální přístroje dosahují přesnosti <strong>±3–5 procentních bodů</strong> oproti DEXA, domácí váhy mohou vykazovat vyšší odchylky.</p>
+<p>Faktory ovlivňující přesnost měření:</p>
+<ul>
+<li><strong>Dehydratace</strong> – nadhodnotí podíl tuku</li>
+<li><strong>Nadměrné pití tekutin</strong> nebo intenzivní cvičení – podhodnotí podíl tuku</li>
+<li>Konzumace <strong>alkoholu a kofeinu</strong></li>
+<li><strong>Menstruační cyklus</strong> u žen</li>
+<li><strong>Teplota pokožky</strong></li>
+</ul>
+<p>Doporučení: měřte vždy ve stejnou dobu, nejlépe <strong>ráno nalačno</strong>, po vyprázdnění močového měchýře a před cvičením. BIA je ideální pro sledování trendů v čase – i když absolutní hodnota nemusí být dokonale přesná, změny měřené za stejných podmínek spolehlivě odrážejí skutečné změny v tělesném složení.</p>
+<h2>Srovnávací tabulka všech metod</h2>
+<p>Následující tabulka přehledně shrnuje hlavní vlastnosti všech popsaných metod měření tělesného složení. Při výběru metody je důležité zvážit, co od měření očekáváte. Potřebujete rychlý orientační přehled, nebo přesnou diagnostiku? Hledáte levné domácí řešení, nebo jste ochotni investovat do profesionálního vyšetření? Každá metoda má své místo a ideální je je vzájemně kombinovat.</p>
+<table>
+<thead><tr><th>Metoda</th><th>Přesnost</th><th>Dostupnost</th><th>Cena</th><th>Vhodnost</th></tr></thead>
+<tbody>
+<tr><td>BMI</td><td>Nízká</td><td>Velmi vysoká</td><td>Zdarma</td><td>Základní screening</td></tr>
+<tr><td>Obvod pasu / WHR</td><td>Střední</td><td>Velmi vysoká</td><td>Zdarma</td><td>Riziko viscerálního tuku</td></tr>
+<tr><td>Kožní řasy (kaliper)</td><td>Střední</td><td>Střední</td><td>Nízká</td><td>Odhad tělesného tuku</td></tr>
+<tr><td>BIA</td><td>Střední</td><td>Vysoká</td><td>Nízká–střední</td><td>Domácí monitoring</td></tr>
+<tr><td>DEXA</td><td>Vysoká</td><td>Nízká</td><td>Vysoká</td><td>Přesná analýza složení</td></tr>
+<tr><td>Hydrostatické vážení</td><td>Vysoká</td><td>Velmi nízká</td><td>Vysoká</td><td>Výzkum, sport</td></tr>
+</tbody>
+</table>
+<p>Z tabulky je patrné, že neexistuje jedna univerzálně nejlepší metoda. BMI zůstává užitečným screeningovým nástrojem pro velké populace a jako první orientační vodítko. Pro domácí sledování je ideální kombinace BMI s měřením obvodu pasu a případně BIA váhou. Pokud potřebujete skutečně přesnou analýzu tělesného složení, například pro sportovní diagnostiku nebo při řešení zdravotních komplikací spojených s obezitou, je DEXA sken jednoznačně nejlepší volbou.</p>
+<p>Za zmínku stojí, že žádná z těchto metod sama o sobě nenahradí komplexní lékařské vyšetření. Hodnoty jako krevní tlak, hladina cholesterolu, glykémie nalačno, zánětlivé markery a další laboratorní parametry poskytují o zdravotním stavu informace, které žádné měření tělesného složení nemůže zachytit. Optimální přístup proto kombinuje hodnocení tělesného složení s laboratorními výsledky a celkovým klinickým posouzením.</p>
+<h2>Kterou metodu zvolit?</h2>
+<p>Výběr správné metody závisí na vašich cílech, finančních možnostech a dostupnosti.</p>
+<h3>Běžná populace a domácí sledování</h3>
+<ul>
+<li>Kombinujte <strong>BMI + měření obvodu pasu</strong> – bezplatné, rychlé, lepší obrázek než BMI samotné.</li>
+<li>Pro pokročilejší sledování si pořiďte kvalitní <strong>BIA váhu</strong> s elektrodami na rukojetích.</li>
+<li>Měřte se pravidelně za stejných podmínek (1× týdně ráno nalačno) a zaměřte se na <strong>dlouhodobé trendy</strong>.</li>
+</ul>
+<h3>Sportovci a aktivní lidé</h3>
+<ul>
+<li>BMI může být zavádějící – zaměřte se na <strong>procento tělesného tuku</strong> (segmentální BIA nebo kaliper).</li>
+<li>Absolvujte <strong>DEXA sken</strong> jednou za 3–6 měsíců pro přesnou analýzu.</li>
+<li>Sledujte obvod pasu a výkonnostní ukazatele.</li>
+</ul>
+<h3>Osoby s nadváhou a obezitou</h3>
+<ul>
+<li>Klíčový je <strong>obvod pasu</strong> – pokles byť jen o 5 cm znamená významné snížení zdravotního rizika.</li>
+<li>Na začátku léčby může být přínosný <strong>DEXA sken</strong> jako výchozí hodnota pro sledování pokroku.</li>
+<li>Praktické tipy pro snížení BMI najdete v našem <a href="/jak-snizit-bmi/">kompletním průvodci hubnutím</a>.</li>
+</ul>
+<h3>Klinické a výzkumné účely</h3>
+<ul>
+<li>Preferovány jsou přesné metody: <strong>DEXA sken</strong> nebo <strong>profesionální segmentální BIA</strong>.</li>
+<li>Hydrostatické vážení se stále využívá jako referenční metoda pro validaci jiných postupů.</li>
+</ul>
+<p>Bez ohledu na zvolenou metodu platí, že žádné číslo by nemělo být vaším jediným ukazatelem zdraví. Jak se cítíte, jaké jsou vaše laboratorní výsledky a celková pohoda – to vše je důležité.</p>
+<p>Chcete si spočítat své BMI jako výchozí bod? Vyzkoušejte naši <a href="/">bezplatnou BMI kalkulačku</a>, která vám okamžitě ukáže vaši hmotnostní kategorii a doporučí další kroky.</p>
+  </div>
+
+  
+
+  <div class="max-w-3xl mx-auto mt-12 rounded-3xl bg-brand-gradient p-8 text-white text-center shadow-card-lg">
+    <h2 class="font-display text-2xl sm:text-3xl font-bold">Spočítejte si své BMI</h2>
+    <p class="mt-2 text-brand-50/90">Přesný výpočet zdarma podle WHO. Zadejte výšku a váhu a uvidíte výsledek za 2 vteřiny.</p>
+    <a href="/#kalkulacka" class="inline-flex mt-4 items-center gap-2 rounded-2xl bg-white px-6 py-3 font-semibold text-brand-700 hover:bg-brand-50 transition shadow-card">
+      Otevřít BMI kalkulačku →
+    </a>
+  </div>
+</article>
+
+  </main>
+
+  <footer class="mt-24 relative bg-ink text-paper">
+  
+  <svg viewBox="0 0 1200 40" preserveAspectRatio="none" class="block w-full h-8 -mt-px" aria-hidden="true">
+    <path d="M0 40 Q 200 0, 400 20 T 800 20 T 1200 20 L1200 40 Z" fill="#0b1420"/>
+  </svg>
+
+  <div class="container-x py-14">
+    <div class="grid gap-10 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <a href="/" class="flex items-center gap-2.5">
+          <img src="/img/logo.png" alt="" width="40" height="40" class="h-10 w-10">
+          <span class="font-display text-xl font-bold">Ideální <span class="italic text-flame-400">BMI</span></span>
+        </a>
+        <p class="mt-4 text-sm text-paper/70 max-w-xs text-pretty">
+          Zdravotní kalkulačky bez bullshitu. Data z WHO, CDC a NIH. Žádná registrace, žádný prodej e-mailů.
+        </p>
+        <div class="mt-6 flex flex-wrap items-center gap-2 text-xs text-paper/50">
+          <span class="inline-block h-1.5 w-1.5 rounded-full bg-flame-400"></span>
+          <span>Vyrobeno v Česku</span>
+          <span class="text-paper/30">·</span>
+          <span>2026</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 lg:col-span-8">
+        <div>
+          <h3 class="font-display font-bold text-paper text-sm mb-3 uppercase tracking-wider">Kalkulačky</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a class="text-paper/70 hover:text-flame-400" href="/">BMI kalkulačka</a></li><li><a class="text-paper/70 hover:text-flame-400" href="/kalkulacka-bmr/">BMR / TDEE</a></li><li><a class="text-paper/70 hover:text-flame-400" href="/kalkulacka-idealni-vaha/">Ideální váha</a></li><li><a class="text-paper/70 hover:text-flame-400" href="/kalkulacka-whtr/">Obvod pasu k výšce</a></li><li><a class="text-paper/70 hover:text-flame-400" href="/kalkulacka-deficit/">Kalorický deficit</a></li><li><a class="text-paper/70 hover:text-flame-400" href="/kalkulacka-tep/">Tepové zóny</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-display font-bold text-paper text-sm mb-3 uppercase tracking-wider">BMI</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a class="text-paper/70 hover:text-flame-400" href="/jak-snizit-bmi/">Jak snížit BMI</a></li><li><a class="text-paper/70 hover:text-flame-400" href="/bmi-u-deti/">BMI u dětí</a></li><li><a class="text-paper/70 hover:text-flame-400" href="/bmi-vs-jine-metody/">BMI vs. jiné metody</a></li><li><a class="text-paper/70 hover:text-flame-400" href="/stupne-obezity/">Stupně obezity</a></li><li><a class="text-paper/70 hover:text-flame-400" href="/bazalni-metabolismus/">Bazální metabolismus</a></li><li><a class="text-paper/70 hover:text-flame-400" href="/metabolismus/">Metabolismus</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-display font-bold text-paper text-sm mb-3 uppercase tracking-wider">Hubnutí</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a class="text-paper/70 hover:text-flame-400" href="/hubnuti-chuzi/">Hubnutí chůzí</a></li><li><a class="text-paper/70 hover:text-flame-400" href="/hubnuti-po-40/">Hubnutí po 40</a></li><li><a class="text-paper/70 hover:text-flame-400" href="/hubnuti-po-50/">Hubnutí po 50</a></li><li><a class="text-paper/70 hover:text-flame-400" href="/hubnuti-po-porodu/">Hubnutí po porodu</a></li><li><a class="text-paper/70 hover:text-flame-400" href="/pocitani-kalorii/">Počítání kalorií</a></li><li><a class="text-paper/70 hover:text-flame-400" href="/nejlepsi-sport-na-hubnuti/">Nejlepší sport na hubnutí</a></li><li><a class="text-paper/70 hover:text-flame-400" href="/tepova-frekvence-spalovani/">Tepová frekvence</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-display font-bold text-paper text-sm mb-3 uppercase tracking-wider">Web</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a class="text-paper/70 hover:text-flame-400" href="/metodika/">Metodika a zdroje</a></li><li><a class="text-paper/70 hover:text-flame-400" href="/blog/">Blog</a></li><li><a class="text-paper/70 hover:text-flame-400" href="/ochrana-soukromi/">Ochrana soukromí</a></li><li><a class="text-paper/70 hover:text-flame-400" href="/podminky/">Obchodní podmínky</a></li>
+            <li><button id="cookie-reopen" class="text-paper/70 hover:text-flame-400">Nastavení cookies</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 border-t border-paper/10 pt-6 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between text-xs text-paper/50">
+      <p>
+        Provozovatel: CodeWhiskers · IČ 05684447 · Jindice 115, 285 04 Rašovice-Uhlířské Janovice ·
+        <a class="underline hover:text-flame-400" href="mailto:hello@codewhiskers.app">hello@codewhiskers.app</a>
+      </p>
+      <p>© 2026 · Informace orientační, nenahrazují lékařské vyšetření.</p>
+    </div>
+  </div>
+</footer>
+
+  <div class="cookie-banner fixed inset-x-0 bottom-0 z-50 hidden p-4" id="cookie-banner">
+  <div class="container-x">
+    <div class="card p-5 sm:p-6 sm:flex sm:items-start sm:gap-6">
+      <div class="flex-1">
+        <h3 class="font-display text-base font-bold text-slate-900 dark:text-slate-100">Cookies, které vás respektují</h3>
+        <p class="mt-1 text-sm text-slate-600 dark:text-slate-400 text-pretty">
+          Používáme cookies, abychom rozuměli, jak web vylepšit, a mohli zobrazit relevantní reklamy.
+          Vy si vybíráte, co povolíte – kdykoli to změníte v patičce.
+        </p>
+      </div>
+      <div class="mt-4 sm:mt-0 flex flex-wrap gap-2 sm:flex-col sm:items-stretch sm:w-56">
+        <button class="btn-primary w-full" id="cookie-accept-all">Povolit vše</button>
+        <button class="btn-secondary w-full" id="cookie-open-settings">Nastavení</button>
+        <button class="btn-ghost w-full" id="cookie-reject">Zamítnout vše</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cookie-settings-overlay fixed inset-0 z-50 hidden bg-slate-900/50 backdrop-blur-sm p-4" id="cookie-settings">
+  <div class="cookie-settings-panel mx-auto mt-20 max-w-lg card overflow-hidden">
+    <div class="flex items-center justify-between px-6 py-4 border-b border-slate-200 dark:border-slate-800">
+      <h3 class="font-display text-lg font-bold">Nastavení soukromí</h3>
+      <button id="cookie-close-settings" class="btn-ghost h-9 w-9 !p-0" aria-label="Zavřít">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div class="px-6 py-5 space-y-5">
+      <label class="flex items-start gap-4">
+        <input type="checkbox" checked disabled id="cookie-necessary" class="mt-1 h-5 w-5 rounded text-brand-600">
+        <span>
+          <span class="block font-semibold">Nezbytné</span>
+          <span class="block text-sm text-slate-600 dark:text-slate-400">Zajišťují základní funkce webu (např. platby). Nelze vypnout.</span>
+        </span>
+      </label>
+      <label class="flex items-start gap-4">
+        <input type="checkbox" id="cookie-analytics" class="mt-1 h-5 w-5 rounded text-brand-600">
+        <span>
+          <span class="block font-semibold">Analytické</span>
+          <span class="block text-sm text-slate-600 dark:text-slate-400">Pomáhají nám rozumět tomu, jak web používáte, abychom ho mohli zlepšovat.</span>
+        </span>
+      </label>
+      <label class="flex items-start gap-4">
+        <input type="checkbox" id="cookie-ads" class="mt-1 h-5 w-5 rounded text-brand-600">
+        <span>
+          <span class="block font-semibold">Reklamní</span>
+          <span class="block text-sm text-slate-600 dark:text-slate-400">Umožňují zobrazit reklamy, které vás mohou zajímat. Bez nich uvidíte obecnou reklamu.</span>
+        </span>
+      </label>
+    </div>
+    <div class="px-6 py-4 bg-slate-50 dark:bg-slate-900/50 border-t border-slate-200 dark:border-slate-800 flex flex-wrap gap-2 justify-end">
+      <button class="btn-ghost" id="cookie-settings-reject">Zamítnout vše</button>
+      <button class="btn-secondary" id="cookie-save-settings">Potvrdit volbu</button>
+      <button class="btn-primary" id="cookie-settings-accept-all">Povolit vše</button>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/cookies.js"></script>
+  
+  <script src="/js/app.js" defer></script>
+</body>
+</html>
