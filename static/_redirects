@@ -1,0 +1,19 @@
+# 301 redirects from legacy .html URLs to new clean URLs.
+# Preserves SEO juice from indexed pages and prevents 404s for any external links.
+
+/blog.html                          /blog/                          301
+/jak-snizit-bmi.html                /jak-snizit-bmi/                301
+/bmi-u-deti.html                    /bmi-u-deti/                    301
+/bmi-vs-jine-metody.html            /bmi-vs-jine-metody/            301
+/hubnuti-chuzi.html                 /hubnuti-chuzi/                 301
+/hubnuti-po-40.html                 /hubnuti-po-40/                 301
+/hubnuti-po-50.html                 /hubnuti-po-50/                 301
+/hubnuti-po-porodu.html             /hubnuti-po-porodu/             301
+/metabolismus.html                  /metabolismus/                  301
+/bazalni-metabolismus.html          /bazalni-metabolismus/          301
+/nejlepsi-sport-na-hubnuti.html     /nejlepsi-sport-na-hubnuti/     301
+/pocitani-kalorii.html              /pocitani-kalorii/              301
+/tepova-frekvence-spalovani.html    /tepova-frekvence-spalovani/    301
+/stupne-obezity.html                /stupne-obezity/                301
+/ochrana-soukromi.html              /ochrana-soukromi/              301
+/podminky.html                      /podminky/                      301
