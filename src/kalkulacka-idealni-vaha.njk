@@ -1,0 +1,52 @@
+---
+layout: layouts/calculator.njk
+title: "Kalkulačka ideální váhy – Devine, Robinson, Miller"
+description: "Spočítejte si ideální tělesnou hmotnost podle tří klasických vzorců a porovnejte s rozsahem zdravého BMI."
+permalink: /kalkulacka-idealni-vaha/
+tag: "Hmotnost"
+perex: "Ideální váha není jedna konkrétní hodnota. Každý vzorec ji počítá trochu jinak – ukážeme vám všechny tři, abyste si mohli udělat reálný cíl."
+---
+
+<div class="card p-6 sm:p-8">
+  <form id="form-iw" class="grid gap-4 sm:grid-cols-2" novalidate>
+    <div><label class="label" for="iw-gender">Pohlaví</label>
+      <select class="input" id="iw-gender" required>
+        <option value="">Vyberte…</option><option value="male">Muž</option><option value="female">Žena</option>
+      </select>
+    </div>
+    <div><label class="label" for="iw-height">Výška (cm)</label><input class="input" type="number" id="iw-height" min="120" max="220" placeholder="např. 175" required></div>
+    <div class="sm:col-span-2"><button type="submit" class="btn-primary w-full">Spočítat ideální váhu</button></div>
+  </form>
+  <div id="iw-result" class="hidden mt-8 pt-8 border-t border-slate-200 dark:border-slate-800 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    <div class="rounded-2xl bg-brand-50 dark:bg-brand-900/30 p-5"><p class="text-xs uppercase tracking-widest text-brand-700 dark:text-brand-300">Devine (1974)</p><p class="font-display text-2xl font-bold mt-1" id="iw-devine">–</p></div>
+    <div class="rounded-2xl bg-brand-50 dark:bg-brand-900/30 p-5"><p class="text-xs uppercase tracking-widest text-brand-700 dark:text-brand-300">Robinson (1983)</p><p class="font-display text-2xl font-bold mt-1" id="iw-robinson">–</p></div>
+    <div class="rounded-2xl bg-brand-50 dark:bg-brand-900/30 p-5"><p class="text-xs uppercase tracking-widest text-brand-700 dark:text-brand-300">Miller (1983)</p><p class="font-display text-2xl font-bold mt-1" id="iw-miller">–</p></div>
+    <div class="rounded-2xl bg-emerald-50 dark:bg-emerald-900/30 p-5"><p class="text-xs uppercase tracking-widest text-emerald-700 dark:text-emerald-300">Zdravé BMI 18,5–25</p><p class="font-display text-2xl font-bold mt-1" id="iw-bmi">–</p></div>
+  </div>
+</div>
+
+<div class="prose prose-slate dark:prose-invert max-w-none mt-10">
+  <h2>Co je ideální váha?</h2>
+  <p>Vzorce vznikly pro dávkování léků, ne jako fitness cíl. Berou v úvahu jen výšku a pohlaví – ne věk, kostní stavbu ani podíl svalů. Proto je rozumné výsledek vnímat jako <strong>střed rozsahu</strong>, ne pevný cíl. Pokud spadáte do rozsahu zdravého BMI (18,5–24,9), jste v pohodě.</p>
+</div>
+
+<script>
+document.getElementById('form-iw').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var g = document.getElementById('iw-gender').value;
+  var h = parseFloat(document.getElementById('iw-height').value);
+  if (!g || !h) return;
+  var inOver5ft = Math.max(0, (h - 152.4) / 2.54); // inches above 5'
+  var devine = g === 'male' ? 50 + 2.3 * inOver5ft : 45.5 + 2.3 * inOver5ft;
+  var robinson = g === 'male' ? 52 + 1.9 * inOver5ft : 49 + 1.7 * inOver5ft;
+  var miller = g === 'male' ? 56.2 + 1.41 * inOver5ft : 53.1 + 1.36 * inOver5ft;
+  var hM = h / 100;
+  var bmiLow = (18.5 * hM * hM).toFixed(1).replace('.', ',');
+  var bmiHigh = (24.9 * hM * hM).toFixed(1).replace('.', ',');
+  document.getElementById('iw-devine').textContent = devine.toFixed(1).replace('.', ',') + ' kg';
+  document.getElementById('iw-robinson').textContent = robinson.toFixed(1).replace('.', ',') + ' kg';
+  document.getElementById('iw-miller').textContent = miller.toFixed(1).replace('.', ',') + ' kg';
+  document.getElementById('iw-bmi').textContent = bmiLow + '–' + bmiHigh + ' kg';
+  document.getElementById('iw-result').classList.remove('hidden');
+});
+</script>

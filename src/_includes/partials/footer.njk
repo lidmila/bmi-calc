@@ -1,0 +1,62 @@
+<footer class="mt-24 relative bg-ink text-paper">
+  {# Wave divider on top #}
+  <svg viewBox="0 0 1200 40" preserveAspectRatio="none" class="block w-full h-8 -mt-px" aria-hidden="true">
+    <path d="M0 40 Q 200 0, 400 20 T 800 20 T 1200 20 L1200 40 Z" fill="#0b1420"/>
+  </svg>
+
+  <div class="container-x py-14">
+    <div class="grid gap-10 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <a href="/" class="flex items-center gap-2.5">
+          <img src="/img/logo.png" alt="" width="40" height="40" class="h-10 w-10">
+          <span class="font-display text-xl font-bold">Ideální <span class="italic text-flame-400">BMI</span></span>
+        </a>
+        <p class="mt-4 text-sm text-paper/70 max-w-xs text-pretty">
+          Zdravotní kalkulačky bez bullshitu. Data z WHO, CDC a NIH. Žádná registrace, žádný prodej e-mailů.
+        </p>
+        <div class="mt-6 flex flex-wrap items-center gap-2 text-xs text-paper/50">
+          <span class="inline-block h-1.5 w-1.5 rounded-full bg-flame-400"></span>
+          <span>Vyrobeno v Česku</span>
+          <span class="text-paper/30">·</span>
+          <span>{% year %}</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 lg:col-span-8">
+        <div>
+          <h3 class="font-display font-bold text-paper text-sm mb-3 uppercase tracking-wider">Kalkulačky</h3>
+          <ul class="space-y-2 text-sm">
+            {% for l in nav.footer.kalkulacky %}<li><a class="text-paper/70 hover:text-flame-400" href="{{ l.url }}">{{ l.label }}</a></li>{% endfor %}
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-display font-bold text-paper text-sm mb-3 uppercase tracking-wider">BMI</h3>
+          <ul class="space-y-2 text-sm">
+            {% for l in nav.footer.pruvodci %}<li><a class="text-paper/70 hover:text-flame-400" href="{{ l.url }}">{{ l.label }}</a></li>{% endfor %}
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-display font-bold text-paper text-sm mb-3 uppercase tracking-wider">Hubnutí</h3>
+          <ul class="space-y-2 text-sm">
+            {% for l in nav.footer.hubnuti %}<li><a class="text-paper/70 hover:text-flame-400" href="{{ l.url }}">{{ l.label }}</a></li>{% endfor %}
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-display font-bold text-paper text-sm mb-3 uppercase tracking-wider">Web</h3>
+          <ul class="space-y-2 text-sm">
+            {% for l in nav.footer.onas %}<li><a class="text-paper/70 hover:text-flame-400" href="{{ l.url }}">{{ l.label }}</a></li>{% endfor %}
+            <li><button id="cookie-reopen" class="text-paper/70 hover:text-flame-400">Nastavení cookies</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 border-t border-paper/10 pt-6 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between text-xs text-paper/50">
+      <p>
+        Provozovatel: {{ site.org.name }} · IČ {{ site.org.ico }} · {{ site.org.address }} ·
+        <a class="underline hover:text-flame-400" href="mailto:{{ site.org.email }}">{{ site.org.email }}</a>
+      </p>
+      <p>© {% year %} · Informace orientační, nenahrazují lékařské vyšetření.</p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,39 @@
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.ga4 }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('consent', 'default', {
+    'analytics_storage': 'denied',
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied'
+  });
+  (function() {
+    try {
+      var raw = localStorage.getItem('cookie_consent');
+      if (raw) {
+        var c = JSON.parse(raw);
+        gtag('consent', 'update', {
+          'analytics_storage': c.analytics ? 'granted' : 'denied',
+          'ad_storage': c.ads ? 'granted' : 'denied',
+          'ad_user_data': c.ads ? 'granted' : 'denied',
+          'ad_personalization': c.ads ? 'granted' : 'denied'
+        });
+      }
+    } catch(e) {}
+  })();
+  gtag('config', '{{ site.analytics.ga4 }}');
+  // Dark mode FOUC guard – set class before paint
+  (function() {
+    try {
+      var d = localStorage.getItem('theme');
+      if (d === 'dark' || (!d && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+    } catch(e) {}
+  })();
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.analytics.adsense }}" crossorigin="anonymous"></script>
+<meta name="google-site-verification" content="{{ site.analytics.googleVerify }}">
+<meta name="google-adsense-account" content="{{ site.analytics.adsense }}">

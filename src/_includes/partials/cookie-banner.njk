@@ -1,0 +1,57 @@
+<div class="cookie-banner fixed inset-x-0 bottom-0 z-50 hidden p-4" id="cookie-banner">
+  <div class="container-x">
+    <div class="card p-5 sm:p-6 sm:flex sm:items-start sm:gap-6">
+      <div class="flex-1">
+        <h3 class="font-display text-base font-bold text-slate-900 dark:text-slate-100">Cookies, které vás respektují</h3>
+        <p class="mt-1 text-sm text-slate-600 dark:text-slate-400 text-pretty">
+          Používáme cookies, abychom rozuměli, jak web vylepšit, a mohli zobrazit relevantní reklamy.
+          Vy si vybíráte, co povolíte – kdykoli to změníte v patičce.
+        </p>
+      </div>
+      <div class="mt-4 sm:mt-0 flex flex-wrap gap-2 sm:flex-col sm:items-stretch sm:w-56">
+        <button class="btn-primary w-full" id="cookie-accept-all">Povolit vše</button>
+        <button class="btn-secondary w-full" id="cookie-open-settings">Nastavení</button>
+        <button class="btn-ghost w-full" id="cookie-reject">Zamítnout vše</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cookie-settings-overlay fixed inset-0 z-50 hidden bg-slate-900/50 backdrop-blur-sm p-4" id="cookie-settings">
+  <div class="cookie-settings-panel mx-auto mt-20 max-w-lg card overflow-hidden">
+    <div class="flex items-center justify-between px-6 py-4 border-b border-slate-200 dark:border-slate-800">
+      <h3 class="font-display text-lg font-bold">Nastavení soukromí</h3>
+      <button id="cookie-close-settings" class="btn-ghost h-9 w-9 !p-0" aria-label="Zavřít">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div class="px-6 py-5 space-y-5">
+      <label class="flex items-start gap-4">
+        <input type="checkbox" checked disabled id="cookie-necessary" class="mt-1 h-5 w-5 rounded text-brand-600">
+        <span>
+          <span class="block font-semibold">Nezbytné</span>
+          <span class="block text-sm text-slate-600 dark:text-slate-400">Zajišťují základní funkce webu (např. platby). Nelze vypnout.</span>
+        </span>
+      </label>
+      <label class="flex items-start gap-4">
+        <input type="checkbox" id="cookie-analytics" class="mt-1 h-5 w-5 rounded text-brand-600">
+        <span>
+          <span class="block font-semibold">Analytické</span>
+          <span class="block text-sm text-slate-600 dark:text-slate-400">Pomáhají nám rozumět tomu, jak web používáte, abychom ho mohli zlepšovat.</span>
+        </span>
+      </label>
+      <label class="flex items-start gap-4">
+        <input type="checkbox" id="cookie-ads" class="mt-1 h-5 w-5 rounded text-brand-600">
+        <span>
+          <span class="block font-semibold">Reklamní</span>
+          <span class="block text-sm text-slate-600 dark:text-slate-400">Umožňují zobrazit reklamy, které vás mohou zajímat. Bez nich uvidíte obecnou reklamu.</span>
+        </span>
+      </label>
+    </div>
+    <div class="px-6 py-4 bg-slate-50 dark:bg-slate-900/50 border-t border-slate-200 dark:border-slate-800 flex flex-wrap gap-2 justify-end">
+      <button class="btn-ghost" id="cookie-settings-reject">Zamítnout vše</button>
+      <button class="btn-secondary" id="cookie-save-settings">Potvrdit volbu</button>
+      <button class="btn-primary" id="cookie-settings-accept-all">Povolit vše</button>
+    </div>
+  </div>
+</div>

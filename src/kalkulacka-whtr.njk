@@ -1,0 +1,52 @@
+---
+layout: layouts/calculator.njk
+title: "Kalkulačka WHtR – obvod pasu k výšce"
+description: "Poměr obvodu pasu k výšce (WHtR) je modernější ukazatel zdravotního rizika než BMI. Změřte se a uvidíte."
+permalink: /kalkulacka-whtr/
+tag: "Pas a viscerální tuk"
+perex: "Klasické pravidlo: obvod pasu by neměl být víc než polovina vaší výšky. WHtR pod 0,5 znamená nízké zdravotní riziko."
+---
+
+<div class="card p-6 sm:p-8">
+  <form id="form-whtr" class="grid gap-4 sm:grid-cols-2" novalidate>
+    <div><label class="label" for="whtr-height">Výška (cm)</label><input class="input" type="number" id="whtr-height" min="120" max="220" placeholder="např. 175" required></div>
+    <div><label class="label" for="whtr-waist">Obvod pasu (cm)</label><input class="input" type="number" id="whtr-waist" min="40" max="200" step="0.1" placeholder="např. 85" required></div>
+    <div class="sm:col-span-2"><button type="submit" class="btn-primary w-full">Spočítat WHtR</button></div>
+  </form>
+  <div id="whtr-result" class="hidden mt-8 pt-8 border-t border-slate-200 dark:border-slate-800">
+    <div class="text-center">
+      <p class="text-xs uppercase tracking-widest text-slate-500">Váš WHtR</p>
+      <p class="font-display text-5xl font-bold mt-1" id="whtr-out">–</p>
+      <p id="whtr-cat" class="badge mt-3 bg-slate-100 text-slate-800">–</p>
+      <p id="whtr-tip" class="mt-4 text-sm text-slate-600 dark:text-slate-400 max-w-md mx-auto"></p>
+    </div>
+  </div>
+</div>
+
+<div class="prose prose-slate dark:prose-invert max-w-none mt-10">
+  <h2>Proč WHtR?</h2>
+  <p>BMI nerozlišuje, kde tuk máte. Břišní (viscerální) tuk je rizikovější než tuk na bocích – obklopuje vnitřní orgány a souvisí se srdečními nemocemi a diabetem 2. typu. WHtR je přesnější a univerzální: <strong>stačí, aby byl pas méně než polovina výšky</strong>.</p>
+  <h3>Jak změřit pas správně</h3>
+  <ol>
+    <li>Svlékněte se na spodní prádlo, postavte se rovně.</li>
+    <li>Najděte si nejtenčí místo mezi spodním žebrem a horní hranou kyčelní kosti (přibližně v úrovni pupku).</li>
+    <li>Měřte při volném výdechu, pásmo má být vodorovně, ne stažené.</li>
+  </ol>
+</div>
+
+<script>
+document.getElementById('form-whtr').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var h = parseFloat(document.getElementById('whtr-height').value);
+  var w = parseFloat(document.getElementById('whtr-waist').value);
+  if (!h || !w) return;
+  var r = w / h;
+  document.getElementById('whtr-out').textContent = r.toFixed(2).replace('.', ',');
+  var cat = document.getElementById('whtr-cat'), tip = document.getElementById('whtr-tip');
+  if (r < 0.4) { cat.textContent = 'Štíhlý / atletický'; cat.className = 'badge mt-3 bg-blue-100 text-blue-900'; tip.textContent = 'Velmi nízké riziko, ale velmi nízká hodnota může u žen znamenat podváhu.'; }
+  else if (r < 0.5) { cat.textContent = 'Nízké riziko'; cat.className = 'badge mt-3 bg-emerald-100 text-emerald-900'; tip.textContent = 'Skvělé. Pas pod polovinou výšky = nízké zdravotní riziko.'; }
+  else if (r < 0.6) { cat.textContent = 'Zvýšené riziko'; cat.className = 'badge mt-3 bg-amber-100 text-amber-900'; tip.textContent = 'Doporučujeme zaměřit se na obvod pasu – kombinace stravy a pohybu zaměřená na viscerální tuk.'; }
+  else { cat.textContent = 'Vysoké riziko'; cat.className = 'badge mt-3 bg-red-100 text-red-900'; tip.textContent = 'Vysoké zdravotní riziko, doporučujeme konzultaci s lékařem nebo nutričním terapeutem.'; }
+  document.getElementById('whtr-result').classList.remove('hidden');
+});
+</script>

@@ -1,0 +1,71 @@
+<header class="sticky top-0 z-40 border-b-2 border-ink/10 bg-paper/85 backdrop-blur-md
+                dark:bg-slate-950/80 dark:border-slate-800">
+  <div class="container-x flex h-16 items-center justify-between gap-4">
+    <a href="/" class="flex items-center gap-2.5 group" aria-label="Ideální BMI – domovská stránka">
+      <img src="/img/logo.png" alt="" width="40" height="40" class="h-10 w-10 transition group-hover:rotate-[-6deg]">
+      <span class="font-display text-xl font-bold text-ink dark:text-slate-50">
+        Ideální <span class="italic text-flame-600">BMI</span>
+      </span>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-1" aria-label="Hlavní navigace">
+      {% for item in nav.main %}
+        {% if item.children %}
+          <div class="relative group">
+            <button class="nav-link inline-flex items-center gap-1" aria-haspopup="true" aria-expanded="false">
+              {{ item.label }}
+              <svg class="h-3.5 w-3.5 transition group-hover:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="absolute left-0 top-full pt-2 hidden group-hover:block group-focus-within:block">
+              <div class="w-64 rounded-2xl border-2 border-ink/10 bg-paper p-2 shadow-stampLg
+                          dark:bg-slate-900 dark:border-slate-800">
+                {% for c in item.children %}
+                  <a href="{{ c.url }}" class="block rounded-lg px-3 py-2 text-sm font-medium text-ink/80 hover:bg-flame-50 hover:text-flame-700
+                                                dark:text-slate-200 dark:hover:bg-slate-800 dark:hover:text-flame-300">
+                    {{ c.label }}
+                  </a>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        {% else %}
+          <a href="{{ item.url }}" class="nav-link">{{ item.label }}</a>
+        {% endif %}
+      {% endfor %}
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <button id="theme-toggle" class="btn-ghost h-10 w-10 !p-0" aria-label="Přepnout vzhled">
+        <svg class="h-5 w-5 hidden dark:inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke-linecap="round"/></svg>
+        <svg class="h-5 w-5 dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke-linejoin="round"/></svg>
+      </button>
+      <a href="/#kalkulacka" class="hidden sm:inline-flex btn-primary !py-2 !px-4 text-sm">Spočítat BMI →</a>
+
+      <button id="mobile-menu-toggle" class="lg:hidden btn-ghost h-10 w-10 !p-0" aria-label="Otevřít menu" aria-expanded="false">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="lg:hidden hidden border-t-2 border-ink/10 bg-paper dark:bg-slate-950 dark:border-slate-800">
+    <nav class="container-x py-3 flex flex-col gap-1" aria-label="Mobilní navigace">
+      {% for item in nav.main %}
+        {% if item.children %}
+          <details class="group">
+            <summary class="flex cursor-pointer items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-ink hover:bg-white/60 dark:text-slate-100 dark:hover:bg-slate-800">
+              <span>{{ item.label }}</span>
+              <svg class="h-4 w-4 transition group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <div class="ml-3 mt-1 flex flex-col gap-0.5">
+              {% for c in item.children %}
+                <a href="{{ c.url }}" class="rounded-lg px-3 py-2 text-sm font-medium text-ink/70 hover:bg-flame-50 hover:text-flame-700 dark:text-slate-300 dark:hover:bg-slate-800">{{ c.label }}</a>
+              {% endfor %}
+            </div>
+          </details>
+        {% else %}
+          <a href="{{ item.url }}" class="rounded-lg px-3 py-2 text-sm font-semibold text-ink hover:bg-white/60 dark:text-slate-100 dark:hover:bg-slate-800">{{ item.label }}</a>
+        {% endif %}
+      {% endfor %}
+    </nav>
+  </div>
+</header>

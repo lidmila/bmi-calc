@@ -1,0 +1,59 @@
+---
+layout: layouts/calculator.njk
+title: "Kalkulačka kalorického deficitu"
+description: "Zadejte svůj cíl a spočítáme, kolik kcal denně ubrat a jak dlouho bude trvat dosažení cíle."
+permalink: /kalkulacka-deficit/
+tag: "Hubnutí"
+perex: "Hubnutí stojí na jednom: jíst méně, než vydáte. Zadejte cílovou hmotnost a uvidíte, jaký deficit dává smysl."
+---
+
+<div class="card p-6 sm:p-8">
+  <form id="form-def" class="grid gap-4 sm:grid-cols-2" novalidate>
+    <div><label class="label" for="def-tdee">Váš denní výdej (TDEE) v kcal</label><input class="input" type="number" id="def-tdee" min="1200" max="5000" placeholder="např. 2400" required>
+      <p class="text-xs text-slate-500 mt-1">Neznáte? <a class="text-brand-700 underline" href="/kalkulacka-bmr/">Spočítejte si TDEE</a>.</p>
+    </div>
+    <div><label class="label" for="def-current">Aktuální hmotnost (kg)</label><input class="input" type="number" id="def-current" min="35" max="250" step="0.1" placeholder="např. 82" required></div>
+    <div><label class="label" for="def-target">Cílová hmotnost (kg)</label><input class="input" type="number" id="def-target" min="35" max="250" step="0.1" placeholder="např. 75" required></div>
+    <div><label class="label" for="def-pace">Tempo</label>
+      <select class="input" id="def-pace">
+        <option value="300">Pohodové (deficit 300 kcal)</option>
+        <option value="500" selected>Standardní (deficit 500 kcal)</option>
+        <option value="750">Rychlejší (deficit 750 kcal)</option>
+      </select>
+    </div>
+    <div class="sm:col-span-2"><button type="submit" class="btn-primary w-full">Vypočítat plán</button></div>
+  </form>
+  <div id="def-result" class="hidden mt-8 pt-8 border-t border-slate-200 dark:border-slate-800 grid gap-4 sm:grid-cols-3">
+    <div class="rounded-2xl bg-brand-50 dark:bg-brand-900/30 p-5 text-center"><p class="text-xs uppercase tracking-widest text-brand-700 dark:text-brand-300">Cíl</p><p class="font-display text-3xl font-bold mt-1" id="def-cal">–</p><p class="text-xs text-slate-500">kcal denně</p></div>
+    <div class="rounded-2xl bg-emerald-50 dark:bg-emerald-900/30 p-5 text-center"><p class="text-xs uppercase tracking-widest text-emerald-700 dark:text-emerald-300">Trvání</p><p class="font-display text-3xl font-bold mt-1" id="def-weeks">–</p><p class="text-xs text-slate-500">týdnů</p></div>
+    <div class="rounded-2xl bg-amber-50 dark:bg-amber-900/30 p-5 text-center"><p class="text-xs uppercase tracking-widest text-amber-700 dark:text-amber-300">Týdenní úbytek</p><p class="font-display text-3xl font-bold mt-1" id="def-pace-out">–</p><p class="text-xs text-slate-500">kg / týden</p></div>
+  </div>
+</div>
+
+<div class="prose prose-slate dark:prose-invert max-w-none mt-10">
+  <h2>Pravidla rozumného deficitu</h2>
+  <ul>
+    <li>1 kg tuku ≈ 7 700 kcal. Deficit 500 kcal/den ≈ 0,45 kg/týden.</li>
+    <li>Nikdy nejděte pod 1 200 kcal (ženy) / 1 500 kcal (muži) bez dohledu lékaře.</li>
+    <li>Bílkoviny: 1,6–2,2 g na kg vaší hmotnosti, abyste si udrželi svaly.</li>
+    <li>Realistické tempo je 0,5–1 % vaší aktuální hmotnosti za týden.</li>
+  </ul>
+</div>
+
+<script>
+document.getElementById('form-def').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var tdee = parseFloat(document.getElementById('def-tdee').value);
+  var cur = parseFloat(document.getElementById('def-current').value);
+  var tgt = parseFloat(document.getElementById('def-target').value);
+  var def = parseFloat(document.getElementById('def-pace').value);
+  if (!tdee || !cur || !tgt) return;
+  var diff = cur - tgt;
+  var weeklyKg = (def * 7) / 7700;
+  var weeks = diff > 0 ? Math.ceil(diff / weeklyKg) : 0;
+  document.getElementById('def-cal').textContent = (tdee - def).toLocaleString('cs-CZ');
+  document.getElementById('def-weeks').textContent = weeks;
+  document.getElementById('def-pace-out').textContent = weeklyKg.toFixed(2).replace('.', ',');
+  document.getElementById('def-result').classList.remove('hidden');
+});
+</script>

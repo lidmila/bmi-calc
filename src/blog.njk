@@ -1,0 +1,63 @@
+---
+layout: layouts/base.njk
+title: "Blog o hubnutí, BMI a zdravém životním stylu"
+description: "Praktické články o hubnutí, výživě, sportu, metabolismu a BMI – všechno, co potřebujete vědět."
+permalink: /blog/
+---
+
+<section class="container-x py-12 lg:py-16">
+  <div class="max-w-2xl mx-auto text-center">
+    <h1 class="font-display text-4xl sm:text-5xl font-bold text-balance">Blog</h1>
+    <p class="mt-4 text-lg text-slate-600 dark:text-slate-300 text-pretty">Praktické články, které vám pomůžou rozumět svému tělu, hubnout zdravě a dlouhodobě udržovat formu.</p>
+  </div>
+
+  <div class="mt-10 flex flex-wrap justify-center gap-2" role="tablist" aria-label="Filtrovat podle tématu">
+    {% set filters = [
+      {key: "all", label: "Vše"},
+      {key: "hubnuti", label: "Hubnutí"},
+      {key: "vyziva", label: "Výživa"},
+      {key: "sport", label: "Sport"},
+      {key: "metabolismus", label: "Metabolismus"},
+      {key: "bmi", label: "BMI"}
+    ] %}
+    {% for f in filters %}
+      <button class="tab-pill" data-blog-filter="{{ f.key }}" aria-pressed="{{ 'true' if f.key == 'all' else 'false' }}" role="tab">{{ f.label }}</button>
+    {% endfor %}
+  </div>
+
+  {% set posts = [
+    {url: "/hubnuti-chuzi/", img: "/img/hubnuti-chuzi.webp", cat: "hubnuti", catLabel: "Hubnutí", title: "Hubnutí chůzí: kolik kroků denně potřebujete?", desc: "Chůze je nejpřístupnější způsob hubnutí. Zjistěte, kolik kroků denně stačí."},
+    {url: "/hubnuti-po-40/", img: "/img/hubnuti-po-40.webp", cat: "hubnuti", catLabel: "Hubnutí", title: "Hubnutí po 40: co se mění a jak na to", desc: "Po čtyřicítce se hubnutí mění. Zjistěte, co se děje s metabolismem."},
+    {url: "/hubnuti-po-50/", img: "/img/hubnuti-po-50.webp", cat: "hubnuti", catLabel: "Hubnutí", title: "Hubnutí po 50: jak na to bezpečně a účinně", desc: "Bezpečné hubnutí po padesátce. Rady pro zachování zdraví a svalové hmoty."},
+    {url: "/hubnuti-po-porodu/", img: "/img/hubnuti-po-porodu.webp", cat: "hubnuti", catLabel: "Hubnutí", title: "Hubnutí po porodu: bezpečně a s rozumem", desc: "Jak bezpečně zhubnout po porodu bez extrémních diet a s ohledem na kojení."},
+    {url: "/pocitani-kalorii/", img: "/img/pocitani-kalorii.webp", cat: "vyziva", catLabel: "Výživa", title: "Počítání kalorií při hubnutí: kompletní návod", desc: "Kompletní návod na počítání kalorií. Jak spočítat denní příjem a vytvořit deficit."},
+    {url: "/nejlepsi-sport-na-hubnuti/", img: "/img/nejlepsi-sport-na-hubnuti.webp", cat: "sport", catLabel: "Sport", title: "Nejlepší sporty na hubnutí: který si vybrat?", desc: "Který sport spaluje nejvíce kalorií? Porovnání běhu, plavání, HIIT a dalších."},
+    {url: "/tepova-frekvence-spalovani/", img: "/img/tepova-frekvence-spalovani.webp", cat: "sport", catLabel: "Sport", title: "Tepová frekvence pro spalování tuků", desc: "Jaká tepová frekvence je ideální pro spalování tuků? Výpočet a zóny."},
+    {url: "/metabolismus/", img: "/img/metabolismus.webp", cat: "metabolismus", catLabel: "Metabolismus", title: "Metabolismus: co to je a jak ovlivňuje vaši váhu", desc: "Co je metabolismus, jak funguje a jak ovlivňuje vaši hmotnost."},
+    {url: "/bazalni-metabolismus/", img: "/img/bazalni-metabolismus.webp", cat: "metabolismus", catLabel: "Metabolismus", title: "Bazální metabolismus: výpočet, vzorce a kalkulačka", desc: "Výpočet bazálního metabolismu, vzorce a kalkulačka pro muže i ženy."},
+    {url: "/stupne-obezity/", img: "/img/stupne-obezity.webp", cat: "bmi", catLabel: "BMI", title: "Stupně obezity: BMI tabulka a zdravotní rizika", desc: "BMI tabulka, stupně obezity a jejich zdravotní rizika."},
+    {url: "/jak-snizit-bmi/", img: "/img/jak-snizit-bmi.webp", cat: "bmi", catLabel: "BMI", title: "Jak snížit BMI: kompletní průvodce", desc: "Praktický průvodce, jak snížit BMI zdravým způsobem. Strava, cvičení, spánek."},
+    {url: "/bmi-u-deti/", img: "/img/bmi-u-deti.webp", cat: "bmi", catLabel: "BMI", title: "BMI u dětí a dospívajících: kompletní průvodce", desc: "Kompletní průvodce BMI u dětí. Percentilové grafy a hodnocení."},
+    {url: "/bmi-vs-jine-metody/", img: "/img/bmi-vs-jine-metody.webp", cat: "bmi", catLabel: "BMI", title: "BMI vs. jiné metody měření tělesného složení", desc: "Srovnání BMI s bioimpedancí, DEXA a měřením tělesného složení."}
+  ] %}
+
+  <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    {% for p in posts %}
+      <article data-blog-card="{{ p.cat }}" class="group">
+        <a href="{{ p.url }}" class="card overflow-hidden h-full flex flex-col hover:shadow-card-lg hover:-translate-y-0.5 transition">
+          <div class="aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800">
+            <img src="{{ p.img }}" alt="{{ p.title }}" loading="lazy" width="640" height="400"
+                 class="h-full w-full object-cover group-hover:scale-105 transition duration-500"
+                 onerror="this.src='/img/BMI-calc.png'">
+          </div>
+          <div class="p-5 flex-1 flex flex-col">
+            <span class="badge bg-brand-50 text-brand-800 dark:bg-brand-900/40 dark:text-brand-200 self-start">{{ p.catLabel }}</span>
+            <h2 class="mt-3 font-display text-lg font-bold text-slate-900 dark:text-slate-100 leading-snug text-balance">{{ p.title }}</h2>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-400 text-pretty">{{ p.desc }}</p>
+            <span class="mt-auto pt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-700 dark:text-brand-300">Číst článek →</span>
+          </div>
+        </a>
+      </article>
+    {% endfor %}
+  </div>
+</section>

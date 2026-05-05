@@ -1,0 +1,68 @@
+---
+layout: layouts/base.njk
+---
+
+<article class="container-x py-10 lg:py-14">
+  <header class="max-w-3xl mx-auto">
+    <nav class="text-sm text-slate-500 dark:text-slate-400 mb-4">
+      <a href="/" class="hover:text-brand-700">Domů</a>
+      <span class="mx-2">/</span>
+      <a href="/blog/" class="hover:text-brand-700">Blog</a>
+      <span class="mx-2">/</span>
+      <span>{{ title }}</span>
+    </nav>
+    <div class="flex flex-wrap items-center gap-3 text-sm text-slate-500 dark:text-slate-400 mb-3">
+      {% if category %}<span class="badge bg-brand-50 text-brand-800 dark:bg-brand-900/40 dark:text-brand-200">{{ category }}</span>{% endif %}
+      {% if dateModified %}<span>Aktualizováno {{ dateModified | dateCZ }}</span>{% elif date %}<span>{{ date | dateCZ }}</span>{% endif %}
+      <span aria-hidden="true">·</span>
+      <span>{{ content | readingTime }} min čtení</span>
+    </div>
+    <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-ink dark:text-slate-50 text-balance leading-[1.05]">{{ title }}</h1>
+    {% if perex %}<p class="mt-5 text-lg sm:text-xl text-ink/75 dark:text-slate-300 text-pretty max-w-2xl">{{ perex }}</p>{% endif %}
+
+    {% if reviewer %}
+      <aside class="mt-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/40 p-4 flex items-start gap-4">
+        <div class="grid h-12 w-12 place-items-center rounded-full bg-brand-gradient text-white text-lg font-bold">
+          {{ reviewer.initials or "?" }}
+        </div>
+        <div class="text-sm">
+          <p class="text-slate-500 dark:text-slate-400">Odborně zkontrolováno</p>
+          <p class="font-semibold text-slate-900 dark:text-slate-100">{{ reviewer.name }}</p>
+          <p class="text-slate-600 dark:text-slate-400">{{ reviewer.role }}</p>
+        </div>
+      </aside>
+    {% endif %}
+
+    {% if heroImage %}
+      <img src="{{ heroImage }}" alt="{{ heroAlt or title }}" width="1200" height="630"
+           class="mt-8 rounded-3xl w-full aspect-[16/9] object-cover shadow-card">
+    {% endif %}
+  </header>
+
+  <div class="prose prose-slate dark:prose-invert lg:prose-lg max-w-3xl mx-auto mt-10
+              prose-headings:font-display prose-headings:tracking-tight
+              prose-a:text-brand-700 hover:prose-a:text-brand-800
+              prose-strong:text-slate-900 dark:prose-strong:text-slate-100
+              prose-img:rounded-2xl">
+    {{ content | safe }}
+  </div>
+
+  {% if sources %}
+    <aside class="max-w-3xl mx-auto mt-12 rounded-3xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/40 p-6">
+      <h2 class="font-display text-xl font-bold text-slate-900 dark:text-slate-100">Zdroje</h2>
+      <ul class="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-400">
+        {% for s in sources %}
+          <li>· <a href="{{ s.url }}" rel="nofollow noopener" target="_blank" class="hover:text-brand-700 underline">{{ s.label }}</a></li>
+        {% endfor %}
+      </ul>
+    </aside>
+  {% endif %}
+
+  <div class="max-w-3xl mx-auto mt-12 rounded-3xl bg-brand-gradient p-8 text-white text-center shadow-card-lg">
+    <h2 class="font-display text-2xl sm:text-3xl font-bold">Spočítejte si své BMI</h2>
+    <p class="mt-2 text-brand-50/90">Přesný výpočet zdarma podle WHO. Zadejte výšku a váhu a uvidíte výsledek za 2 vteřiny.</p>
+    <a href="/#kalkulacka" class="inline-flex mt-4 items-center gap-2 rounded-2xl bg-white px-6 py-3 font-semibold text-brand-700 hover:bg-brand-50 transition shadow-card">
+      Otevřít BMI kalkulačku →
+    </a>
+  </div>
+</article>

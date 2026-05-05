@@ -1,0 +1,67 @@
+---
+layout: layouts/calculator.njk
+title: "BMR a TDEE kalkulačka – kolik kalorií spotřebujete"
+description: "Spočítejte si bazální metabolismus (BMR) a celkový denní výdej (TDEE) podle Mifflin-St Jeor. Základ pro hubnutí i nabírání svalů."
+permalink: /kalkulacka-bmr/
+tag: "Energie & metabolismus"
+perex: "BMR vám řekne, kolik kalorií tělo spálí v klidu. TDEE přidá pohyb. Z toho odvodíte, kolik máte jíst, abyste hubli, drželi se, nebo nabírali."
+ogImage: "/img/og-bazalni-metabolismus.png"
+---
+
+<div class="card p-6 sm:p-8">
+  <form id="form-bmr" class="grid gap-4 sm:grid-cols-2" novalidate>
+    <div><label class="label" for="bmr-gender">Pohlaví</label>
+      <select class="input" id="bmr-gender" required>
+        <option value="">Vyberte…</option><option value="male">Muž</option><option value="female">Žena</option>
+      </select>
+    </div>
+    <div><label class="label" for="bmr-age">Věk (roky)</label><input class="input" type="number" id="bmr-age" min="15" max="100" placeholder="např. 35" required></div>
+    <div><label class="label" for="bmr-height">Výška (cm)</label><input class="input" type="number" id="bmr-height" min="120" max="220" placeholder="např. 175" required></div>
+    <div><label class="label" for="bmr-weight">Hmotnost (kg)</label><input class="input" type="number" id="bmr-weight" min="35" max="250" step="0.1" placeholder="např. 72" required></div>
+    <div class="sm:col-span-2"><label class="label" for="bmr-activity">Pohybová aktivita</label>
+      <select class="input" id="bmr-activity" required>
+        <option value="1.2">Sedavé zaměstnání, žádné cvičení (×1,2)</option>
+        <option value="1.375">Lehká aktivita 1–3× týdně (×1,375)</option>
+        <option value="1.55" selected>Střední aktivita 3–5× týdně (×1,55)</option>
+        <option value="1.725">Vysoká aktivita 6–7× týdně (×1,725)</option>
+        <option value="1.9">Sportovec / fyzická práce (×1,9)</option>
+      </select>
+    </div>
+    <div class="sm:col-span-2"><button type="submit" class="btn-primary w-full">Spočítat BMR a TDEE</button></div>
+  </form>
+
+  <div id="bmr-result" class="hidden mt-8 pt-8 border-t border-slate-200 dark:border-slate-800 grid gap-4 sm:grid-cols-3">
+    <div class="rounded-2xl bg-brand-50 dark:bg-brand-900/30 p-5 text-center"><p class="text-xs uppercase tracking-widest text-brand-700 dark:text-brand-300">BMR</p><p class="font-display text-3xl font-bold mt-1" id="bmr-out">–</p><p class="text-xs text-slate-500">kcal v klidu</p></div>
+    <div class="rounded-2xl bg-emerald-50 dark:bg-emerald-900/30 p-5 text-center"><p class="text-xs uppercase tracking-widest text-emerald-700 dark:text-emerald-300">TDEE</p><p class="font-display text-3xl font-bold mt-1" id="tdee-out">–</p><p class="text-xs text-slate-500">kcal denní výdej</p></div>
+    <div class="rounded-2xl bg-amber-50 dark:bg-amber-900/30 p-5 text-center"><p class="text-xs uppercase tracking-widest text-amber-700 dark:text-amber-300">Hubnutí</p><p class="font-display text-3xl font-bold mt-1" id="cut-out">–</p><p class="text-xs text-slate-500">kcal s deficitem 500</p></div>
+  </div>
+</div>
+
+<div class="prose prose-slate dark:prose-invert max-w-none mt-10">
+  <h2>Jak se BMR počítá</h2>
+  <p>Používáme rovnici <strong>Mifflin-St Jeor</strong> (1990), která je dnes v klinické praxi přesnější než starší Harris-Benedict:</p>
+  <ul>
+    <li><strong>Muži:</strong> 10 × váha (kg) + 6,25 × výška (cm) − 5 × věk (roky) + 5</li>
+    <li><strong>Ženy:</strong> 10 × váha (kg) + 6,25 × výška (cm) − 5 × věk (roky) − 161</li>
+  </ul>
+  <p>TDEE = BMR × koeficient aktivity. Pro hubnutí běžně doporučujeme deficit 300–500 kcal/den (≈ 0,5 kg za týden).</p>
+</div>
+
+<script>
+document.getElementById('form-bmr').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var g = document.getElementById('bmr-gender').value;
+  var a = parseInt(document.getElementById('bmr-age').value, 10);
+  var h = parseFloat(document.getElementById('bmr-height').value);
+  var w = parseFloat(document.getElementById('bmr-weight').value);
+  var act = parseFloat(document.getElementById('bmr-activity').value);
+  if (!g || !a || !h || !w) return;
+  var base = 10 * w + 6.25 * h - 5 * a;
+  var bmr = Math.round(g === 'male' ? base + 5 : base - 161);
+  var tdee = Math.round(bmr * act);
+  document.getElementById('bmr-out').textContent = bmr.toLocaleString('cs-CZ');
+  document.getElementById('tdee-out').textContent = tdee.toLocaleString('cs-CZ');
+  document.getElementById('cut-out').textContent = (tdee - 500).toLocaleString('cs-CZ');
+  document.getElementById('bmr-result').classList.remove('hidden');
+});
+</script>

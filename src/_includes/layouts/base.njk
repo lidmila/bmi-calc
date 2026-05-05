@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}" class="scroll-smooth">
+<head>
+  {% include "partials/head-analytics.njk" %}
+  {% include "partials/head-meta.njk" %}
+  {% if jsonld %}
+    {% for block in jsonld %}
+    <script type="application/ld+json">{{ block | dump | safe }}</script>
+    {% endfor %}
+  {% endif %}
+</head>
+<body class="min-h-screen flex flex-col">
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-white focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-card">Přeskočit na obsah</a>
+
+  {% include "partials/header.njk" %}
+
+  <main id="main" class="flex-1">
+    {{ content | safe }}
+  </main>
+
+  {% include "partials/footer.njk" %}
+  {% include "partials/cookie-banner.njk" %}
+
+  <script src="/js/cookies.js"></script>
+  {% block beforeAppScripts %}{% endblock %}
+  <script src="/js/app.js" defer></script>
+</body>
+</html>

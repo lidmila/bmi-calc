@@ -1,0 +1,46 @@
+---
+layout: layouts/base.njk
+title: "Metodika a zdroje výpočtů"
+description: "Jaké vzorce, klasifikace a zdroje používáme v jednotlivých kalkulačkách."
+permalink: /metodika/
+---
+
+<section class="container-x py-14 max-w-3xl">
+  <h1 class="font-display text-4xl sm:text-5xl font-bold">Metodika &amp; zdroje</h1>
+  <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">Tady najdete přesně, podle čeho každá kalkulačka počítá.</p>
+
+  <div class="prose prose-slate dark:prose-invert mt-10">
+    <h2>BMI pro dospělé</h2>
+    <p>Vzorec <code>BMI = m (kg) / h² (m)</code>. Klasifikace podle <a href="https://www.who.int/data/gho/data/themes/topics/topic-details/GHO/body-mass-index" rel="nofollow">WHO Global Health Observatory – BMI</a>: podváha &lt;18,5 / normální 18,5–24,9 / nadváha 25–29,9 / obezita ≥30 (s podtřídami I, II, III).</p>
+
+    <h2>BMI pro děti (2–19 let)</h2>
+    <p>Používáme <a href="https://www.cdc.gov/growthcharts/percentile_data_files.htm" rel="nofollow">CDC LMS data (2000)</a> pro chlapce a dívky. Z BMI počítáme Z-skóre podle vzorce
+    <code>Z = ((BMI/M)<sup>L</sup> − 1) / (L × S)</code> a převádíme na percentil. Kategorie podle CDC:
+    podváha &lt;5. percentil, normální 5.–84., nadváha 85.–94., obezita ≥95. percentil.</p>
+
+    <h2>BMR a TDEE</h2>
+    <p><strong>Mifflin-St Jeor</strong> (1990), v klinické praxi přesnější než Harris-Benedict. Aktivitu násobíme koeficientem 1,2–1,9.</p>
+
+    <h2>Ideální váha</h2>
+    <p>Vzorce <strong>Devine (1974)</strong>, <strong>Robinson (1983)</strong> a <strong>Miller (1983)</strong>. Doplňujeme rozsahem zdravého BMI (18,5–24,9) pro váš výškový profil.</p>
+
+    <h2>WHtR (pas k výšce)</h2>
+    <p>Hraniční hodnota 0,5 podle <a href="https://www.nice.org.uk/guidance/ng246" rel="nofollow">NICE NG246</a> (2023) a meta-analýz. Riziko stoupá nad 0,5 a strmě nad 0,6.</p>
+
+    <h2>Tepové zóny</h2>
+    <p>Maximální tep <em>208 − 0,7 × věk</em> (Tanaka, 2001). Při zadaném klidovém tepu používáme <strong>Karvonenovu metodu</strong> tepové rezervy.</p>
+
+    <h2>Limity nástroje</h2>
+    <p>Žádný online kalkulátor nenahrazuje lékařské vyšetření. Pokud máte zdravotní obtíže, jste těhotná nebo se intenzivně rekreačně či profesionálně sportujete, konzultujte své hodnoty s odborníkem.</p>
+
+    <h3>Zdroje</h3>
+    <ul>
+      <li><a href="https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight" rel="nofollow">WHO – Obesity and overweight</a></li>
+      <li><a href="https://www.cdc.gov/growthcharts/" rel="nofollow">CDC Growth Charts</a></li>
+      <li><a href="https://www.nih.gov/" rel="nofollow">NIH – National Institutes of Health</a></li>
+      <li><a href="https://www.nice.org.uk/" rel="nofollow">NICE – National Institute for Health and Care Excellence</a></li>
+      <li>Mifflin MD et al. <em>A new predictive equation for resting energy expenditure in healthy individuals.</em> Am J Clin Nutr. 1990.</li>
+      <li>Tanaka H, Monahan KD, Seals DR. <em>Age-predicted maximal heart rate revisited.</em> J Am Coll Cardiol. 2001.</li>
+    </ul>
+  </div>
+</section>

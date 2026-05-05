@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================
+   Base overrides
+   ============================ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+  body {
+    @apply font-sans text-ink antialiased bg-paper;
+    background-image:
+      radial-gradient(at 12% 0%, rgba(20,184,166,0.08) 0px, transparent 50%),
+      radial-gradient(at 90% 12%, rgba(249,115,22,0.07) 0px, transparent 45%);
+  }
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-600;
+  }
+  .dark body {
+    @apply bg-slate-950 text-slate-100;
+    background-image:
+      radial-gradient(at 12% 0%, rgba(20,184,166,0.18) 0px, transparent 50%),
+      radial-gradient(at 90% 12%, rgba(249,115,22,0.14) 0px, transparent 45%);
+  }
+  ::selection { background: #fdba74; color: #0b1420; }
+}
+
+/* ============================
+   Reusable components
+   ============================ */
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-semibold transition-all
+           focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2;
+  }
+  /* Brutalist primary button: solid + offset shadow that "pops" on hover */
+  .btn-primary {
+    @apply btn bg-ink text-paper shadow-stamp hover:shadow-stampLg hover:-translate-x-0.5 hover:-translate-y-0.5
+           active:shadow-none active:translate-x-0 active:translate-y-0;
+  }
+  .btn-flame {
+    @apply btn bg-flame-500 text-white shadow-stamp hover:shadow-stampLg hover:-translate-x-0.5 hover:-translate-y-0.5;
+  }
+  .btn-secondary {
+    @apply btn bg-paper text-ink border-2 border-ink hover:bg-brand-50;
+  }
+  .btn-ghost {
+    @apply btn text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800;
+  }
+
+  /* Editorial card with hand-feel: warm paper, slight border, hover lifts subtly */
+  .card {
+    @apply rounded-[28px] bg-paper border border-ink/10 shadow-card;
+    background-image: radial-gradient(circle at 100% 0%, rgba(20,184,166,0.04) 0%, transparent 30%);
+  }
+  .dark .card { @apply bg-slate-900 border-slate-800; background-image: none; }
+
+  .badge {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold;
+  }
+  .badge-trust {
+    @apply badge bg-paper text-ink border border-ink/15;
+  }
+  .input {
+    @apply w-full rounded-xl border-2 border-ink/15 bg-paper px-4 py-3 text-base font-medium
+           transition-all placeholder:text-slate-400
+           focus:border-ink focus:ring-0 focus:outline-none focus:bg-white
+           dark:bg-slate-900 dark:border-slate-700 dark:text-slate-100;
+  }
+  .label {
+    @apply block text-sm font-semibold text-ink dark:text-slate-200 mb-1.5;
+  }
+  .tab-pill {
+    @apply px-4 py-2 rounded-full text-sm font-semibold text-slate-700 hover:bg-white/60 transition
+           dark:text-slate-300 dark:hover:bg-slate-800;
+  }
+  .tab-pill[aria-selected="true"] {
+    @apply bg-ink text-paper shadow-stamp dark:bg-paper dark:text-ink;
+  }
+  .nav-link {
+    @apply relative px-3 py-2 text-sm font-semibold text-ink/80 hover:text-ink transition
+           dark:text-slate-200 dark:hover:text-white;
+  }
+
+  /* === Distinctive flourishes === */
+
+  /* Marker highlight — yellow stripe behind text */
+  .marker {
+    @apply relative inline-block;
+    background-image: linear-gradient(180deg, transparent 55%, rgba(251,191,36,0.55) 55%, rgba(251,191,36,0.55) 92%, transparent 92%);
+    padding: 0 0.18em;
+  }
+  .marker-flame {
+    background-image: linear-gradient(180deg, transparent 55%, rgba(253,186,116,0.65) 55%, rgba(253,186,116,0.65) 92%, transparent 92%);
+  }
+
+  /* Hand-drawn scribble underline — wraps a span, animates on first paint */
+  .scribble {
+    @apply relative inline-block;
+  }
+  .scribble svg {
+    position: absolute;
+    bottom: -10px;
+    left: -4px;
+    width: calc(100% + 8px);
+    height: 14px;
+    overflow: visible;
+  }
+  .scribble svg path {
+    stroke-dasharray: 240;
+    stroke-dashoffset: 240;
+    animation: squiggle 1s ease-out 0.4s forwards;
+  }
+
+  /* Number stamp — rotated badge for steps and stats */
+  .stamp {
+    @apply inline-flex h-12 w-12 items-center justify-center rounded-full bg-ink text-paper font-display font-bold text-lg shadow-stamp;
+    transform: rotate(-6deg);
+  }
+  .stamp-flame { @apply bg-flame-500 text-white; }
+  .stamp-brand { @apply bg-brand-gradient text-white; }
+
+  /* Sticker — corner element rotated, with offset shadow */
+  .sticker {
+    @apply inline-flex items-center gap-1 rounded-full bg-flame-500 text-white px-3 py-1 text-xs font-bold uppercase tracking-wider shadow-stamp;
+    transform: rotate(-4deg);
+  }
+
+  /* Drop cap for first paragraph */
+  .dropcap::first-letter {
+    @apply font-display font-bold float-left text-7xl leading-[0.85] mt-1 mr-3 text-flame-600;
+  }
+
+  /* Pull quote — large serif italic, with oversized opening glyph */
+  .pullquote {
+    @apply relative my-12 px-6 py-2 text-2xl sm:text-3xl font-display italic text-balance text-ink/90 dark:text-slate-100/90 max-w-2xl;
+    border-left: 4px solid theme(colors.flame.500);
+  }
+  .pullquote::before {
+    content: '\201E';
+    @apply absolute -top-6 -left-2 font-display text-[8rem] leading-none text-flame-200 select-none;
+    z-index: -1;
+  }
+  .dark .pullquote::before { @apply text-flame-900/50; }
+
+  /* Tag pills with a "ticked off" feel for category */
+  .pill-cat {
+    @apply inline-flex items-center gap-1 rounded-full border-2 border-ink/15 bg-paper px-3 py-1 text-xs font-bold uppercase tracking-wider text-ink;
+  }
+
+  .gauge-track { stroke: theme(colors.slate.200); }
+  .dark .gauge-track { stroke: theme(colors.slate.800); }
+}
+
+/* ============================
+   Utilities
+   ============================ */
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .text-pretty  { text-wrap: pretty; }
+
+  /* Slightly imperfect rotation for hand-placed feel */
+  .tilt-l   { transform: rotate(-1.2deg); }
+  .tilt-l-2 { transform: rotate(-2.5deg); }
+  .tilt-r   { transform: rotate(1.2deg); }
+  .tilt-r-2 { transform: rotate(2.5deg); }
+
+  /* Dotted divider as inline rule */
+  .divider-dots {
+    background-image: radial-gradient(circle, rgba(11,20,32,0.35) 1.2px, transparent 1.2px);
+    background-size: 14px 14px;
+    background-position: center;
+    background-repeat: repeat-x;
+    height: 14px;
+  }
+
+  /* Paper tape strip — for sticker effect */
+  .tape::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    width: 80px;
+    height: 22px;
+    background: rgba(251,191,36,0.55);
+    transform: translateX(-50%) rotate(-3deg);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+}
+
+/* AdSense empty unit hide */
+ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; }

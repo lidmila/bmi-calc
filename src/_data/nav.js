@@ -1,0 +1,62 @@
+module.exports = {
+  main: [
+    { label: "Kalkulačka BMI", url: "/" },
+    {
+      label: "Kalkulačky",
+      url: "#",
+      children: [
+        { label: "BMI kalkulačka", url: "/" },
+        { label: "BMR / TDEE kalkulačka", url: "/kalkulacka-bmr/" },
+        { label: "Ideální váha", url: "/kalkulacka-idealni-vaha/" },
+        { label: "Obvod pasu k výšce (WHtR)", url: "/kalkulacka-whtr/" },
+        { label: "Kalorický deficit", url: "/kalkulacka-deficit/" },
+        { label: "Tepové zóny", url: "/kalkulacka-tep/" },
+      ],
+    },
+    {
+      label: "Průvodci",
+      url: "#",
+      children: [
+        { label: "Jak snížit BMI", url: "/jak-snizit-bmi/" },
+        { label: "BMI u dětí", url: "/bmi-u-deti/" },
+        { label: "BMI vs. jiné metody", url: "/bmi-vs-jine-metody/" },
+        { label: "Stupně obezity", url: "/stupne-obezity/" },
+      ],
+    },
+    { label: "Blog", url: "/blog/" },
+    { label: "Metodika", url: "/metodika/" },
+  ],
+  footer: {
+    kalkulacky: [
+      { label: "BMI kalkulačka", url: "/" },
+      { label: "BMR / TDEE", url: "/kalkulacka-bmr/" },
+      { label: "Ideální váha", url: "/kalkulacka-idealni-vaha/" },
+      { label: "Obvod pasu k výšce", url: "/kalkulacka-whtr/" },
+      { label: "Kalorický deficit", url: "/kalkulacka-deficit/" },
+      { label: "Tepové zóny", url: "/kalkulacka-tep/" },
+    ],
+    pruvodci: [
+      { label: "Jak snížit BMI", url: "/jak-snizit-bmi/" },
+      { label: "BMI u dětí", url: "/bmi-u-deti/" },
+      { label: "BMI vs. jiné metody", url: "/bmi-vs-jine-metody/" },
+      { label: "Stupně obezity", url: "/stupne-obezity/" },
+      { label: "Bazální metabolismus", url: "/bazalni-metabolismus/" },
+      { label: "Metabolismus", url: "/metabolismus/" },
+    ],
+    hubnuti: [
+      { label: "Hubnutí chůzí", url: "/hubnuti-chuzi/" },
+      { label: "Hubnutí po 40", url: "/hubnuti-po-40/" },
+      { label: "Hubnutí po 50", url: "/hubnuti-po-50/" },
+      { label: "Hubnutí po porodu", url: "/hubnuti-po-porodu/" },
+      { label: "Počítání kalorií", url: "/pocitani-kalorii/" },
+      { label: "Nejlepší sport na hubnutí", url: "/nejlepsi-sport-na-hubnuti/" },
+      { label: "Tepová frekvence", url: "/tepova-frekvence-spalovani/" },
+    ],
+    onas: [
+      { label: "Metodika a zdroje", url: "/metodika/" },
+      { label: "Blog", url: "/blog/" },
+      { label: "Ochrana soukromí", url: "/ochrana-soukromi/" },
+      { label: "Obchodní podmínky", url: "/podminky/" },
+    ],
+  },
+};

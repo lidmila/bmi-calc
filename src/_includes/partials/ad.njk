@@ -1,0 +1,10 @@
+{# Reusable AdSense slot — call as: {% include "partials/ad.njk" with {slot: "9044571605", format: "auto"} %} #}
+<div class="my-8 mx-auto max-w-3xl">
+  <p class="text-center text-[10px] uppercase tracking-widest text-slate-400 mb-1">Reklama</p>
+  <ins class="adsbygoogle block"
+       style="display:block"
+       data-ad-client="{{ site.analytics.adsense }}"
+       data-ad-slot="{{ slot }}"
+       {% if format == 'in-article' %}data-ad-layout="in-article" data-ad-format="fluid"{% else %}data-ad-format="{{ format or 'auto' }}" data-full-width-responsive="true"{% endif %}></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
