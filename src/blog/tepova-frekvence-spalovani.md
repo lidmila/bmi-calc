@@ -10,7 +10,31 @@ perex: "Možná jste slyšeli, že pro spalování tuků musíte cvičit v urči
 heroImage: "/img/tepova-frekvence-spalovani.webp"
 heroAlt: "Tepová frekvence pro spalování tuků"
 ogImage: "/img/og-tepova-frekvence-spalovani.png"
+sources:
+  - { label: "Tanaka H, Monahan KD, Seals DR. – Age-predicted maximal heart rate revisited", url: "https://pubmed.ncbi.nlm.nih.gov/11153730/" }
+  - { label: "ACSM – Heart rate zones for exercise", url: "https://www.acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines" }
+  - { label: "AHA – Target heart rates", url: "https://www.heart.org/en/healthy-living/fitness/fitness-basics/target-heart-rates" }
+  - { label: "Karvonen MJ. – Heart rate reserve method (1957) – overview", url: "https://pubmed.ncbi.nlm.nih.gov/13491210/" }
+jsonld:
+  - "@context": "https://schema.org"
+    "@type": "Article"
+    headline: "Tepová frekvence pro spalování tuků"
+    description: "Jaká tepová frekvence je ideální pro spalování tuků a hubnutí? Naučte se ji vypočítat a využijte zóny tepové frekvence pro efektivnější trénink."
+    datePublished: "2026-04-15"
+    dateModified: "2026-05-05"
+    author:
+      "@type": "Organization"
+      name: "Ideální BMI"
+    publisher:
+      "@type": "Organization"
+      name: "CodeWhiskers"
+      logo:
+        "@type": "ImageObject"
+        url: "https://idealnibmi.com/img/BMI-calc.png"
+    image: "https://idealnibmi.com/img/og-tepova-frekvence-spalovani.png"
+    mainEntityOfPage: "https://idealnibmi.com/tepova-frekvence-spalovani/"
 ---
+
 <p>V tomto článku si vysvětlíme, jak tepová frekvence souvisí se spalováním tuků, jak si ji vypočítat a jak ji využít v praxi – ať už chodíte, běháte, nebo cvičíte v posilovně.</p>
 
 <h2>Jak tepová frekvence ovlivňuje spalování</h2>
@@ -106,3 +130,16 @@ ogImage: "/img/og-tepova-frekvence-spalovani.png"
 <li>Nejlepší trénink je ten, který <strong>děláte pravidelně</strong></li>
 </ul>
 <p><a href="/">Spočítejte si BMI</a> a nastavte si tréninkový plán podle svých cílů.</p>
+
+## Kdy si nechat změřit tep zátěží
+
+Vzorce pro maximální tepovou frekvenci (Tanaka, Karvonen) jsou statistické průměry. **Skutečné maximum se může od výpočtu lišit i o 15–20 tepů.**
+
+Doporučujeme vyšetření, pokud:
+
+- **Pocitujete vynechávání tepu, závratě nebo bolest na hrudi při zátěži** – kardiolog, případně urgentní vyšetření.
+- **Máte v rodinné anamnéze infarkt nebo náhlou srdeční smrt před 55. (muži) / 65. (ženy) rokem** – preventivní zátěžové EKG.
+- **Trénujete intenzivně (HIIT, závody)** – přesné měření přes **spiroergometrii** (zátěžový test s analýzou plynů) určí osobní zóny.
+- **Máte diagnostikované kardiovaskulární onemocnění** – tepové zóny musí stanovit kardiolog, ne kalkulačka.
+
+Pro běžné rekreační hubnutí (zóna 2, 60–70 % HRmax) je vzorec **Tanaka 208 − 0,7 × věk** dostatečně přesný a bezpečný.

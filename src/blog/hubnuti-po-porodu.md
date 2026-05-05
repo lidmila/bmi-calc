@@ -10,7 +10,31 @@ perex: "Právě jste se stala maminkou – a vaše tělo si prošlo neuvěřitel
 heroImage: "/img/hubnuti-po-porodu.webp"
 heroAlt: "Hubnutí po porodu: bezpečně a s rozumem"
 ogImage: "/img/og-hubnuti-po-porodu.png"
+sources:
+  - { label: "ACOG – Postpartum exercise and weight", url: "https://www.acog.org/womens-health/faqs/exercise-after-pregnancy" }
+  - { label: "WHO – Breastfeeding", url: "https://www.who.int/health-topics/breastfeeding" }
+  - { label: "NIH – Weight retention after pregnancy", url: "https://www.nichd.nih.gov/health/topics/preconceptioncare/conditioninfo/weight-management" }
+  - { label: "La Leche League – Diet and weight loss while breastfeeding", url: "https://llli.org/breastfeeding-info/diet-and-weight/" }
+jsonld:
+  - "@context": "https://schema.org"
+    "@type": "Article"
+    headline: "Hubnutí po porodu: bezpečně a s rozumem"
+    description: "Jak zhubnout po porodu bezpečně, i při kojení? Praktické tipy na nastartování hubnutí, jídelníček a cvičení pro maminky po porodu."
+    datePublished: "2026-04-02"
+    dateModified: "2026-05-05"
+    author:
+      "@type": "Organization"
+      name: "Ideální BMI"
+    publisher:
+      "@type": "Organization"
+      name: "CodeWhiskers"
+      logo:
+        "@type": "ImageObject"
+        url: "https://idealnibmi.com/img/BMI-calc.png"
+    image: "https://idealnibmi.com/img/og-hubnuti-po-porodu.png"
+    mainEntityOfPage: "https://idealnibmi.com/hubnuti-po-porodu/"
 ---
+
 <p>V tomto článku se podíváme na to, jak nastartovat hubnutí po porodu bezpečně – i při kojení –, kdy je vhodné začít cvičit, jak si nastavit stravu a proč je nejdůležitější laskavost k sobě samé.</p>
 
 <h2>Co se děje s tělem po porodu</h2>
@@ -88,3 +112,15 @@ ogImage: "/img/og-hubnuti-po-porodu.png"
 <li>Buďte k sobě <strong>laskavé</strong> – právě jste vytvořily nový život</li>
 </ul>
 <p><a href="/">Spočítejte si své aktuální BMI</a> a sledujte svůj pokrok v čase. Jestli vás zajímá, kolik kalorií byste měla přijímat, podívejte se na článek o <a href="/pocitani-kalorii/">počítání kalorií při hubnutí</a>.</p>
+
+## Kdy vyhledat odbornou pomoc
+
+Šestinedělí a období kojení mají specifické nutriční a fyzické nároky. Drastické diety a intenzivní cvičení v této době mohou ohrozit zdraví matky i tvorbu mléka.
+
+Konzultaci doporučujeme:
+
+- **Gynekolog** – po šestinedělí (resp. 8 týdnů po císařském řezu) potvrdí, že se můžete vrátit k pohybové aktivitě.
+- **Laktační poradkyně** – pokud kojíte a chcete redukovat příjem, ověří, že to neovlivní mléko.
+- **Nutriční terapeut** – sestaví jídelníček, který pokryje zvýšené nutriční nároky kojení (~450 kcal navíc denně) a zároveň umožní pomalé hubnutí.
+- **Fyzioterapeut zaměřený na poporodní rehabilitaci** – diastáza, oslabené pánevní dno. Některé klasické cviky (zkracovačky, plank) můžou v prvních měsících uškodit.
+- **Psycholog/psychiatr** – při příznacích poporodní deprese. Hubnutí může být symptomem, ne cílem.

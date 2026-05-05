@@ -10,7 +10,31 @@ perex: "Padesátka není konec – je to nový začátek. Ano, hubnutí po 50 m�
 heroImage: "/img/hubnuti-po-50.webp"
 heroAlt: "Hubnutí po 50: jak na to bezpečně a účinně"
 ogImage: "/img/og-hubnuti-po-50.png"
+sources:
+  - { label: "NIH – Menopause and weight", url: "https://www.nia.nih.gov/health/menopause/what-menopause" }
+  - { label: "Cruz-Jentoft AJ et al. – Sarcopenia: revised European consensus 2019", url: "https://pubmed.ncbi.nlm.nih.gov/30312372/" }
+  - { label: "ACSM – Exercise and physical activity for older adults", url: "https://www.acsm.org/docs/default-source/files-for-resource-library/exercise-and-physical-activity-for-older-adults.pdf" }
+  - { label: "NHLBI – Healthy aging", url: "https://www.nhlbi.nih.gov/health/heart-healthy-living" }
+jsonld:
+  - "@context": "https://schema.org"
+    "@type": "Article"
+    headline: "Hubnutí po 50: jak na to bezpečně a účinně"
+    description: "Hubnutí po padesátce má svá specifika. Zjistěte, jaký jídelníček funguje, které cvičení je bezpečné a jak zhubnout zdravě i po 50 letech."
+    datePublished: "2026-03-25"
+    dateModified: "2026-05-05"
+    author:
+      "@type": "Organization"
+      name: "Ideální BMI"
+    publisher:
+      "@type": "Organization"
+      name: "CodeWhiskers"
+      logo:
+        "@type": "ImageObject"
+        url: "https://idealnibmi.com/img/BMI-calc.png"
+    image: "https://idealnibmi.com/img/og-hubnuti-po-50.png"
+    mainEntityOfPage: "https://idealnibmi.com/hubnuti-po-50/"
 ---
+
 <p>Dobrá zpráva? S rozumným přístupem ke stravě a pohybu se dá zhubnout v jakémkoli věku. V tomto článku se podíváme na to, jak si nastavit jídelníček, jaké cvičení je po 50 bezpečné a účinné, a proč se vyplatí spolupracovat s lékařem.</p>
 
 <h2>Co se děje v těle po padesátce</h2>
@@ -118,3 +142,15 @@ ogImage: "/img/og-hubnuti-po-50.png"
 <li><strong>Buďte trpěliví</strong> – cílem je 0,3–0,5 kg týdně</li>
 </ol>
 <p>Hubnutí po 50 je marathon, ne sprint. Nejdůležitější je začít – a vytrvat. Pokud vás zajímají specifika hubnutí ve čtyřiceti, přečtěte si náš článek <a href="/hubnuti-po-40/">Hubnutí po 40</a>.</p>
+
+## Kdy vyhledat odbornou pomoc
+
+Hubnutí po padesátce je medicínsky komplikovanější než ve čtyřicítce – klesá svalová hmota, mění se hormony, klesá citlivost na inzulin.
+
+Konzultaci doporučujeme:
+
+- **Praktický lékař** – preventivní prohlídka, krevní obraz, glykémie, cholesterol, hormony štítné žlázy. Hradí pojišťovna.
+- **Endokrinolog** – při podezření na hypotyreózu, andropauzu nebo poruchy nadledvin.
+- **Gynekolog** (ženy v menopauze) – posoudí potřebu hormonální substituční terapie a sledování kostní hustoty.
+- **Obezitolog** – při BMI nad 30 nebo komorbiditách. Obezitologická centra (např. Endokrinologický ústav v Praze) nabízejí komplexní program včetně farmakoterapie.
+- **Fyzioterapeut nebo trenér se specializací 50+** – nastaví silový trénink bez rizika zranění.

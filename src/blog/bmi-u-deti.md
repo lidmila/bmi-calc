@@ -10,7 +10,31 @@ perex: "Body Mass Index, zkráceně BMI, je jedním z nejčastěji používanýc
 heroImage: "/img/bmi-u-deti.webp"
 heroAlt: "BMI u dětí a dospívajících: kompletní průvodce"
 ogImage: "/img/og-bmi-u-deti.png"
+sources:
+  - { label: "CDC – Growth Charts (LMS data)", url: "https://www.cdc.gov/growthcharts/percentile_data_files.htm" }
+  - { label: "WHO – Child Growth Standards", url: "https://www.who.int/tools/child-growth-standards" }
+  - { label: "AAP – Clinical Practice Guideline for the Evaluation and Treatment of Children and Adolescents With Obesity", url: "https://publications.aap.org/pediatrics/article/151/2/e2022060640/190443" }
+  - { label: "CDC – BMI for children and teens", url: "https://www.cdc.gov/bmi/child-teen-calculator/about.html" }
+jsonld:
+  - "@context": "https://schema.org"
+    "@type": "Article"
+    headline: "BMI u dětí a dospívajících: kompletní průvodce"
+    description: "Kompletní průvodce BMI u dětí a dospívajících. Percentily, růstové grafy CDC/WHO a kdy se obrátit na pediatra."
+    datePublished: "2026-05-03"
+    dateModified: "2026-05-05"
+    author:
+      "@type": "Organization"
+      name: "Ideální BMI"
+    publisher:
+      "@type": "Organization"
+      name: "CodeWhiskers"
+      logo:
+        "@type": "ImageObject"
+        url: "https://idealnibmi.com/img/BMI-calc.png"
+    image: "https://idealnibmi.com/img/og-bmi-u-deti.png"
+    mainEntityOfPage: "https://idealnibmi.com/bmi-u-deti/"
 ---
+
 <p>Sledování BMI u dětí je přesto nesmírně důležité. Dětská obezita se v posledních desetiletích stala celosvětovým zdravotním problémem, který se nevyhýbá ani České republice. Nadměrná hmotnost v dětství výrazně zvyšuje riziko obezity v dospělosti a s ní spojených onemocnění, jako je diabetes 2. typu, kardiovaskulární choroby nebo problémy s pohybovým aparátem. Na druhou stranu může být podváha známkou nedostatečné výživy nebo skrytého zdravotního problému.</p>
 <p>U dospělých se BMI jednoduše porovnává s univerzálními hranicemi: hodnota pod 18,5 značí podváhu, 18,5 až 24,9 je normální hmotnost, 25 až 29,9 nadváha a 30 a více obezita. U dětí však tyto pevné hranice neplatí. Místo toho se BMI porovnává s referenčními hodnotami pro daný věk a pohlaví prostřednictvím takzvaných percentilů. To umožňuje zohlednit přirozené růstové změny a hormonální vývoj, kterými každé dítě prochází.</p>
 <p>V tomto článku se podrobně podíváme na to, jak se BMI u dětí vypočítává, co znamenají percentily a Z-skóre, jak číst růstové grafy a kdy je vhodné vyhledat odbornou pomoc. Cílem je poskytnout rodičům a pečovatelům srozumitelného průvodce, který pomůže lépe porozumět zdravotnímu stavu jejich dítěte.</p>

@@ -10,7 +10,31 @@ perex: "Obezita není jen estetický problém – je to chronické onemocnění,
 heroImage: "/img/stupne-obezity.webp"
 heroAlt: "Stupně obezity: BMI tabulka a zdravotní rizika"
 ogImage: "/img/og-stupne-obezity.png"
+sources:
+  - { label: "WHO – Obesity and overweight", url: "https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight" }
+  - { label: "NHLBI – Clinical Guidelines on the Identification, Evaluation, and Treatment of Overweight and Obesity in Adults", url: "https://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmicalc.htm" }
+  - { label: "NICE NG246 – Obesity: identification, assessment and management", url: "https://www.nice.org.uk/guidance/ng246" }
+  - { label: "ÚZIS – Zdravotnická ročenka ČR (data o obezitě)", url: "https://www.uzis.cz/" }
+jsonld:
+  - "@context": "https://schema.org"
+    "@type": "Article"
+    headline: "Stupně obezity: BMI tabulka a zdravotní rizika"
+    description: "Jaké jsou stupně obezity podle BMI? Přehledná tabulka, zdravotní rizika obezity 1., 2. a 3. stupně a statistiky obezity v České republice."
+    datePublished: "2026-05-01"
+    dateModified: "2026-05-05"
+    author:
+      "@type": "Organization"
+      name: "Ideální BMI"
+    publisher:
+      "@type": "Organization"
+      name: "CodeWhiskers"
+      logo:
+        "@type": "ImageObject"
+        url: "https://idealnibmi.com/img/BMI-calc.png"
+    image: "https://idealnibmi.com/img/og-stupne-obezity.png"
+    mainEntityOfPage: "https://idealnibmi.com/stupne-obezity/"
 ---
+
 <p>V tomto článku se dozvíte, jak se obezita klasifikuje, jaká zdravotní rizika jednotlivé stupně přinášejí, jak na tom je Česká republika a jaké jsou možnosti léčby.</p>
 
 <h2>Klasifikace obezity podle BMI</h2>
@@ -127,3 +151,15 @@ ogImage: "/img/og-stupne-obezity.png"
 <li>Už ztráta <strong>5–10 % hmotnosti</strong> výrazně snižuje zdravotní rizika</li>
 </ul>
 <p>Prvním krokem je zjistit, kde stojíte. <a href="/">Spočítejte si své BMI</a> a pokud spadáte do kategorie nadváhy nebo obezity, přečtěte si náš <a href="/jak-snizit-bmi/">kompletní průvodce snížením BMI</a>.</p>
+
+## Kdy vyhledat odbornou pomoc
+
+Obezita je chronické onemocnění, ne kosmetický problém. Při BMI nad 30, zvlášť s komorbiditami, je medicínská pomoc indikovaná a v ČR dostupná:
+
+- **Praktický lékař** (BMI 30–34,9, bez komorbidit) – preventivní prohlídka, krevní hodnoty, doporučení k nutričnímu terapeutovi.
+- **Obezitolog** (BMI nad 35 nebo BMI 30–34,9 + komorbidity) – komplexní vyšetření, plán léčby. V ČR mají specializovaná **obezitologická centra** ve velkých nemocnicích.
+- **Endokrinolog** – při podezření na hormonální příčinu (Cushing, hypotyreóza, PCOS).
+- **Bariatrický chirurg** (BMI nad 40 nebo BMI nad 35 s komorbiditami) – chirurgická léčba (bypass, sleeve gastrektomie). Pojišťovna hradí.
+- **Farmakologická léčba** – GLP-1 analogy (semaglutid, liraglutid) jsou v ČR dostupné, předepisuje obezitolog.
+
+Léčba obezity **není o vůli, ale o medicíně**. Pokud máte BMI nad 30 a všechny pokusy o redukci selhávají, je čas zkusit jinou cestu.

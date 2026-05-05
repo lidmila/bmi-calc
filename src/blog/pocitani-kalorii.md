@@ -10,7 +10,31 @@ perex: "Pokud chcete zhubnout, potřebujete jíst méně kalorií, než kolik va
 heroImage: "/img/pocitani-kalorii.webp"
 heroAlt: "Počítání kalorií při hubnutí: kompletní návod"
 ogImage: "/img/og-pocitani-kalorii.png"
+sources:
+  - { label: "NIH – Body Weight Planner", url: "https://www.niddk.nih.gov/bwp" }
+  - { label: "USDA – Dietary Guidelines for Americans", url: "https://www.dietaryguidelines.gov/" }
+  - { label: "Hall KD et al. – Quantification of the effect of energy imbalance on bodyweight", url: "https://pubmed.ncbi.nlm.nih.gov/21872751/" }
+  - { label: "WHO – Healthy diet", url: "https://www.who.int/news-room/fact-sheets/detail/healthy-diet" }
+jsonld:
+  - "@context": "https://schema.org"
+    "@type": "Article"
+    headline: "Počítání kalorií při hubnutí: kompletní návod"
+    description: "Jak správně počítat kalorie při hubnutí? Zjistěte svůj denní příjem kalorií, naučte se vytvořit kalorický deficit a nastavte si jídelníček, který funguje."
+    datePublished: "2026-04-08"
+    dateModified: "2026-05-05"
+    author:
+      "@type": "Organization"
+      name: "Ideální BMI"
+    publisher:
+      "@type": "Organization"
+      name: "CodeWhiskers"
+      logo:
+        "@type": "ImageObject"
+        url: "https://idealnibmi.com/img/BMI-calc.png"
+    image: "https://idealnibmi.com/img/og-pocitani-kalorii.png"
+    mainEntityOfPage: "https://idealnibmi.com/pocitani-kalorii/"
 ---
+
 <p>V tomto článku vám krok za krokem ukážeme, jak si spočítat denní příjem kalorií při hubnutí, jak správně jíst a na co si dát pozor, abyste zhubli zdravě a bez zbytečného stresu.</p>
 
 <h2>Jak fungují kalorie a energetická bilance</h2>
@@ -116,3 +140,15 @@ ogImage: "/img/og-pocitani-kalorii.png"
 <li>Měřte, zapisujte a po pár týdnech přejděte na intuitivní odhad</li>
 </ol>
 <p>Chcete začít? <a href="/">Spočítejte si BMI</a> a zjistěte, jak daleko jste od svého cíle. A pokud hledáte vhodný pohyb k hubnutí, mrkněte na <a href="/nejlepsi-sport-na-hubnuti/">nejlepší sporty na hubnutí</a> nebo na <a href="/hubnuti-chuzi/">hubnutí chůzí</a>.</p>
+
+## Kdy se poradit s nutričním terapeutem
+
+Počítání kalorií je užitečný nástroj pro většinu lidí, ale ne univerzální řešení. Existují situace, kdy pomůže odborný dohled:
+
+- **Po dlouhodobé restriktivní dietě / opakovaných dietních cyklech** – riziko porušeného metabolismu. Řeší se postupným reverse dietingem, ne dalším deficitem.
+- **Při poruchách příjmu potravy v anamnéze** – kalkulačky a tracking apps mohou spustit relaps. Doporučujeme konzultaci s psychoterapeutem před začátkem.
+- **U sportovců s vysokými nároky** – obecné kalkulačky podhodnocují potřebu o 200–500 kcal.
+- **U vegetariánů, veganů a alergiků** – nutriční terapeut zajistí dostatek bílkovin, B12, železa, omega-3.
+- **U dětí a dospívajících** – kalorické restrikce nepatří do rukou rodičů, ale dětského nutričního terapeuta.
+
+V ČR mají nutriční terapeuti sdružení v **České asociaci nutričních terapeutů** – seznam ověřených odborníků najdete na jejich webu.

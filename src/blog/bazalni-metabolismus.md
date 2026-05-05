@@ -10,7 +10,31 @@ perex: "…"
 heroImage: "/img/bazalni-metabolismus.webp"
 heroAlt: "Bazální metabolismus: výpočet, vzorce a kalkulačka"
 ogImage: "/img/og-bazalni-metabolismus.png"
+sources:
+  - { label: "Mifflin MD et al. – A new predictive equation for resting energy expenditure", url: "https://pubmed.ncbi.nlm.nih.gov/2305711/" }
+  - { label: "NIH – Body Weight Planner / Energy expenditure", url: "https://www.niddk.nih.gov/bwp" }
+  - { label: "WHO – Obesity and overweight", url: "https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight" }
+  - { label: "Harris JA, Benedict FG. – A biometric study of basal metabolism", url: "https://pubmed.ncbi.nlm.nih.gov/16576330/" }
+jsonld:
+  - "@context": "https://schema.org"
+    "@type": "Article"
+    headline: "Bazální metabolismus: výpočet, vzorce a kalkulačka"
+    description: "Vypočítejte si bazální metabolismus (BMR) pomocí ověřených vzorců. Zjistěte, kolik kalorií spalujete v klidu a jak BMR využít při hubnutí."
+    datePublished: "2026-04-25"
+    dateModified: "2026-05-05"
+    author:
+      "@type": "Organization"
+      name: "Ideální BMI"
+    publisher:
+      "@type": "Organization"
+      name: "CodeWhiskers"
+      logo:
+        "@type": "ImageObject"
+        url: "https://idealnibmi.com/img/BMI-calc.png"
+    image: "https://idealnibmi.com/img/og-bazalni-metabolismus.png"
+    mainEntityOfPage: "https://idealnibmi.com/bazalni-metabolismus/"
 ---
+
 <p>Znalost bazálního metabolismu je klíčová pro nastavení správného kalorického příjmu při hubnutí. Pokud jíte pod úroveň BMR, riskujete zpomalení metabolismu, ztrátu svalové hmoty a zdravotní problémy. V tomto článku vám ukážeme, jak si BMR vypočítat a jak ho využít v praxi.</p>
 
 <h2>Jak vypočítat bazální metabolismus</h2>
@@ -117,3 +141,15 @@ ogImage: "/img/og-bazalni-metabolismus.png"
 <li>Přepočítávejte BMR každých ~5 kg úbytku</li>
 </ul>
 <p><a href="/">Spočítejte si své BMI</a> a zjistěte, kde stojíte. Pokud chcete pochopit metabolismus jako celek, přečtěte si náš článek <a href="/metabolismus/">Co je metabolismus</a>.</p>
+
+## Kdy konzultovat s odborníkem
+
+Online vzorce pro BMR jsou orientační. Pokud máte nestandardní složení těla (vysoký podíl svalů, otoky, hormonální poruchy), skutečný BMR se může od výpočtu lišit i o 200–400 kcal.
+
+Doporučujeme konzultaci, pokud:
+
+- **Máte podezření na poruchu štítné žlázy** – praktický lékař vás pošle na TSH a fT4.
+- **Hubnete při velkém deficitu a stagnujete** – nutriční terapeut posoudí adaptaci metabolismu.
+- **Trpíte únavou, ztrátou energie a chladem** – známky příliš nízkého kalorického příjmu.
+
+Pro přesné měření klidového výdeje energie existuje **nepřímá kalorimetrie** (dostupná v některých obezitologických centrech).

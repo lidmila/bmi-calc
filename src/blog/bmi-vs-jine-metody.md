@@ -10,7 +10,31 @@ perex: "Index tělesné hmotnosti, známý pod zkratkou BMI, patří mezi nejroz
 heroImage: "/img/bmi-vs-jine-metody.webp"
 heroAlt: "BMI vs. jiné metody měření tělesného složení"
 ogImage: "/img/og-bmi-vs-jine-metody.png"
+sources:
+  - { label: "WHO – BMI classification", url: "https://www.who.int/data/gho/data/themes/topics/topic-details/GHO/body-mass-index" }
+  - { label: "NICE NG246 – Obesity: identification, assessment and management", url: "https://www.nice.org.uk/guidance/ng246" }
+  - { label: "Heymsfield SB et al. – Body composition methods (review)", url: "https://pubmed.ncbi.nlm.nih.gov/26104202/" }
+  - { label: "Ashwell M, Gunn P, Gibson S. – Waist-to-height ratio (meta-analysis)", url: "https://pubmed.ncbi.nlm.nih.gov/22106927/" }
+jsonld:
+  - "@context": "https://schema.org"
+    "@type": "Article"
+    headline: "BMI vs. jiné metody měření tělesného složení"
+    description: "Srovnání BMI s dalšími metodami: tělesný tuk, obvod pasu, WHR, DEXA, BIA. Kdy BMI nestačí a jaké metody zvolit."
+    datePublished: "2026-05-04"
+    dateModified: "2026-05-05"
+    author:
+      "@type": "Organization"
+      name: "Ideální BMI"
+    publisher:
+      "@type": "Organization"
+      name: "CodeWhiskers"
+      logo:
+        "@type": "ImageObject"
+        url: "https://idealnibmi.com/img/BMI-calc.png"
+    image: "https://idealnibmi.com/img/og-bmi-vs-jine-metody.png"
+    mainEntityOfPage: "https://idealnibmi.com/bmi-vs-jine-metody/"
 ---
+
 <p>Jednoduchost BMI je ovšem zároveň jeho největší slabinou. Tento ukazatel totiž nerozlišuje, z čeho se tělesná hmotnost skládá. Neříká nám nic o poměru svalové a tukové tkáně, neodhalí rozložení tuku v těle a nezohledňuje ani faktory jako věk, pohlaví, etnicitu nebo fyzickou zdatnost. Člověk s výraznou svalovou hmotou může mít podle BMI nadváhu, přestože jeho procento tělesného tuku je velmi nízké. Naopak osoba s normálním BMI může skrývat nebezpečně vysoký podíl viscerálního tuku kolem vnitřních orgánů.</p>
 <p>V tomto článku podrobně porovnáme BMI s dalšími metodami hodnocení tělesného složení. Představíme měření procenta tělesného tuku, obvod pasu a poměr pas/boky, pokročilé laboratorní metody jako DEXA sken a hydrostatické vážení i běžně dostupnou bioimpedanční analýzu. U každé metody se zaměříme na princip fungování, přesnost, dostupnost a praktické využití, abyste si mohli zvolit ten nejlepší přístup pro vaši situaci.</p>
 
@@ -149,3 +173,13 @@ ogImage: "/img/og-bmi-vs-jine-metody.png"
 
 <p>Bez ohledu na zvolenou metodu platí, že žádné číslo by nemělo být vaším jediným ukazatelem zdraví. Jak se cítíte, jaké jsou vaše laboratorní výsledky a celková pohoda – to vše je důležité.</p>
 <p>Chcete si spočítat své BMI jako výchozí bod? Vyzkoušejte naši <a href="/">bezplatnou BMI kalkulačku</a>, která vám okamžitě ukáže vaši hmotnostní kategorii a doporučí další kroky.</p>
+
+## Kdy se obrátit na odborníka
+
+BMI ani jiná samostatná metrika není diagnóza. Pro komplexní posouzení tělesného složení a metabolického zdraví doporučujeme:
+
+- **Praktický lékař** – základní vyšetření krevních hodnot (cholesterol, glykémie, jaterní testy), tlak.
+- **Nutriční terapeut** – přesnější metodu měření (bioimpedance, kožní řasy) a interpretaci v kontextu životního stylu.
+- **Obezitolog** – při BMI nad 30 nebo WHtR nad 0,6, zvlášť pokud máte další rizikové faktory.
+
+Pro nejpřesnější analýzu složení těla existuje **DEXA sken** (dostupný ve specializovaných centrech) – zlatý standard pro měření tukové, svalové a kostní hmoty.

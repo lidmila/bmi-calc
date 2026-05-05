@@ -10,7 +10,31 @@ perex: "Chcete zhubnout a hledáte sport, který vám to usnadní? Dobrá zpráv
 heroImage: "/img/nejlepsi-sport-na-hubnuti.webp"
 heroAlt: "Nejlepší sporty na hubnutí: který si vybrat?"
 ogImage: "/img/og-nejlepsi-sport-na-hubnuti.png"
+sources:
+  - { label: "ACSM – Physical Activity Guidelines", url: "https://www.acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines" }
+  - { label: "AHA – American Heart Association recommendations for physical activity", url: "https://www.heart.org/en/healthy-living/fitness/fitness-basics/aha-recs-for-physical-activity-in-adults" }
+  - { label: "WHO – Physical activity guidelines", url: "https://www.who.int/news-room/fact-sheets/detail/physical-activity" }
+  - { label: "Foster C et al. – Effectiveness of HIIT vs MICT for weight loss", url: "https://pubmed.ncbi.nlm.nih.gov/28401638/" }
+jsonld:
+  - "@context": "https://schema.org"
+    "@type": "Article"
+    headline: "Nejlepší sporty na hubnutí: který si vybrat?"
+    description: "Který sport je nejlepší na hubnutí? Srovnání plavání, běhu, švihadla, pilates, hula hoop a dalších sportů – kolik spálíte a pro koho se hodí."
+    datePublished: "2026-04-12"
+    dateModified: "2026-05-05"
+    author:
+      "@type": "Organization"
+      name: "Ideální BMI"
+    publisher:
+      "@type": "Organization"
+      name: "CodeWhiskers"
+      logo:
+        "@type": "ImageObject"
+        url: "https://idealnibmi.com/img/BMI-calc.png"
+    image: "https://idealnibmi.com/img/og-nejlepsi-sport-na-hubnuti.png"
+    mainEntityOfPage: "https://idealnibmi.com/nejlepsi-sport-na-hubnuti/"
 ---
+
 <p>V tomto přehledu srovnáme nejoblíbenější sporty z hlediska spalování kalorií, vhodnosti pro začátečníky a účinku na hubnutí. Od plavání přes švihadlo až po hula hoop.</p>
 
 <h2>Srovnání sportů: kolik spálíte za hodinu</h2>
@@ -129,3 +153,14 @@ ogImage: "/img/og-nejlepsi-sport-na-hubnuti.png"
 <li><strong>Denní chůze</strong> – jako základ pohybového režimu</li>
 </ul>
 <p>Ke správnému spalování pomáhá i znalost <a href="/tepova-frekvence-spalovani/">optimální tepové frekvence</a>. A nezapomeňte, že hubnutí je z 80 % o stravě – sport je důležitý doplněk, ne náhrada za <a href="/pocitani-kalorii/">správný kalorický příjem</a>.</p>
+
+## Kdy se poradit s odborníkem
+
+Pohybová aktivita je obecně bezpečná, ale začátek nového sportu, zvlášť po dlouhé pauze nebo při vyšším BMI, by měl být informovaný:
+
+- **Před začátkem intenzivního tréninku po 40. roce** – preventivní vyšetření u praktického lékaře (EKG, krevní tlak, glykémie).
+- **Při BMI nad 35** – konzultace s obezitologem nebo fyzioterapeutem. Některé sporty (běh, skoky) jsou v této váze rizikové pro klouby.
+- **Při bolestech kloubů, zad nebo svalů, které neodeznívají do 2 týdnů** – ortoped/fyzioterapeut.
+- **Při kardiovaskulárním onemocnění v rodině** – kardiolog nebo zátěžové EKG před HIIT.
+
+Pokud začínáte úplně, **nejbezpečnější vstup je rychlá chůze**. Postupně přidávejte: silový trénink (s trenérem) → kardio (kolo, plavání) → vyšší intenzity.

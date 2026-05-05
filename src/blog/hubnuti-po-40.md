@@ -10,7 +10,31 @@ perex: "Překročili jste čtyřicítku a máte pocit, že hubnutí už nefunguj
 heroImage: "/img/hubnuti-po-40.webp"
 heroAlt: "Hubnutí po 40: co se mění a jak na to"
 ogImage: "/img/og-hubnuti-po-40.png"
+sources:
+  - { label: "NHLBI – Aim for a Healthy Weight", url: "https://www.nhlbi.nih.gov/health/educational/lose_wt/" }
+  - { label: "WHO – Healthy ageing", url: "https://www.who.int/health-topics/ageing" }
+  - { label: "Mifflin MD et al. – Predictive equation for resting energy expenditure", url: "https://pubmed.ncbi.nlm.nih.gov/2305711/" }
+  - { label: "Cruz-Jentoft AJ et al. – Sarcopenia: revised European consensus", url: "https://pubmed.ncbi.nlm.nih.gov/30312372/" }
+jsonld:
+  - "@context": "https://schema.org"
+    "@type": "Article"
+    headline: "Hubnutí po 40: co se mění a jak na to"
+    description: "Po čtyřicítce se hubnutí mění. Přečtěte si, proč je těžší zhubnout, jaký jídelníček funguje a které strategie opravdu pomáhají ženám i mužům po 40."
+    datePublished: "2026-03-22"
+    dateModified: "2026-05-05"
+    author:
+      "@type": "Organization"
+      name: "Ideální BMI"
+    publisher:
+      "@type": "Organization"
+      name: "CodeWhiskers"
+      logo:
+        "@type": "ImageObject"
+        url: "https://idealnibmi.com/img/BMI-calc.png"
+    image: "https://idealnibmi.com/img/og-hubnuti-po-40.png"
+    mainEntityOfPage: "https://idealnibmi.com/hubnuti-po-40/"
 ---
+
 <p>V tomto článku si vysvětlíme, proč se po čtyřicítce hubne hůř, co s tím můžete udělat a jak si nastavit jídelníček i pohyb tak, aby výsledky přišly – bezpečně a udržitelně.</p>
 
 <h2>Proč je hubnutí po 40 těžší</h2>
@@ -126,3 +150,14 @@ ogImage: "/img/og-hubnuti-po-40.png"
 <li><strong>Trpělivost</strong> – očekávejte ztrátu 0,5 kg týdně, ne víc</li>
 </ol>
 <p>Pokud vás zajímá hubnutí po padesátce, přečtěte si náš navazující článek <a href="/hubnuti-po-50/">Hubnutí po 50</a>, kde se věnujeme specifickým výzvám vyššího věku. A pokud chcete pochopit, jak váš metabolismus funguje, doporučujeme článek o <a href="/metabolismus/">metabolismu</a>.</p>
+
+## Kdy vyhledat odbornou pomoc
+
+Hubnutí po čtyřicítce je často komplikované hormonálními a metabolickými změnami, které nejdou vyřešit jen kalorickým deficitem.
+
+Konzultaci doporučujeme, pokud:
+
+- **Hubnete striktně, ale výsledek není** – často skrytá hypotyreóza, inzulinová rezistence nebo PCOS u žen.
+- **Máte bolesti kloubů, které brání cvičení** – ortoped/revmatolog. Často jde o začínající artrózu, kterou lze zbrzdit cílenou rehabilitací.
+- **Vstupujete do perimenopauzy / klesá vám libido** (ženy 45+, muži s testosteronem) – endokrinolog.
+- **BMI nad 30 + komorbidity** (vysoký tlak, vysoký cholesterol) – obezitolog. V ČR jsou dostupná i farmakologická řešení (semaglutid, liraglutid).

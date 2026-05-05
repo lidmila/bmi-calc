@@ -10,7 +10,31 @@ perex: "Chůze je nejpřirozenější pohyb, který existuje. Nepotřebujete k n
 heroImage: "/img/hubnuti-chuzi.webp"
 heroAlt: "Hubnutí chůzí: kolik kroků denně potřebujete?"
 ogImage: "/img/og-hubnuti-chuzi.png"
+sources:
+  - { label: "CDC – Physical Activity Basics", url: "https://www.cdc.gov/physical-activity-basics/guidelines/adults.html" }
+  - { label: "AHA – Walking and physical activity recommendations", url: "https://www.heart.org/en/healthy-living/fitness/walking" }
+  - { label: "Tudor-Locke C, Bassett DR. – How many steps/day are enough?", url: "https://pubmed.ncbi.nlm.nih.gov/14715035/" }
+  - { label: "WHO – Physical activity guidelines", url: "https://www.who.int/news-room/fact-sheets/detail/physical-activity" }
+jsonld:
+  - "@context": "https://schema.org"
+    "@type": "Article"
+    headline: "Hubnutí chůzí: kolik kroků denně potřebujete?"
+    description: "Chůze je nejpřístupnější způsob hubnutí. Zjistěte, kolik kroků denně stačí, jak pomáhá rychlá chůze i chůze na páse a proč funguje na břicho."
+    datePublished: "2026-03-18"
+    dateModified: "2026-05-05"
+    author:
+      "@type": "Organization"
+      name: "Ideální BMI"
+    publisher:
+      "@type": "Organization"
+      name: "CodeWhiskers"
+      logo:
+        "@type": "ImageObject"
+        url: "https://idealnibmi.com/img/BMI-calc.png"
+    image: "https://idealnibmi.com/img/og-hubnuti-chuzi.png"
+    mainEntityOfPage: "https://idealnibmi.com/hubnuti-chuzi/"
 ---
+
 <p>V tomto článku se podíváme na to, kolik kroků denně je potřeba k hubnutí, jak funguje rychlá chůze, proč chůze pomáhá i na hubnutí břicha a jestli má smysl chodit na běžeckém páse. Všechno prakticky a bez zbytečných komplikací.</p>
 
 <h2>Proč chůze funguje na hubnutí</h2>
@@ -124,3 +148,14 @@ ogImage: "/img/og-hubnuti-chuzi.png"
 <li>Důslednost porazí intenzitu – choďte každý den, ne jednou za týden 3 hodiny</li>
 </ul>
 <p>Chcete vědět, kde právě stojíte? <a href="/">Spočítejte si své BMI</a> a sledujte svůj pokrok v čase.</p>
+
+## Kdy se poradit s lékařem před začátkem
+
+Chůze je obecně bezpečná pro většinu lidí, ale pokud máte:
+
+- **Diagnostikované kardiovaskulární onemocnění** nebo bolest na hrudi při zátěži – konzultace s kardiologem před zvýšením intenzity.
+- **Bolesti kolen, kyčlí nebo zad**, které se s chůzí zhoršují – vyšetření u ortopeda nebo fyzioterapeuta.
+- **BMI nad 35** – obezitolog nebo nutriční terapeut vám pomůže nastavit bezpečnou progresi.
+- **Diabetes 2. typu nebo prediabetes** – diabetolog nastaví, jak chůzi zařadit s ohledem na glykémii.
+
+Pokud začínáte po dlouhé pauze, postupujte pomalu: **týden 1–2: 15–20 min/den, týden 3–4: 25–30 min/den**.

@@ -10,7 +10,31 @@ perex: "Slovo „metabolismus\" slyšíte všude – v článcích o hubnutí, v
 heroImage: "/img/metabolismus.webp"
 heroAlt: "Metabolismus: co to je a jak ovlivňuje vaši váhu"
 ogImage: "/img/og-metabolismus.png"
+sources:
+  - { label: "NIH – Metabolism and weight", url: "https://www.niddk.nih.gov/health-information/weight-management" }
+  - { label: "WHO – Obesity and overweight", url: "https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight" }
+  - { label: "Pontzer H et al. – Daily energy expenditure through the human life course", url: "https://pubmed.ncbi.nlm.nih.gov/34385400/" }
+  - { label: "Mayo Clinic – Metabolism and weight loss", url: "https://www.mayoclinic.org/healthy-lifestyle/weight-loss/in-depth/metabolism/art-20046508" }
+jsonld:
+  - "@context": "https://schema.org"
+    "@type": "Article"
+    headline: "Metabolismus: co to je a jak ovlivňuje vaši váhu"
+    description: "Co je metabolismus a jak ovlivňuje hubnutí? Srozumitelné vysvětlení, jak metabolismus funguje, proč se zpomaluje a jak ho přirozeně zrychlit."
+    datePublished: "2026-04-22"
+    dateModified: "2026-05-05"
+    author:
+      "@type": "Organization"
+      name: "Ideální BMI"
+    publisher:
+      "@type": "Organization"
+      name: "CodeWhiskers"
+      logo:
+        "@type": "ImageObject"
+        url: "https://idealnibmi.com/img/BMI-calc.png"
+    image: "https://idealnibmi.com/img/og-metabolismus.png"
+    mainEntityOfPage: "https://idealnibmi.com/metabolismus/"
 ---
+
 <p>V tomto článku si jednoduše a srozumitelně vysvětlíme, co metabolismus je, jak funguje, co ho ovlivňuje a – hlavně – jestli se dá nějak zrychlit.</p>
 
 <h2>Co je metabolismus</h2>
@@ -96,3 +120,14 @@ ogImage: "/img/og-metabolismus.png"
 <li>Rozdíly v metabolismu mezi lidmi jsou menší, než si myslíte</li>
 </ul>
 <p>Chcete vědět, kolik kalorií vaše tělo spaluje v klidu? Přečtěte si náš podrobný článek o <a href="/bazalni-metabolismus/">bazálním metabolismu</a> s kalkulačkou a vzorci. A nezapomeňte si <a href="/">spočítat BMI</a>.</p>
+
+## Kdy se obrátit na odborníka
+
+„Pomalý metabolismus" je častá výmluva, ale skutečně metabolický důvod hubnoucích stagnací bývá vzácný. Přesto existují stavy, které ho ovlivňují a vyžadují léčbu:
+
+- **Hypotyreóza (snížená funkce štítné žlázy)** – vede k zpomalení BMR o 5–15 %. Řeší endokrinolog vyšetřením TSH, fT4.
+- **Cushingův syndrom** – nadbytek kortizolu. Vzácný, ale typické příznaky (centrální obezita, fialové strie, otoky obličeje) jsou výrazné.
+- **Inzulinová rezistence / PCOS** – diabetolog nebo gynekolog.
+- **Po dlouhodobé restriktivní dietě** – „adaptivní termogeneze" snižuje BMR o 100–200 kcal. Řešením je ne další dieta, ale **cílená rehabilitace metabolismu** (reverse dieting) s nutričním terapeutem.
+
+Pokud máte podezření na metabolickou poruchu, **začněte u praktického lékaře** – základní laboratorní vyšetření je hrazené pojišťovnou a vyloučí nejčastější příčiny.
