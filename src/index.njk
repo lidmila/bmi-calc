@@ -57,8 +57,7 @@ jsonld:
         </h1>
 
         <p class="mt-7 max-w-xl text-lg sm:text-xl text-ink/80 dark:text-slate-300 text-pretty dropcap">
-          Zadáte výšku, váhu a podle chuti i věk či obvod pasu. Vrátíme vám číslo,
-          kontext podle WHO, doporučený rozsah pro váš věk a srozumitelné vysvětlení, co s tím dál. Bez registrace a bez e-mailu.
+          Zadáte výšku a váhu. Vrátíme vám číslo, kontext podle WHO a srozumitelné vysvětlení, co s tím dál. Bez registrace, bez e-mailu, bez triků.
         </p>
 
         <div class="mt-9 flex flex-wrap items-center gap-3">
@@ -78,7 +77,7 @@ jsonld:
       <div class="lg:col-span-5 relative">
         <div class="relative max-w-sm mx-auto">
           {# floating sticker #}
-          <div class="absolute -top-6 -left-6 sticker animate-floaty z-10">Zdarma · bez registrace</div>
+          <div class="absolute -top-6 -left-6 sticker animate-floaty z-10">Bez registrace · bez e-mailu</div>
 
           <div class="relative tilt-r-2">
             <img src="/img/logo-transparent.png" alt="BMI Kalkulačka – ilustrace"
@@ -95,29 +94,14 @@ jsonld:
       </div>
     </div>
 
-    {# stats ticker, marquee-like, bottom of hero #}
-    <div class="mt-16 border-y-2 border-ink/10 py-5 overflow-hidden">
-      <div class="flex items-center gap-12 text-sm font-semibold text-ink/70 dark:text-slate-300 whitespace-nowrap animate-ticker">
-        <span class="flex items-center gap-2"><span class="font-display text-2xl text-flame-600">200k+</span> spočítaných BMI</span>
-        <span class="opacity-40">★</span>
-        <span class="flex items-center gap-2"><span class="font-display text-2xl text-brand-700">3</span> režimy výpočtu</span>
-        <span class="opacity-40">★</span>
-        <span class="flex items-center gap-2"><span class="font-display text-2xl text-flame-600">CDC LMS</span> data pro děti</span>
-        <span class="opacity-40">★</span>
-        <span class="flex items-center gap-2"><span class="font-display text-2xl text-brand-700">2026</span> aktualizováno</span>
-        <span class="opacity-40">★</span>
-        <span class="flex items-center gap-2"><span class="font-display text-2xl text-flame-600">0 Kč</span> navždy</span>
-        <span class="opacity-40">★</span>
-        {# duplicate for seamless loop #}
-        <span class="flex items-center gap-2"><span class="font-display text-2xl text-flame-600">200k+</span> spočítaných BMI</span>
-        <span class="opacity-40">★</span>
-        <span class="flex items-center gap-2"><span class="font-display text-2xl text-brand-700">3</span> režimy výpočtu</span>
-        <span class="opacity-40">★</span>
-        <span class="flex items-center gap-2"><span class="font-display text-2xl text-flame-600">CDC LMS</span> data pro děti</span>
-        <span class="opacity-40">★</span>
-        <span class="flex items-center gap-2"><span class="font-display text-2xl text-brand-700">2026</span> aktualizováno</span>
-        <span class="opacity-40">★</span>
-        <span class="flex items-center gap-2"><span class="font-display text-2xl text-flame-600">0 Kč</span> navždy</span>
+    {# credibility strip – static, factual, verifiable #}
+    <div class="mt-16 border-y-2 border-ink/10 py-6">
+      <p class="text-[10px] uppercase tracking-[0.25em] text-ink/50 dark:text-slate-500 font-bold mb-4">Podle čeho počítáme</p>
+      <div class="grid gap-x-8 gap-y-3 sm:grid-cols-2 lg:grid-cols-4 text-sm text-ink/80 dark:text-slate-300">
+        <div class="flex items-baseline gap-2"><span class="font-display text-2xl text-flame-600">WHO</span><span>klasifikace pro dospělé</span></div>
+        <div class="flex items-baseline gap-2"><span class="font-display text-2xl text-brand-700">CDC</span><span>percentilové grafy pro děti</span></div>
+        <div class="flex items-baseline gap-2"><span class="font-display text-2xl text-flame-600">Mifflin</span><span>vzorec pro BMR a TDEE</span></div>
+        <div class="flex items-baseline gap-2"><span class="font-display text-2xl text-brand-700">NICE</span><span>guideline pro obvod pasu</span></div>
       </div>
     </div>
   </div>
