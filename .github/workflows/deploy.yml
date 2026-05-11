@@ -28,3 +28,46 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy _site --project-name=bmi-calc-test --branch=main --commit-dirty=true
+
+      # IndexNow: notify Bing, Yandex, Seznam.cz, Naver of changed URLs.
+      # Free, legitimate API. Does NOT include Google (no equivalent API exists).
+      # Key file: static/1bf3ea3b833b49269ebc202db6fc091a.txt (auto-verified by IndexNow).
+      - name: Notify IndexNow (Bing/Seznam/Yandex)
+        if: success()
+        run: |
+          # Wait a few seconds for Cloudflare cache to warm up after deploy
+          sleep 30
+
+          # Extract all <loc>...</loc> URLs from generated sitemap
+          URLS=$(grep -oE '<loc>[^<]+</loc>' _site/sitemap.xml | sed 's|</\?loc>||g')
+          URL_COUNT=$(echo "$URLS" | wc -l)
+          echo "Pinging IndexNow for $URL_COUNT URLs..."
+
+          # Build JSON payload
+          JSON_URLS=$(echo "$URLS" | jq -R . | jq -s .)
+          PAYLOAD=$(jq -n \
+            --arg host "idealnibmi.com" \
+            --arg key "1bf3ea3b833b49269ebc202db6fc091a" \
+            --arg keyLoc "https://idealnibmi.com/1bf3ea3b833b49269ebc202db6fc091a.txt" \
+            --argjson urls "$JSON_URLS" \
+            '{host: $host, key: $key, keyLocation: $keyLoc, urlList: $urls}')
+
+          echo "Payload preview:"
+          echo "$PAYLOAD" | jq '.urlList | length'
+
+          # POST to IndexNow (broadcast endpoint forwards to all participants)
+          HTTP_CODE=$(curl -s -o /tmp/indexnow-response.txt -w "%{http_code}" \
+            -X POST "https://api.indexnow.org/IndexNow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "$PAYLOAD")
+
+          echo "IndexNow HTTP $HTTP_CODE"
+          cat /tmp/indexnow-response.txt
+          echo ""
+
+          # 200 = accepted, 202 = accepted (validation pending)
+          # 400 = bad request, 403 = key file not found
+          # We don't fail the workflow on IndexNow errors – deploy already succeeded.
+          if [ "$HTTP_CODE" -ge 400 ]; then
+            echo "::warning::IndexNow returned HTTP $HTTP_CODE — check key file accessibility"
+          fi
