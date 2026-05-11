@@ -6,12 +6,15 @@ permalink: /blog/
 ---
 
 <section class="container-x py-12 lg:py-16">
-  <div class="max-w-2xl mx-auto text-center">
-    <h1 class="font-display text-4xl sm:text-5xl font-bold text-balance">Blog</h1>
-    <p class="mt-4 text-lg text-slate-600 dark:text-slate-300 text-pretty">Praktické články, které vám pomůžou rozumět svému tělu, hubnout zdravě a dlouhodobě udržovat formu.</p>
+  <div class="max-w-3xl">
+    <p class="text-xs uppercase tracking-[0.25em] text-flame-600 font-bold">Čtení · 13 článků</p>
+    <h1 class="mt-2 font-display text-4xl sm:text-5xl font-bold text-balance">Blog o&nbsp;tom, co <span class="italic text-flame-600">opravdu</span> funguje.</h1>
+    <p class="mt-5 max-w-2xl text-lg text-slate-600 dark:text-slate-300 text-pretty">
+      Hubnutí, metabolismus, sport, BMI. Vždy podle WHO, CDC a&nbsp;NIH. Žádné krátkodobé diety, žádné zázračné potraviny, žádné influencerské triky.
+    </p>
   </div>
 
-  <div class="mt-10 flex flex-wrap justify-center gap-2" role="tablist" aria-label="Filtrovat podle tématu">
+  <div class="mt-10 flex flex-wrap gap-2" role="tablist" aria-label="Filtrovat podle tématu">
     {% set filters = [
       {key: "all", label: "Vše"},
       {key: "hubnuti", label: "Hubnutí"},
@@ -26,19 +29,19 @@ permalink: /blog/
   </div>
 
   {% set posts = [
-    {url: "/hubnuti-chuzi/", img: "/img/hubnuti-chuzi.webp", cat: "hubnuti", catLabel: "Hubnutí", title: "Hubnutí chůzí: kolik kroků denně potřebujete?", desc: "Chůze je nejpřístupnější způsob hubnutí. Zjistěte, kolik kroků denně stačí."},
-    {url: "/hubnuti-po-40/", img: "/img/hubnuti-po-40.webp", cat: "hubnuti", catLabel: "Hubnutí", title: "Hubnutí po 40: co se mění a jak na to", desc: "Po čtyřicítce se hubnutí mění. Zjistěte, co se děje s metabolismem."},
-    {url: "/hubnuti-po-50/", img: "/img/hubnuti-po-50.webp", cat: "hubnuti", catLabel: "Hubnutí", title: "Hubnutí po 50: jak na to bezpečně a účinně", desc: "Bezpečné hubnutí po padesátce. Rady pro zachování zdraví a svalové hmoty."},
-    {url: "/hubnuti-po-porodu/", img: "/img/hubnuti-po-porodu.webp", cat: "hubnuti", catLabel: "Hubnutí", title: "Hubnutí po porodu: bezpečně a s rozumem", desc: "Jak bezpečně zhubnout po porodu bez extrémních diet a s ohledem na kojení."},
-    {url: "/pocitani-kalorii/", img: "/img/pocitani-kalorii.webp", cat: "vyziva", catLabel: "Výživa", title: "Počítání kalorií při hubnutí: kompletní návod", desc: "Kompletní návod na počítání kalorií. Jak spočítat denní příjem a vytvořit deficit."},
-    {url: "/nejlepsi-sport-na-hubnuti/", img: "/img/nejlepsi-sport-na-hubnuti.webp", cat: "sport", catLabel: "Sport", title: "Nejlepší sporty na hubnutí: který si vybrat?", desc: "Který sport spaluje nejvíce kalorií? Porovnání běhu, plavání, HIIT a dalších."},
-    {url: "/tepova-frekvence-spalovani/", img: "/img/tepova-frekvence-spalovani.webp", cat: "sport", catLabel: "Sport", title: "Tepová frekvence pro spalování tuků", desc: "Jaká tepová frekvence je ideální pro spalování tuků? Výpočet a zóny."},
-    {url: "/metabolismus/", img: "/img/metabolismus.webp", cat: "metabolismus", catLabel: "Metabolismus", title: "Metabolismus: co to je a jak ovlivňuje vaši váhu", desc: "Co je metabolismus, jak funguje a jak ovlivňuje vaši hmotnost."},
-    {url: "/bazalni-metabolismus/", img: "/img/bazalni-metabolismus.webp", cat: "metabolismus", catLabel: "Metabolismus", title: "Bazální metabolismus: výpočet, vzorce a kalkulačka", desc: "Výpočet bazálního metabolismu, vzorce a kalkulačka pro muže i ženy."},
-    {url: "/stupne-obezity/", img: "/img/stupne-obezity.webp", cat: "bmi", catLabel: "BMI", title: "Stupně obezity: BMI tabulka a zdravotní rizika", desc: "BMI tabulka, stupně obezity a jejich zdravotní rizika."},
-    {url: "/jak-snizit-bmi/", img: "/img/jak-snizit-bmi.webp", cat: "bmi", catLabel: "BMI", title: "Jak snížit BMI: kompletní průvodce", desc: "Praktický průvodce, jak snížit BMI zdravým způsobem. Strava, cvičení, spánek."},
-    {url: "/bmi-u-deti/", img: "/img/bmi-u-deti.webp", cat: "bmi", catLabel: "BMI", title: "BMI u dětí a dospívajících: kompletní průvodce", desc: "Kompletní průvodce BMI u dětí. Percentilové grafy a hodnocení."},
-    {url: "/bmi-vs-jine-metody/", img: "/img/bmi-vs-jine-metody.webp", cat: "bmi", catLabel: "BMI", title: "BMI vs. jiné metody měření tělesného složení", desc: "Srovnání BMI s bioimpedancí, DEXA a měřením tělesného složení."}
+    {url: "/hubnuti-chuzi/", img: "/img/hubnuti-chuzi.webp", cat: "hubnuti", catLabel: "Hubnutí", title: "Hubnutí chůzí: kolik kroků denně potřebujete?", desc: "Nejdostupnější sport s nulovou cenou. Kolik kroků, kde leží práh a proč to funguje i bez kondice."},
+    {url: "/hubnuti-po-40/", img: "/img/hubnuti-po-40.webp", cat: "hubnuti", catLabel: "Hubnutí", title: "Hubnutí po 40: co se mění a jak na to", desc: "Perimenopauza, pokles testosteronu, inzulinová citlivost. Co dělá metabolismus po čtyřicítce a jak hubnout chytře."},
+    {url: "/hubnuti-po-50/", img: "/img/hubnuti-po-50.webp", cat: "hubnuti", catLabel: "Hubnutí", title: "Hubnutí po 50: jak na to bezpečně a účinně", desc: "Menopauza, sarkopenie, HRT a GLP-1. 12-týdenní plán pro hubnutí po padesátce s ohledem na hormonální realitu."},
+    {url: "/hubnuti-po-porodu/", img: "/img/hubnuti-po-porodu.webp", cat: "hubnuti", catLabel: "Hubnutí", title: "Hubnutí po porodu: bezpečně a s rozumem", desc: "Šestinedělí, kojení, pánevní dno, diastáza. Plán, který bere v úvahu medicínu i vaše duševní zdraví."},
+    {url: "/pocitani-kalorii/", img: "/img/pocitani-kalorii.webp", cat: "vyziva", catLabel: "Výživa", title: "Počítání kalorií při hubnutí: kompletní návod", desc: "Aplikace, vážení, hand portion metoda. Kdy začít, kdy přestat a proč většina lidí podhodnocuje příjem o 500 kcal."},
+    {url: "/nejlepsi-sport-na-hubnuti/", img: "/img/nejlepsi-sport-na-hubnuti.webp", cat: "sport", catLabel: "Sport", title: "Nejlepší sporty na hubnutí: který si vybrat?", desc: "Srovnání 10 sportů s reálnými kcal. HIIT vs. zóna 2, silový jako kámen úhelný. Podle BMI, věku a možností."},
+    {url: "/tepova-frekvence-spalovani/", img: "/img/tepova-frekvence-spalovani.webp", cat: "sport", catLabel: "Sport", title: "Tepová frekvence pro spalování tuků", desc: "Pět zón podle Tanaka a Karvonena. Kde tělo opravdu čerpá z tuků a proč není honba za jedním číslem strategie."},
+    {url: "/metabolismus/", img: "/img/metabolismus.webp", cat: "metabolismus", catLabel: "Metabolismus", title: "Metabolismus: co to je a jak ovlivňuje vaši váhu", desc: "Katabolismus, anabolismus, hormony, mýty. Kdy je „pomalý metabolismus“ výmluva a kdy medicínský problém."},
+    {url: "/bazalni-metabolismus/", img: "/img/bazalni-metabolismus.webp", cat: "metabolismus", catLabel: "Metabolismus", title: "Bazální metabolismus: výpočet, vzorce a kalkulačka", desc: "Mifflin-St Jeor, Harris-Benedict, Cunningham. Co BMR opravdu mění a jak ho měřit přesněji než vzorcem."},
+    {url: "/stupne-obezity/", img: "/img/stupne-obezity.webp", cat: "bmi", catLabel: "BMI", title: "Stupně obezity: BMI tabulka a zdravotní rizika", desc: "Klasifikace WHO od podváhy po obezitu III. stupně. Konkrétní rizika a kdy je BMI nad 35 indikací k léčbě."},
+    {url: "/jak-snizit-bmi/", img: "/img/jak-snizit-bmi.webp", cat: "bmi", catLabel: "BMI", title: "Jak snížit BMI: kompletní průvodce", desc: "Pillar průvodce: kalorický deficit, bílkoviny, silový trénink, spánek, 12-týdenní plán a 7 chyb, kterých se vyhnout."},
+    {url: "/bmi-u-deti/", img: "/img/bmi-u-deti.webp", cat: "bmi", catLabel: "BMI", title: "BMI u dětí a dospívajících: kompletní průvodce", desc: "Percentily, Z-skóre, růstové grafy CDC a WHO. Proč se BMI u dětí čte jinak a kdy patří k pediatrovi."},
+    {url: "/bmi-vs-jine-metody/", img: "/img/bmi-vs-jine-metody.webp", cat: "bmi", catLabel: "BMI", title: "BMI vs. jiné metody měření tělesného složení", desc: "WHtR, bioimpedance, DEXA, kožní řasy. Kdy BMI nadhodnocuje, kdy podhodnocuje a co používat místo něj."}
   ] %}
 
   <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
