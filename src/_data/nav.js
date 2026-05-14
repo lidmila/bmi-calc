@@ -26,7 +26,6 @@ module.exports = {
     { label: "Blog", url: "/blog/" },
     { label: "Metodika", url: "/metodika/" },
     { label: "O nás", url: "/o-nas/" },
-    { label: "Kontakt", url: "/kontakt/" },
   ],
   footer: {
     kalkulacky: [
@@ -60,6 +59,7 @@ module.exports = {
     onas: [
       { label: "O nás", url: "/o-nas/" },
       { label: "Kontakt", url: "/kontakt/" },
+      { label: "Provozovatel", url: "/provozovatel/" },
       { label: "Metodika a zdroje", url: "/metodika/" },
       { label: "Blog", url: "/blog/" },
       { label: "Ochrana soukromí", url: "/ochrana-soukromi/" },

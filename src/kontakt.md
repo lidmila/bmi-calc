@@ -1,12 +1,12 @@
 ---
 layout: layouts/article.njk
 title: "Kontakt"
-description: "Kontakt na redakci Ideální BMI – e-mail, doba odpovědi, informace pro spolupráci, hlášení chyb i návrhy tématu."
+description: "Kontaktní formulář pro redakci Ideální BMI – připomínky, návrhy tématu, opravy chyb i nabídky spolupráce."
 permalink: /kontakt/
 date: 2026-05-14
 dateModified: 2026-05-14
 category: "Web"
-perex: "Napište nám připomínku k článku, návrh tématu nebo nabídku spolupráce. Odpovídáme do 5 pracovních dní."
+perex: "Napište nám připomínku k článku, návrh tématu nebo nabídku spolupráce. Ozveme se obvykle do 5 pracovních dní."
 jsonld:
   - "@context": "https://schema.org"
     "@type": "ContactPage"
@@ -32,24 +32,71 @@ jsonld:
         availableLanguage: ["cs", "en"]
 ---
 
-## Jak nás zastihnete
+## Napište nám
 
-Nemáme telefonní centrum ani webový formulář. Nejrychlejší cestou je **e-mail**:
+Vyplňte formulář níže nebo nám pošlete e-mail na **[hello@codewhiskers.app](mailto:hello@codewhiskers.app)**. Obvykle odpovídáme do 5 pracovních dní.
 
-- **[hello@codewhiskers.app](mailto:hello@codewhiskers.app)**
+<div class="not-prose my-8">
+<form action="https://formsubmit.co/hello@codewhiskers.app" method="POST" class="card p-6 sm:p-8 grid gap-4">
+  <input type="hidden" name="_subject" value="Zpráva z idealnibmi.com">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="true">
+  <input type="hidden" name="_next" value="https://idealnibmi.com/kontakt/?odeslano=1">
+  <input type="text" name="_honey" style="display:none">
 
-Píšeme zpět **do 5 pracovních dní**. Pokud se ozveme později, je dovolená nebo redakční uzávěrka – nezdržíme.
+  <div class="grid gap-4 sm:grid-cols-2">
+    <div>
+      <label class="label" for="kontakt-jmeno">Jméno</label>
+      <input class="input" type="text" id="kontakt-jmeno" name="Jméno" required placeholder="Vaše jméno">
+    </div>
+    <div>
+      <label class="label" for="kontakt-email">E-mail</label>
+      <input class="input" type="email" id="kontakt-email" name="E-mail" required placeholder="vas@email.cz">
+    </div>
+  </div>
+
+  <div>
+    <label class="label" for="kontakt-tema">Téma zprávy</label>
+    <select class="input" id="kontakt-tema" name="Téma" required>
+      <option value="">Vyberte téma…</option>
+      <option value="Připomínka k článku">Připomínka k článku</option>
+      <option value="Návrh tématu">Návrh tématu</option>
+      <option value="Faktická chyba">Faktická chyba v textu</option>
+      <option value="Technická chyba">Technická chyba na webu</option>
+      <option value="Spolupráce">Spolupráce / autorství</option>
+      <option value="Mediální dotaz">Mediální dotaz</option>
+      <option value="Jiné">Jiné</option>
+    </select>
+  </div>
+
+  <div>
+    <label class="label" for="kontakt-zprava">Vaše zpráva</label>
+    <textarea class="input" id="kontakt-zprava" name="Zpráva" rows="6" required placeholder="Krátce popište, s čím se ozýváte. Pokud jde o článek, prosíme uveďte odkaz."></textarea>
+  </div>
+
+  <div class="flex items-start gap-2">
+    <input type="checkbox" id="kontakt-souhlas" name="Souhlas s ochranou soukromí" required class="mt-1">
+    <label for="kontakt-souhlas" class="text-sm text-slate-600 dark:text-slate-400">
+      Souhlasím se zpracováním údajů pro účely zodpovězení dotazu podle <a href="/ochrana-soukromi/" class="text-brand-700 underline">Ochrany soukromí</a>.
+    </label>
+  </div>
+
+  <button type="submit" class="btn-primary w-full sm:w-auto justify-self-start">Odeslat zprávu</button>
+
+  <p class="text-xs text-slate-500 dark:text-slate-400">Formulář používá službu FormSubmit – zprávu doručí na <strong>hello@codewhiskers.app</strong>. Po prvním odeslání vás může požádat o jednorázové ověření přes CAPTCHA.</p>
+</form>
+</div>
 
 ## S čím se na nás můžete obrátit
 
 ### Faktická chyba v článku
-Píšete vědecký text a najdete u nás zastaralý vzorec, špatnou citaci nebo nepřesnou statistiku? **Napište prosím konkrétně co a kde.** Pokud máte odkaz na primární zdroj (PubMed, oficiální doporučení), priorita roste. Opravu provedeme do 14 dnů a do hlavičky článku doplníme datum revize.
+Najdete u nás zastaralý vzorec, špatnou citaci nebo nepřesnou statistiku? **Napište prosím konkrétně co a kde.** Pokud máte odkaz na primární zdroj (PubMed, oficiální doporučení), priorita roste. Opravu provedeme do 14 dnů a do hlavičky článku doplníme datum revize.
 
 ### Návrh tématu
 Hledáte český článek na téma, které jinde nenajdete? Pošlete nám návrh – pokud zapadá do našeho zaměření (BMI, hmotnost, hubnutí, metabolismus, výživa, pohyb) a má kvalitní primární zdroje, zařadíme ho do plánu. Nezveřejňujeme však recenze produktů, kuchařky ani návody, které by mohly nahrazovat individuální nutriční konzultaci.
 
 ### Spolupráce na obsahu
-Jste nutriční terapeut, obezitolog, sportovní lékař nebo studujete medicínu v posledním ročníku? Máte zájem psát nebo recenzovat texty pro náš web? Ozvěte se – uvítáme spolupráci, **vždy s uvedením autora/recenzenta** v hlavičce článku a v JSON-LD `reviewedBy`.
+Jste nutriční terapeut, obezitolog, sportovní lékař nebo studujete medicínu v posledním ročníku? Máte zájem psát nebo recenzovat texty pro náš web? Ozvěte se – uvítáme spolupráci.
 
 ### Citace našeho obsahu
 Texty Ideální BMI můžete citovat s uvedením zdroje a odkazu. Pro převzetí celého článku nebo komerční použití nás kontaktujte – v drtivé většině případů povolujeme zdarma, jen chceme vědět kam to jde.
@@ -58,24 +105,16 @@ Texty Ideální BMI můžete citovat s uvedením zdroje a odkazu. Pro převzetí
 Něco nefunguje (kalkulačka vrací nesmyslný výsledek, stránka se nenačte, kontrast je nečitelný)? Napište nám prohlížeč + zařízení + co se stalo. Reagujeme prioritně.
 
 ### Mediální dotazy
-Pro novináře a podcasty: kontakt přes e-mail výše, do předmětu prosím **„Média"**. Rádi poskytneme komentář k tématu BMI, obezity v ČR a statistik ÚZIS s odkazy na primární zdroje.
+Pro novináře a podcasty: kontakt přes formulář nebo e-mail, do předmětu prosím **„Média"**. Rádi poskytneme komentář k tématu BMI, obezity v ČR a statistik ÚZIS s odkazy na primární zdroje.
 
-## Co po nás chtít nemůžete
+## Co po nás chtít nemůžeme
 
-- **Individuální zdravotní radu.** Neumíme a nemůžeme posuzovat, zda máte hubnout, co máte jíst, kterou kalkulačku použít na konkrétní diagnózu. To je práce lékaře nebo nutričního terapeuta. Pokud potřebujete osobní péči, vyhledejte [obezitologickou ambulanci](https://obesitas.cz/cs/seznam-obezitologickych-center/) ve své oblasti.
+- **Individuální zdravotní radu.** Neumíme a nemůžeme posuzovat, zda máte hubnout, co máte jíst, kterou kalkulačku použít na konkrétní diagnózu. To je práce lékaře nebo nutričního terapeuta. Pokud potřebujete osobní péči, vyhledejte obezitologickou ambulanci ve své oblasti.
 - **Diagnostiku.** Žádný e-mail nedokáže nahradit vyšetření.
 - **Sestavení jídelníčku.** Individuální plán je práce nutričního terapeuta.
-- **Affiliate spolupráce.** Nepřijímáme placené recenze, sponzorované odkazy ani affiliate kampaně. Naše [Editorial standardy](/o-nas/) to vylučují.
 
-## Provozovatel a fakturační údaje
+## Formální záležitosti a fakturace
 
-**CodeWhiskers**
-IČ 05684447 · neplátce DPH
-Jindice 115, 285 04 Rašovice-Uhlířské Janovice
-[hello@codewhiskers.app](mailto:hello@codewhiskers.app)
+Pro fakturaci, právní záležitosti a obchodní komunikaci pište přímo na **hello@codewhiskers.app**, nebo navštivte stránku [Provozovatel](/provozovatel/), kde najdete fakturační údaje.
 
-Veškeré právní informace najdete v [Obchodních podmínkách](/podminky/), zpracování osobních údajů popisuje [Ochrana soukromí](/ochrana-soukromi/).
-
-## Něco o tom, jak přemýšlíme
-
-Pokud vám není jasné, proč u některých článků váháme s konkrétními doporučeními a u jiných ne, přečtěte si stránku [O nás](/o-nas/). Stručně řečeno: u témat s dopadem na zdraví píšeme **konzervativně a s citacemi**, nikoliv prodejně. Když si tedy nejste jistí, jestli je nějaké tvrzení v naprostém pořádku, dejte nám vědět – je to přesně ten druh zpětné vazby, který má cenu.
+Právní informace najdete v [Obchodních podmínkách](/podminky/), zpracování osobních údajů popisuje [Ochrana soukromí](/ochrana-soukromi/).
