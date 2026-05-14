@@ -35,15 +35,12 @@ Vyplňte formulář níže nebo nám pošlete e-mail na **[hello@codewhiskers.ap
 
 <div class="not-prose my-8">
 
-<div id="kontakt-success" class="hidden card p-8 sm:p-10 text-center bg-emerald-50 dark:bg-emerald-900/20 border-2 border-emerald-200 dark:border-emerald-800">
-  <svg class="h-14 w-14 mx-auto text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-    <polyline points="22 4 12 14.01 9 11.01"/>
-  </svg>
-  <h2 class="font-display text-2xl font-bold mt-4 text-emerald-900 dark:text-emerald-100">Děkujeme, zpráva odešla!</h2>
-  <p class="mt-3 text-emerald-800 dark:text-emerald-200">Ozvu se vám na e-mail, který jste zadali, obvykle do 5 pracovních dní.</p>
-  <p class="mt-1 text-sm text-emerald-700/80 dark:text-emerald-300/80">Pokud byste nedostali odpověď do týdne, podívejte se prosím do spamu nebo napište přímo na <a href="mailto:hello@codewhiskers.app" class="underline">hello@codewhiskers.app</a>.</p>
-  <a href="/" class="inline-flex mt-6 items-center gap-2 rounded-2xl bg-emerald-600 text-white px-6 py-3 font-semibold hover:bg-emerald-700 transition">Zpět na úvodní stránku →</a>
+<div id="kontakt-success" class="hidden rounded-2xl border border-emerald-200 dark:border-emerald-800/60 bg-emerald-50/60 dark:bg-emerald-900/15 p-5 flex items-start gap-3">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+  <div class="text-sm">
+    <p class="font-semibold text-emerald-900 dark:text-emerald-100">Zpráva byla odeslána. Děkujeme.</p>
+    <p class="text-emerald-800/85 dark:text-emerald-200/85 mt-1">Ozvu se na zadaný e-mail obvykle do 5 pracovních dní. Pokud odpověď nedorazí, mrkněte do spamu nebo napište přímo na <a href="mailto:hello@codewhiskers.app" class="underline">hello@codewhiskers.app</a>.</p>
+  </div>
 </div>
 
 <form id="kontakt-form" action="https://api.web3forms.com/submit" method="POST" class="card p-6 sm:p-8 grid gap-4">
