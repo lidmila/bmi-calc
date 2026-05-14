@@ -34,7 +34,19 @@ jsonld:
 Vyplňte formulář níže nebo nám pošlete e-mail na **[hello@codewhiskers.app](mailto:hello@codewhiskers.app)**. Obvykle odpovídáme do 5 pracovních dní.
 
 <div class="not-prose my-8">
-<form action="https://api.web3forms.com/submit" method="POST" class="card p-6 sm:p-8 grid gap-4">
+
+<div id="kontakt-success" class="hidden card p-8 sm:p-10 text-center bg-emerald-50 dark:bg-emerald-900/20 border-2 border-emerald-200 dark:border-emerald-800">
+  <svg class="h-14 w-14 mx-auto text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+    <polyline points="22 4 12 14.01 9 11.01"/>
+  </svg>
+  <h2 class="font-display text-2xl font-bold mt-4 text-emerald-900 dark:text-emerald-100">Děkujeme, zpráva odešla!</h2>
+  <p class="mt-3 text-emerald-800 dark:text-emerald-200">Ozvu se vám na e-mail, který jste zadali, obvykle do 5 pracovních dní.</p>
+  <p class="mt-1 text-sm text-emerald-700/80 dark:text-emerald-300/80">Pokud byste nedostali odpověď do týdne, podívejte se prosím do spamu nebo napište přímo na <a href="mailto:hello@codewhiskers.app" class="underline">hello@codewhiskers.app</a>.</p>
+  <a href="/" class="inline-flex mt-6 items-center gap-2 rounded-2xl bg-emerald-600 text-white px-6 py-3 font-semibold hover:bg-emerald-700 transition">Zpět na úvodní stránku →</a>
+</div>
+
+<form id="kontakt-form" action="https://api.web3forms.com/submit" method="POST" class="card p-6 sm:p-8 grid gap-4">
   <input type="hidden" name="access_key" value="175914ac-4bc4-4c1d-90f5-abfc56b8ba44">
   <input type="hidden" name="subject" value="Zpráva z idealnibmi.com">
   <input type="hidden" name="from_name" value="Ideální BMI – kontaktní formulář">
@@ -82,6 +94,19 @@ Vyplňte formulář níže nebo nám pošlete e-mail na **[hello@codewhiskers.ap
 
   <p class="text-xs text-slate-500 dark:text-slate-400">Formulář používá službu Web3Forms – zprávu doručí na <strong>hello@codewhiskers.app</strong>. Vaše údaje neukládáme.</p>
 </form>
+
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('odeslano') === '1') {
+    var s = document.getElementById('kontakt-success');
+    var f = document.getElementById('kontakt-form');
+    if (s) s.classList.remove('hidden');
+    if (f) f.classList.add('hidden');
+    if (s && s.scrollIntoView) s.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+})();
+</script>
 </div>
 
 ## S čím se na nás můžete obrátit
