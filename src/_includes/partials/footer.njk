@@ -22,7 +22,7 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 lg:col-span-8">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 lg:col-span-8">
         <div>
           <h3 class="font-display font-bold text-paper text-sm mb-3 uppercase tracking-wider">Kalkulačky</h3>
           <ul class="space-y-2 text-sm">
@@ -30,22 +30,16 @@
           </ul>
         </div>
         <div>
-          <h3 class="font-display font-bold text-paper text-sm mb-3 uppercase tracking-wider">BMI</h3>
-          <ul class="space-y-2 text-sm">
-            {% for l in nav.footer.pruvodci %}<li><a class="text-paper/70 hover:text-flame-400" href="{{ l.url }}">{{ l.label }}</a></li>{% endfor %}
-          </ul>
-        </div>
-        <div>
-          <h3 class="font-display font-bold text-paper text-sm mb-3 uppercase tracking-wider">Hubnutí</h3>
-          <ul class="space-y-2 text-sm">
-            {% for l in nav.footer.hubnuti %}<li><a class="text-paper/70 hover:text-flame-400" href="{{ l.url }}">{{ l.label }}</a></li>{% endfor %}
-          </ul>
-        </div>
-        <div>
           <h3 class="font-display font-bold text-paper text-sm mb-3 uppercase tracking-wider">Web</h3>
           <ul class="space-y-2 text-sm">
-            {% for l in nav.footer.onas %}<li><a class="text-paper/70 hover:text-flame-400" href="{{ l.url }}">{{ l.label }}</a></li>{% endfor %}
+            {% for l in nav.footer.web %}<li><a class="text-paper/70 hover:text-flame-400" href="{{ l.url }}">{{ l.label }}</a></li>{% endfor %}
             <li><button id="cookie-reopen" class="text-paper/70 hover:text-flame-400">Nastavení cookies</button></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-display font-bold text-paper text-sm mb-3 uppercase tracking-wider">O nás</h3>
+          <ul class="space-y-2 text-sm">
+            {% for l in nav.footer.onas %}<li><a class="text-paper/70 hover:text-flame-400" href="{{ l.url }}">{{ l.label }}</a></li>{% endfor %}
           </ul>
         </div>
       </div>

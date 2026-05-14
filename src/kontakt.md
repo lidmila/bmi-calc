@@ -13,17 +13,14 @@ jsonld:
     name: "Kontakt – Ideální BMI"
     url: "https://idealnibmi.com/kontakt/"
     publisher:
-      "@type": "Organization"
-      name: "CodeWhiskers"
-      url: "https://idealnibmi.com"
-      logo:
-        "@type": "ImageObject"
-        url: "https://idealnibmi.com/img/BMI-calc.png"
+      "@type": "Person"
+      name: "Lidmila Maršálková"
+      url: "https://idealnibmi.com/o-nas/"
     mainEntity:
-      "@type": "Organization"
-      name: "Ideální BMI"
+      "@type": "Person"
+      name: "Lidmila Maršálková"
       email: "hello@codewhiskers.app"
-      url: "https://idealnibmi.com"
+      url: "https://idealnibmi.com/o-nas/"
       contactPoint:
         "@type": "ContactPoint"
         contactType: "editorial"
@@ -37,12 +34,12 @@ jsonld:
 Vyplňte formulář níže nebo nám pošlete e-mail na **[hello@codewhiskers.app](mailto:hello@codewhiskers.app)**. Obvykle odpovídáme do 5 pracovních dní.
 
 <div class="not-prose my-8">
-<form action="https://formsubmit.co/hello@codewhiskers.app" method="POST" class="card p-6 sm:p-8 grid gap-4">
-  <input type="hidden" name="_subject" value="Zpráva z idealnibmi.com">
-  <input type="hidden" name="_template" value="table">
-  <input type="hidden" name="_captcha" value="true">
-  <input type="hidden" name="_next" value="https://idealnibmi.com/kontakt/?odeslano=1">
-  <input type="text" name="_honey" style="display:none">
+<form action="https://api.web3forms.com/submit" method="POST" class="card p-6 sm:p-8 grid gap-4">
+  <input type="hidden" name="access_key" value="REPLACE_WITH_WEB3FORMS_KEY">
+  <input type="hidden" name="subject" value="Zpráva z idealnibmi.com">
+  <input type="hidden" name="from_name" value="Ideální BMI – kontaktní formulář">
+  <input type="hidden" name="redirect" value="https://idealnibmi.com/kontakt/?odeslano=1">
+  <input type="checkbox" name="botcheck" style="display:none">
 
   <div class="grid gap-4 sm:grid-cols-2">
     <div>
@@ -83,7 +80,7 @@ Vyplňte formulář níže nebo nám pošlete e-mail na **[hello@codewhiskers.ap
 
   <button type="submit" class="btn-primary w-full sm:w-auto justify-self-start">Odeslat zprávu</button>
 
-  <p class="text-xs text-slate-500 dark:text-slate-400">Formulář používá službu FormSubmit – zprávu doručí na <strong>hello@codewhiskers.app</strong>. Po prvním odeslání vás může požádat o jednorázové ověření přes CAPTCHA.</p>
+  <p class="text-xs text-slate-500 dark:text-slate-400">Formulář používá službu Web3Forms – zprávu doručí na <strong>hello@codewhiskers.app</strong>. Vaše údaje neukládáme.</p>
 </form>
 </div>
 

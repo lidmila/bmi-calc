@@ -31,7 +31,7 @@ jsonld:
       name: "Ideální BMI"
     publisher:
       "@type": "Organization"
-      name: "CodeWhiskers"
+      name: "Lidmila Maršálková"
       logo:
         "@type": "ImageObject"
         url: "https://idealnibmi.com/img/BMI-calc.png"

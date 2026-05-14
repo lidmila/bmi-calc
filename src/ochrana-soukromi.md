@@ -13,7 +13,7 @@ perex: "Účinné od 10. 2. 2026. Co o vás web ví, jak to ukládá a jak to ne
 
 Správcem ve smyslu nařízení Evropského parlamentu a Rady (EU) 2016/679 (GDPR) a zákona č. 110/2019 Sb. je:
 
-**CodeWhiskers**
+**Lidmila Maršálková**
 IČ: 05684447
 Sídlo: Jindice 115, 285 04 Rašovice-Uhlířské Janovice
 E-mail: [hello@codewhiskers.app](mailto:hello@codewhiskers.app)

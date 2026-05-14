@@ -6,16 +6,17 @@ permalink: /provozovatel/
 date: 2026-05-14
 dateModified: 2026-05-14
 category: "Web"
-perex: "Provozovatelem webu idealnibmi.com je CodeWhiskers (IČ 05684447), malé české vydavatelství zaměřené na užitkové weby a mobilní aplikace."
+perex: "Provozovatelkou webu idealnibmi.com je Lidmila Maršálková (IČ 05684447), OSVČ se sídlem v Jindicích."
 jsonld:
   - "@context": "https://schema.org"
-    "@type": "Organization"
-    name: "CodeWhiskers"
-    legalName: "CodeWhiskers"
-    url: "https://www.codewhiskers.app"
+    "@type": "Person"
+    name: "Lidmila Maršálková"
+    url: "https://idealnibmi.com/o-nas/"
     email: "hello@codewhiskers.app"
-    foundingDate: "2016"
     taxID: "05684447"
+    image: "https://idealnibmi.com/img/lidmila-marsalkova.png"
+    sameAs:
+      - "https://www.linkedin.com/in/lmarsalkova/"
     address:
       "@type": "PostalAddress"
       streetAddress: "Jindice 115"
@@ -28,20 +29,13 @@ jsonld:
 
 Web **idealnibmi.com** provozuje:
 
-**CodeWhiskers**
+**Lidmila Maršálková**
 IČ: **05684447**
 Neplátce DPH
 Jindice 115, 285 04 Rašovice-Uhlířské Janovice
 E-mail: [hello@codewhiskers.app](mailto:hello@codewhiskers.app)
-Web: [codewhiskers.app](https://www.codewhiskers.app)
 
-## O společnosti CodeWhiskers
-
-CodeWhiskers je malé české vydavatelství a vývojářský tým, který vytváří užitkové weby, mobilní aplikace a digitální nástroje. Zakladatelkou je **Lidmila Maršálková**, technickou stránku zajišťuje **Josef Rousek**.
-
-Web Ideální BMI je jedním z projektů CodeWhiskers zaměřeným na zdravotní kalkulačky a vzdělávací obsah pro českého čtenáře.
-
-Více o lidech, kteří za projektem stojí, najdete na stránce [O nás](/o-nas/).
+Více o tom, kdo za webem stojí, najdete na stránce [O nás](/o-nas/).
 
 ## Pro fakturaci a obchodní záležitosti
 

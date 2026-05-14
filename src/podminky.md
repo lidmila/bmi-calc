@@ -11,7 +11,7 @@ perex: "Tato kalkulačka je zdarma a slouží jako orientační nástroj. Nenahr
 
 ## 1. Provozovatel
 
-**CodeWhiskers** · IČ 05684447 · Jindice 115, 285 04 Rašovice-Uhlířské Janovice · [hello@codewhiskers.app](mailto:hello@codewhiskers.app) · Provozovatel není plátcem DPH.
+**Lidmila Maršálková** · IČ 05684447 · Jindice 115, 285 04 Rašovice-Uhlířské Janovice · [hello@codewhiskers.app](mailto:hello@codewhiskers.app) · Provozovatelka není plátcem DPH.
 
 ## 2. Charakter služby
 

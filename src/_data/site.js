@@ -6,7 +6,7 @@ module.exports = {
   description:
     "BMI vyjadřuje poměr mezi vaší hmotností a výškou. Spočítejte si BMI podle věku a pohlaví – přesně, zdarma, online.",
   org: {
-    name: "CodeWhiskers",
+    name: "Lidmila Maršálková",
     ico: "05684447",
     address: "Jindice 115, 285 04 Rašovice-Uhlířské Janovice",
     email: "hello@codewhiskers.app",
