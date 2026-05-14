@@ -3,8 +3,56 @@ layout: layouts/calculator.njk
 title: "Kalkulačka kalorického deficitu"
 description: "Zadejte svůj cíl a spočítáme, kolik kcal denně ubrat a jak dlouho bude trvat dosažení cíle."
 permalink: /kalkulacka-deficit/
+date: 2026-02-01
+dateModified: 2026-05-14
 tag: "Hubnutí"
 perex: "Hubnutí stojí na jednom: jíst méně, než vydáte. Zadejte cílovou hmotnost a uvidíte, jaký deficit dává smysl."
+ogImage: "/img/og-default.png"
+sources:
+  - { label: "NICE NG246 – Obesity: identification, assessment and management (2023)", url: "https://www.nice.org.uk/guidance/ng246" }
+  - { label: "Hall KD et al. Quantification of the effect of energy imbalance on bodyweight (Lancet, 2011)", url: "https://pubmed.ncbi.nlm.nih.gov/21872751/" }
+  - { label: "Müller MJ et al. Adaptive thermogenesis with weight loss in humans (Obesity, 2013)", url: "https://pubmed.ncbi.nlm.nih.gov/23404923/" }
+  - { label: "Helms ER et al. Evidence-based recommendations for natural bodybuilding contest preparation (J Int Soc Sports Nutr, 2014)", url: "https://pubmed.ncbi.nlm.nih.gov/24864135/" }
+  - { label: "Phillips SM, Van Loon LJ. Dietary protein for athletes (J Sports Sci, 2011)", url: "https://pubmed.ncbi.nlm.nih.gov/22150425/" }
+jsonld:
+  - "@context": "https://schema.org"
+    "@type": "FAQPage"
+    mainEntity:
+      - "@type": "Question"
+        name: "Co je kalorický deficit?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Kalorický deficit je situace, kdy přijímáte méně energie, než vaše tělo denně vydá (TDEE). Rozdíl tělo pokryje z energetických zásob – nejdřív z glykogenu (krátkodobá zásoba), pak primárně z tukové tkáně. Deficit 7 700 kcal odpovídá zhruba 1 kg ztráty tukové tkáně. Pro bezpečné a udržitelné hubnutí doporučujeme deficit 300–600 kcal denně."
+      - "@type": "Question"
+        name: "Jaký deficit je optimální?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Pro většinu lidí 300–500 kcal denně, což odpovídá ztrátě 0,3–0,5 kg týdně. NICE doporučuje 500–600 kcal jako standardní pásmo. Větší deficit (750+ kcal) zrychlí hubnutí krátkodobě, ale zvyšuje riziko ztráty svalové hmoty, hladu, špatné nálady a častěji vede k 'rebound' efektu po skončení diety."
+      - "@type": "Question"
+        name: "Proč rovnice 7700 kcal = 1 kg nesedí přesně?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Číslo 7 700 kcal/kg je zjednodušené – pochází z energetického obsahu tukové tkáně. V realitě tělo nehubne jen tukem, ale i vodou, glykogenem (s vázanou vodou) a malou částí svalů. Navíc s poklesem hmotnosti klesá BMR (adaptivní termogeneze), takže deficit se v čase zmenšuje. Po 6–12 týdnech diety bývá reálná ztráta o 10–20 % menší než predikuje 7700 kcal pravidlo. Hallův dynamický model (NIDDK) je přesnější."
+      - "@type": "Question"
+        name: "Jak velký deficit zvolit pro 5 kg za měsíc?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Pro 5 kg úbytek hmotnosti za 4 týdny potřebujete deficit cca 1 375 kcal denně (5 × 7 700 / 28). To je velmi agresivní deficit. U člověka s TDEE 2 000 kcal by to znamenalo příjem 625 kcal/den – zdravotně nepřípustné. Reálnější cíl: 2 kg za měsíc (deficit 550 kcal/den) je udržitelné, 3 kg za měsíc (deficit 825 kcal/den) je horní hranice bez ztráty svalstva."
+      - "@type": "Question"
+        name: "Co když nehubnu i v deficitu?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Tři nejčastější příčiny: (1) skrytý příjem kalorií – oleje, dressingy, nápoje, ochutnávání při vaření, víkendy. Reálný příjem je o 20–30 % vyšší než zaznamenaný. (2) Adaptivní termogeneze a snížený NEAT – po měsících diety tělo šetří a vy nevědomky méně chodíte, gestikulujete, fidgetujete. (3) Voda a sůl – při menstruaci, vyšším příjmu soli nebo stresu drží tělo vodu, váha je stejná, ale tuk klesá. Sledujte týdenní průměr a obvod pasu."
+      - "@type": "Question"
+        name: "Jak dlouho můžu být v deficitu?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Souvislý deficit nad 12 týdnů snižuje BMR adaptivně, zhoršuje náladu, ovlivňuje hormony (testosteron u mužů, menstruace u žen) a zvyšuje riziko jojo efektu. Doporučení: po 8–12 týdnech deficitu zařaďte 2–4 týdny 'maintenance' (jezení na TDEE), pak pokračujte. U výrazné nadváhy (BMI 30+) je dlouhodobý deficit pod lékařským dohledem akceptovatelný."
+      - "@type": "Question"
+        name: "Proč potřebuju tolik bílkovin v deficitu?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "V deficitu tělo hledá zdroje energie a část odebírá ze svalové tkáně. Vyšší příjem bílkovin (1,6–2,2 g/kg hmotnosti denně) snižuje tuto ztrátu a podporuje retenci svalů – zvlášť v kombinaci se silovým tréninkem. U lidí s obezitou (BMI 30+) doporučení 1,6 g/kg cílové hmotnosti (ne aktuální, která je z důvodu tuku zkreslená)."
 ---
 
 <div class="card p-6 sm:p-8">
@@ -31,13 +79,110 @@ perex: "Hubnutí stojí na jednom: jíst méně, než vydáte. Zadejte cílovou 
 </div>
 
 <div class="prose prose-slate dark:prose-invert max-w-none mt-10">
-  <h2>Pravidla rozumného deficitu</h2>
-  <ul>
-    <li>1 kg tuku ≈ 7 700 kcal. Deficit 500 kcal/den ≈ 0,45 kg/týden.</li>
-    <li>Nikdy nejděte pod 1 200 kcal (ženy) / 1 500 kcal (muži) bez dohledu lékaře.</li>
-    <li>Bílkoviny: 1,6–2,2 g na kg vaší hmotnosti, abyste si udrželi svaly.</li>
-    <li>Realistické tempo je 0,5–1 % vaší aktuální hmotnosti za týden.</li>
-  </ul>
+
+<h2>Co je kalorický deficit</h2>
+
+<p>Kalorický deficit znamená, že vaše tělo má víc energetické práce, než kolik mu denně dodáte z jídla. Rozdíl pokryje z vlastních zásob – primárně z tukové tkáně. Princip je fyzikální (termodynamický) zákon, který platí pro všechny dospělé lidi bez ohledu na metabolický typ, krevní skupinu nebo astrologické znamení.</p>
+
+<p>Zjednodušený model: 1 kg tukové tkáně obsahuje energii cca <strong>7 700 kcal</strong>. Pokud denně vytvoříte deficit 500 kcal, za 7 dní to dělá 3 500 kcal, tedy zhruba <strong>0,45 kg tuku týdně</strong>. Za měsíc 1,8 kg. Za půl roku 11 kg. To je matematika, kterou vám fyziologie kazí jen okrajově (viz níže o adaptaci).</p>
+
+<h2>Jak velký deficit zvolit</h2>
+
+<p>Kalkulačka nabízí tři varianty. Která je pro vás?</p>
+
+<table>
+<thead><tr><th>Deficit</th><th>Týdenní ztráta</th><th>Kdo to zvládne</th><th>Riziko</th></tr></thead>
+<tbody>
+<tr><td>300 kcal</td><td>~0,3 kg</td><td>Začátečníci, lidé s 5–10 kg ke ztrátě, ti, kdo chtějí pomalu a udržitelně</td><td>Velmi nízké</td></tr>
+<tr><td>500 kcal</td><td>~0,45 kg</td><td>Většina lidí; NICE doporučení; nejlepší poměr výsledek/námaha</td><td>Nízké</td></tr>
+<tr><td>750 kcal</td><td>~0,7 kg</td><td>Lidé s BMI 30+, motivovaní, dobrý spánek a silový trénink</td><td>Středně vyšší (hlad, únava, ztráta svalů)</td></tr>
+</tbody>
+</table>
+
+<p>Pravidlo, které vám pomůže rozhodnout: <strong>týdenní deficit by neměl být víc než 1 % aktuální hmotnosti</strong>. Při 90 kg to dělá 0,9 kg/týden, deficit cca 1 000 kcal/den – akceptovatelné. Při 65 kg to dělá 0,65 kg/týden, deficit cca 700 kcal/den – už při horní hranici. Pokud chcete víc, jdete proti vlastní fyziologii.</p>
+
+<h2>Bezpečné limity</h2>
+
+<p>Existují prahy, pod které byste bez lékařského dohledu neměli jít:</p>
+
+<ul>
+<li><strong>Minimum příjmu</strong>: 1 200 kcal/den u žen, 1 500 kcal/den u mužů. Pod tím chronický deficit živin (vitaminy, minerály, esenciální mastné kyseliny) i pokud splníte makro.</li>
+<li><strong>BMR floor</strong>: nikdy dlouhodobě nejezte pod hodnotu vlastního BMR. Při výpočtu z <a href="/kalkulacka-bmr/">BMR kalkulačky</a> vidíte limit. Pod BMR = chronický stres pro tělo, ztráta svalstva, hormonální dysregulace.</li>
+<li><strong>Maximální deficit</strong>: 1 000 kcal/den u zdravého dospělého. Větší jen krátkodobě (1–2 týdny) a pod dohledem.</li>
+<li><strong>Tempo</strong>: 0,5–1 % hmotnosti týdně. Rychlejší tempo = vyšší ztráta svalstva a vyšší riziko jojo efektu.</li>
+</ul>
+
+<h2>Co ovlivňuje, zda deficit funguje</h2>
+
+<h3>Adaptivní termogeneze</h3>
+<p>Tělo není mechanický stroj. Když dlouhodobě dodáváte méně energie, sníží výdej. Studie ukazují, že po 12–24 týdnech kalorického deficitu klesne reálné TDEE o 5–15 % nad rámec poklesu hmotnosti. Praktický dopad: deficit, který fungoval první měsíc, po třech měsících nestačí. Řešením je buď snížit příjem o dalších 100–200 kcal, nebo zařadit <a href="https://pubmed.ncbi.nlm.nih.gov/24864135/" rel="nofollow noopener" target="_blank">refeed dny / diet break</a> a počkat na znovuobnovení normálního metabolismu.</p>
+
+<h3>NEAT (Non-Exercise Activity Thermogenesis)</h3>
+<p>Nevědomá aktivita – chůze do obchodu, fidgeting, gestikulace, postoj. V deficitu klesá NEAT samočinně – tělo šetří. Praktický rozdíl mezi „aktivním" a „pasivním" dnem je 300–500 kcal. Pokud chcete deficit zvětšit bez snížení příjmu, vědomě přidejte chůzi. <a href="/hubnuti-chuzi/">10 000 kroků</a> denně přidá 200–400 kcal výdeje.</p>
+
+<h3>Spánek a stres</h3>
+<p>Spánek pod 6 hodin denně zvyšuje chuť k jídlu o 200–400 kcal a kortizol o 20–30 %. Chronický stres má podobný efekt. Pokud spíte špatně, ujmete se deficitu hůř i při stejných číslech.</p>
+
+<h3>Skryté kalorie</h3>
+<p>Nejčastější chyba: zapomenuté oleje, dressingy, máslo, nápoje, ochutnávání při vaření, weekend slip-ups. Studie ukazují, že lidé v deficitu podhodnocují svůj reálný příjem průměrně o <strong>20–30 %</strong>. Pokud nehubnete v plánovaném tempu, prvotní podezření padá sem.</p>
+
+<h2>Co jíst v deficitu</h2>
+
+<p>Deficit kalorií zafunguje nezávisle na rozložení makroživin – ale složení jídelníčku rozhoduje o tom, <strong>kolik z úbytku bude tuk a kolik sval</strong>:</p>
+
+<ul>
+<li><strong>Bílkoviny: 1,6–2,2 g/kg hmotnosti denně.</strong> Klíčový rozdíl mezi „hubnutím" a „vyhubnutím". U osob s obezitou počítejte z cílové hmotnosti, ne aktuální. Zdroje: kuřecí, hovězí, ryby, vejce, tvaroh, fazole, čočka.</li>
+<li><strong>Tuky: 0,8–1,2 g/kg.</strong> Esenciální mastné kyseliny, hormony, vstřebávání vitaminů A, D, E, K. Olivový olej, ořechy, ryby, vejce.</li>
+<li><strong>Sacharidy: zbytek kalorií.</strong> Komplexní (ovesné vločky, brambory, rýže, luštěniny, ovoce, zelenina). Vyhněte se cukru a rafinovaným sacharidům, které neuživí.</li>
+<li><strong>Vláknina: 25–35 g/den.</strong> Sytost, mikrobiom, stabilita glykémie.</li>
+<li><strong>Voda: 30–35 ml/kg.</strong> V deficitu tělo přechodně drží vodu, hydratace pomáhá s vyloučením.</li>
+</ul>
+
+<h3>Silový trénink je nepovinný, ale prospěšný</h3>
+<p>Silový trénink 2–3× týdně v deficitu snižuje ztrátu svalové hmoty o 30–50 %. Bez tréninku ztratíte v 10kg úbytku zhruba 2 kg svalstva. Se silovým tréninkem jen 0,5–1 kg. To je velký rozdíl pro vzhled, sílu i rychlost metabolismu po ukončení diety.</p>
+
+<h2>Diet break a refeed</h2>
+
+<p>Souvislý dlouhodobý deficit je vyčerpávající fyzicky i psychicky. Po 8–12 týdnech doporučujeme:</p>
+
+<ol>
+<li><strong>Diet break (1–2 týdny):</strong> jezte na TDEE bez deficitu. Hmotnost zůstane stabilní, hormony se vrátí k normálu, mentálně si odpočinete, NEAT se obnoví.</li>
+<li><strong>Refeed dny (1× týdně):</strong> jeden den v týdnu jezte na TDEE, nikoliv v deficitu. Zvyšuje to leptin a snižuje hlad. Funguje hlavně u žen v dlouhodobém deficitu.</li>
+</ol>
+
+<p>Po diet break můžete pokračovat v deficitu, případně s lehkým reset hodnoty TDEE (může být nyní o 100–200 kcal nižší než původně).</p>
+
+<h2>Jak sledovat pokrok</h2>
+
+<ul>
+<li><strong>Hmotnost</strong> – ráno nalačno, 3–5× týdně, sledujte týdenní průměr (ne jednotlivý den – kolísá ±1–2 kg podle vody, soli, fáze cyklu).</li>
+<li><strong>Obvod pasu</strong> – 1× týdně, ráno nalačno. Pomáhá rozlišit, zda klesá tuk i při stagnaci hmotnosti. Viz <a href="/kalkulacka-whtr/">WHtR kalkulačka</a>.</li>
+<li><strong>Fotografie</strong> – 1× měsíčně, ranní světlo, stejná pozice. Změna v tělesné kompozici je viditelnější očima než váhou.</li>
+<li><strong>Síla v posilovně</strong> – pokud držíte sílu (nebo rostete), nepřišli jste o svaly. Pokud klesá rychle, deficit je příliš agresivní.</li>
+</ul>
+
+<h2>Časté chyby</h2>
+
+<ol>
+<li><strong>Příliš agresivní deficit hned na začátku.</strong> Tělo i mysl nevydrží. Pomalu lépe vydrží.</li>
+<li><strong>Nezahrnutí víkendu.</strong> Pokud v pondělí až pátek držíte 1 500 kcal, ale v sobotu a neděli sníte 3 000 kcal, týdenní deficit zmizí.</li>
+<li><strong>Ignorování bílkovin.</strong> Bez dostatečných bílkovin přijdete o svaly a po dietě budete vypadat hůř než před ní.</li>
+<li><strong>Vážení 1× denně místo týdenního průměru.</strong> Krátkodobé kolísání vody zkreslí pohled. Vždy průměr.</li>
+<li><strong>Cardio bez síly.</strong> Aerobní trénink kalorický deficit prohloubí, ale neudrží svalovou hmotu. Síla je důležitější než hodiny chůze.</li>
+<li><strong>Bez deficitu na víkend.</strong> Pokud máte cílový týdenní deficit 3 500 kcal a chcete víkend „uvolnit", zvyšte deficit ve všední dny – ale neztrácejte z očí týdenní bilanci.</li>
+</ol>
+
+<h2>Související kalkulačky a články</h2>
+
+<ul>
+<li><a href="/kalkulacka-bmr/">BMR a TDEE kalkulačka</a> – vstupní hodnota pro deficit.</li>
+<li><a href="/kalkulacka-whtr/">WHtR kalkulačka</a> – sledování viscerálního tuku.</li>
+<li><a href="/jak-snizit-bmi/">Jak snížit BMI</a> – kompletní průvodce redukcí.</li>
+<li><a href="/pocitani-kalorii/">Počítání kalorií – jak začít</a> – praktické tipy, aplikace, nejčastější chyby.</li>
+<li><a href="/nejlepsi-sport-na-hubnuti/">Nejlepší sport na hubnutí</a> – jak vybrat aktivitu, která bude fungovat.</li>
+<li><a href="/metabolismus/">Metabolismus – jak ho podpořit</a> – co reálně funguje a co je mýtus.</li>
+</ul>
+
 </div>
 
 <script>

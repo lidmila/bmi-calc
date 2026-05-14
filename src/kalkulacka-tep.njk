@@ -3,8 +3,56 @@ layout: layouts/calculator.njk
 title: "Kalkulačka tepových zón"
 description: "Pět tepových zón pro spalování tuků, vytrvalost a maximální výkon. Počítáme z věku a klidové tepovky."
 permalink: /kalkulacka-tep/
+date: 2026-02-01
+dateModified: 2026-05-14
 tag: "Sport & tep"
 perex: "Spalování tuků se nejlépe odehrává v zóně 60–70 % maximální tepové frekvence. Zadejte věk a uvidíte své zóny."
+ogImage: "/img/og-default.png"
+sources:
+  - { label: "Tanaka H, Monahan KD, Seals DR. Age-predicted maximal heart rate revisited (J Am Coll Cardiol, 2001)", url: "https://pubmed.ncbi.nlm.nih.gov/11153730/" }
+  - { label: "Karvonen MJ, Kentala E, Mustala O. The effects of training on heart rate (Ann Med Exp Biol Fenn, 1957)", url: "https://pubmed.ncbi.nlm.nih.gov/13453791/" }
+  - { label: "American Heart Association – Target Heart Rates Chart", url: "https://www.heart.org/en/healthy-living/fitness/fitness-basics/target-heart-rates" }
+  - { label: "ACSM's Guidelines for Exercise Testing and Prescription (11th ed., 2021)", url: "https://www.acsm.org/" }
+  - { label: "WHO Guidelines on physical activity and sedentary behaviour (2020)", url: "https://www.who.int/publications/i/item/9789240015128" }
+jsonld:
+  - "@context": "https://schema.org"
+    "@type": "FAQPage"
+    mainEntity:
+      - "@type": "Question"
+        name: "Jak se počítá maximální tepová frekvence?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Naše kalkulačka používá Tanakovu rovnici z roku 2001: 208 - 0,7 × věk. Tato formule je prokazatelně přesnější než staré pravidlo 220 - věk, které platí jen pro průměrnou 30letou populaci. Pro 40letého běžce dává 220 - věk hodnotu 180 bpm, zatímco Tanaka 180. Pro 60letého 220 - věk = 160, Tanaka 166. U starších osob je rozdíl výraznější. Pro klinickou přesnost se používá ergometrické testování."
+      - "@type": "Question"
+        name: "Co je Karvonenův vzorec?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Karvonenův vzorec (1957) zohledňuje klidový tep a tepovou rezervu (rozdíl mezi maximem a klidem). Cílový tep = klidový + procento × tepová rezerva. Pro 35letého běžce s klidovým tepem 60 a 70% cíl: max 184, rezerva 124, cíl 60 + 0,7 × 124 = 147 bpm. Bez Karvonena (jen procento z maxima) by vyšlo 184 × 0,7 = 129 bpm. Karvonen dává realističtější zóny pro trénované sportovce."
+      - "@type": "Question"
+        name: "Která zóna spaluje tuky?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Zóna 2 (60–70 % maxima) je tradiční 'fat burning zone' – relativní podíl spalovaného tuku je nejvyšší. Důležité ale je, že absolutní množství kalorií i tuku je vyšší ve vyšších zónách. Pokud jde o hubnutí, rozhoduje celkový kalorický deficit, ne procento tuku jako paliva. Zóna 2 je vhodná pro dlouhé tréninky a začátečníky kvůli udržitelnosti."
+      - "@type": "Question"
+        name: "Jak změřit klidový tep?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Klidový tep měřte ráno hned po probuzení, ještě vleže, předtím než vstanete. Hmatem na zápěstí nebo krční tepně 60 sekund, nebo 15 sekund × 4. Sportovní hodinky nebo prsní pás dávají přesnější hodnotu. Měřte 3 dny po sobě a vezměte průměr. Normální klidový tep u zdravého dospělého je 60–100 bpm, u sportovců často 40–60 bpm."
+      - "@type": "Question"
+        name: "Co když moje skutečná maximální tepovka nesedí?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Predikované maximum má individuální rozptyl ±10–15 bpm. Pokud máte hodinky a vidíte, že vaše maximum v intenzivní zátěži překračuje predikovaný strop, použijte naměřenou hodnotu místo predikce. Pro přesné určení je vhodný ergometrický test (spiroergometrie) u sportovního lékaře – v ČR cca 1 500–3 000 Kč."
+      - "@type": "Question"
+        name: "Jak často trénovat v jednotlivých zónách?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Pro vytrvalostní sportovce se doporučuje 80 % objemu v nízkých zónách (1–2) a 20 % v zónách 4–5 (model 80/20 / polarizovaný trénink). Pro hubnutí a kondici stačí 150 min týdně střední intenzity (zóna 2–3) podle WHO. Pro pokročilé: 2 lehké tréninky v zóně 2, 1 intervalový (4–5), 1 tempo (3–4) týdně."
+      - "@type": "Question"
+        name: "Pomůže trénink v zóně 5 zhubnout?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Krátké intervaly v zóně 5 (HIIT) zvyšují EPOC (post-exercise oxygen consumption) – výdej kalorií zůstává mírně zvýšený 24–48 hodin po tréninku. Studie ukazují, že 4× týdně 20 min HIIT může mít srovnatelný efekt na ztrátu viscerálního tuku jako 4× 45 min střední intenzity – při menší časové investici. Není to ale magie a vyžaduje to fyzickou připravenost."
 ---
 
 <div class="card p-6 sm:p-8">
@@ -20,9 +68,150 @@ perex: "Spalování tuků se nejlépe odehrává v zóně 60–70 % maximální 
 </div>
 
 <div class="prose prose-slate dark:prose-invert max-w-none mt-10">
-  <h2>Jak zóny používat</h2>
-  <p>Maximální tep odhadujeme jako <em>208 − 0,7 × věk</em> (Tanaka, 2001) – přesnější než staré 220 − věk. S klidovým tepem počítáme tepovou rezervu (<em>Karvonen</em>) a získáme výrazně přesnější zóny.</p>
-  <p>Pro spalování tuků jsou nejlepší zóny 2 a 3. Pro zlepšení vytrvalosti zóna 3 a 4. Zóna 5 je krátké intervaly.</p>
+
+<h2>Co tepové zóny znamenají</h2>
+
+<p>Vaše srdce bije rychleji, když pracujete více. Tepová frekvence proto dobře odráží intenzitu fyzické zátěže. Sportovní fyziologie dělí pásmo mezi klidem a maximem na 5 zón – každá má jiné metabolické nároky, jiné palivo a jiný tréninkový efekt.</p>
+
+<p>Naše kalkulačka spočítá zóny ze dvou údajů: <strong>věku</strong> (k odhadu maxima) a volitelně <strong>klidového tepu</strong> (pro přesnější Karvonenův vzorec). Pokud máte sportovní hodinky a znáte své reálné maximum, můžete ho použít přímo – nahradí to odhad podle věku.</p>
+
+<h2>Maximální tep – proč ne 220 minus věk</h2>
+
+<p>Staré pravidlo „220 minus věk" pochází z 70. let a vzniklo jako rychlá lineární aproximace pro lékaře. Validační studie ukázala, že má velký rozptyl a systematicky podhodnocuje maximum u starších osob.</p>
+
+<p>Naše kalkulačka používá <strong>Tanakovu rovnici (2001)</strong>: 208 − 0,7 × věk. Srovnání:</p>
+
+<table>
+<thead><tr><th>Věk</th><th>220 − věk</th><th>Tanaka</th><th>Rozdíl</th></tr></thead>
+<tbody>
+<tr><td>20</td><td>200</td><td>194</td><td>−6</td></tr>
+<tr><td>30</td><td>190</td><td>187</td><td>−3</td></tr>
+<tr><td>40</td><td>180</td><td>180</td><td>0</td></tr>
+<tr><td>50</td><td>170</td><td>173</td><td>+3</td></tr>
+<tr><td>60</td><td>160</td><td>166</td><td>+6</td></tr>
+<tr><td>70</td><td>150</td><td>159</td><td>+9</td></tr>
+</tbody>
+</table>
+
+<p>Pro většinu lidí je rozdíl 3–9 bpm. Pro tréninkové zóny je to materiální rozdíl – posunutí o jednu hodnotu posune i pásma každé zóny.</p>
+
+<p>Skutečné maximum má individuální rozptyl ±10–15 bpm i u stejně starých jedinců. Pokud máte hodinky a vidíte, že váš tep v intenzivním tréninku překračuje predikovaný strop, použijte naměřenou hodnotu.</p>
+
+<h2>Karvonenův vzorec – přesnější zóny</h2>
+
+<p>Pokud zadáte klidový tep, kalkulačka přejde na <strong>Karvonenův vzorec</strong> (1957). Místo procenta z maxima počítá z <strong>tepové rezervy (HRR)</strong> – rozdílu mezi maximem a klidem.</p>
+
+<p><strong>Cílový tep = klidový tep + (max − klidový) × % zóny</strong></p>
+
+<p>Příklad pro 35letého běžce s klidovým tepem 60:</p>
+<ul>
+<li>Max (Tanaka): 184 bpm</li>
+<li>Tepová rezerva (HRR): 184 − 60 = 124</li>
+<li>Cíl zóny 2 (60–70 %): 60 + 124 × 0,6 = 134 až 60 + 124 × 0,7 = 147 bpm</li>
+</ul>
+
+<p>Bez Karvonena by zóna 2 vyšla 110–129 bpm – výrazně níž a pro trénovaného člověka neadekvátní zátěž. Karvonen je proto přesnější zejména pro sportovce s nízkým klidovým tepem.</p>
+
+<h2>Pět tepových zón</h2>
+
+<h3>Zóna 1 – Regenerace (50–60 % HRR)</h3>
+<p>Velmi lehká aktivita. Chůze, jóga, plavání kraulem volně, rolování. Tep ledabyle, mluvíte v plných větách. Použití: aktivní zotavení po tvrdém tréninku, rozcvička, večerní procházka. Doba: 30–60 min.</p>
+
+<h3>Zóna 2 – Spalování tuků a aerobní základ (60–70 % HRR)</h3>
+<p>„Conversational pace" – mluvíte celé věty bez zadýchání. Tempo, které byste vydrželi hodiny. Použití: dlouhé výlety, klidné kolo, plavání. Hlavní palivo: tuky (až 60 % oxidovaného substrátu). <strong>Pro vytrvalostní sportovce nejdůležitější zóna</strong> – tady se buduje aerobní kapacita a mitochondriální hustota. Doba: 60–180 min.</p>
+
+<p>Pozor na mýtus „fat burning zone": ano, relativní podíl spalovaného tuku je nejvyšší, ale absolutní výdej kalorií i tuku je vyšší ve vyšších zónách. Pro hubnutí je důležitý celkový týdenní deficit, ne procento tuku jako paliva.</p>
+
+<h3>Zóna 3 – Aerobní střední intenzita (70–80 % HRR)</h3>
+<p>Tempo, při kterém můžete mluvit krátké věty, ale nečtete románek. Použití: tempo běh, „comfortably hard". Buduje aerobní výkon, zvedá VO₂ max. Doba: 20–60 min.</p>
+
+<h3>Zóna 4 – Anaerobní práh (80–90 % HRR)</h3>
+<p>„Lactate threshold" – tělo začíná produkovat víc laktátu, než stíhá likvidovat. Vydržíte krátké věty, ale spíš jen 1–3 slova. Použití: tempo intervaly (5–20 min), trénink prahu. Doba: 20–40 min celkem.</p>
+
+<h3>Zóna 5 – Maximum a VO₂ max (90–100 % HRR)</h3>
+<p>Bez řeči, dýcháte z plných plic. Použití: krátké intervaly 30 s až 4 min s odpočinkem, HIIT trénink, sprinty. Buduje maximální výkon a VO₂ max. Doba intervalů: 2–10 % týdenního objemu.</p>
+
+<h2>Jak rozdělit trénink podle zón</h2>
+
+<p>Pro různé cíle existují různá doporučení:</p>
+
+<h3>Hubnutí a kondice (začátečník)</h3>
+<p>WHO doporučuje 150 minut týdně střední intenzity (zóna 2–3) nebo 75 minut vyšší intenzity. Praktický plán:</p>
+<ul>
+<li>3× týdně chůze 45 min v zóně 2 (rychlejší tempo)</li>
+<li>nebo 3× týdně kolo / plavání / běh 30 min v zóně 3</li>
+<li>+ 2× týdně silový trénink (zvedá BMR, udržuje svaly)</li>
+</ul>
+
+<h3>Vytrvalostní sport (pokročilý)</h3>
+<p>Model <strong>80/20</strong> nebo polarizovaný trénink: 80 % objemu v zónách 1–2, 20 % v zónách 4–5. Studie ukazují, že tahle distribuce vede k nejlepším adaptacím u běžců, cyklistů i veslařů.</p>
+<ul>
+<li>Pondělí: 60 min zóna 2</li>
+<li>Středa: 6 × 4 min zóna 4 (intervaly)</li>
+<li>Pátek: 90 min zóna 2</li>
+<li>Neděle: 30 min tempo zóna 3</li>
+</ul>
+
+<h3>HIIT pro lidi s málo časem</h3>
+<p>4× týdně 20 minut: 30 s sprint (zóna 5) + 90 s lehké (zóna 1), opakovat 10×. Tento formát má v <a href="https://pubmed.ncbi.nlm.nih.gov/22825471/" rel="nofollow noopener" target="_blank">studiích</a> srovnatelný efekt na ztrátu viscerálního tuku jako 4× 45 min střední intenzity.</p>
+
+<h2>Jak měřit tep během tréninku</h2>
+
+<ul>
+<li><strong>Prsní pás</strong> (Polar, Garmin, Wahoo) – nejpřesnější. Měří EKG signál. Cena 1 000–3 000 Kč. Doporučujeme pro vytrvalostní sport.</li>
+<li><strong>Hodinky na zápěstí</strong> (Apple Watch, Garmin, Fitbit, Polar) – optická snímání, přesnost ±5 bpm při stálém tempu, horší při HIIT a silovém tréninku. Pro běh a kolo dostačující.</li>
+<li><strong>Hmatem</strong> – krk nebo zápěstí, 15 s × 4. Pro intervaly nevhodné, pro klid OK.</li>
+<li><strong>Smart prsteny</strong> (Oura, Ultrahuman) – primárně pro spánek a klidový tep, ne pro trénink.</li>
+</ul>
+
+<h2>Klidový tep jako ukazatel zdraví a formy</h2>
+
+<p>Klidový tep není jen vstup do Karvonenova vzorce – říká hodně o vašem srdci a kondici:</p>
+
+<ul>
+<li><strong>Pod 60 bpm</strong> – běžné u trénovaných sportovců (bradykardie z tréninku). Bez příznaků v pořádku.</li>
+<li><strong>60–75 bpm</strong> – průměr u zdravého dospělého.</li>
+<li><strong>75–90 bpm</strong> – horní normální. Pravděpodobně nízká kondice, vyšší stres nebo dehydratace.</li>
+<li><strong>Nad 100 bpm</strong> v klidu – tachykardie, vhodné konzultovat s lékařem (může jít o štítnou žlázu, anemii, dehydrataci, kofein, stres).</li>
+<li><strong>Zvýšení klidového tepu o 10+ bpm</strong> oproti vašemu průměru – znamení přetrénování, nemoci nebo nedostatku spánku. Zařaďte odpočinek.</li>
+</ul>
+
+<p>Klidový tep se postupně sníží s tréninkem o 5–15 bpm během 3–6 měsíců pravidelné aerobní aktivity. To je viditelná známka zlepšení kondice.</p>
+
+<h2>Omezení tepových zón</h2>
+
+<ul>
+<li><strong>Léky.</strong> Beta-blokátory snižují maximum i klidový tep o 10–30 bpm. Pokud užíváte, predikované zóny nesedí – mluvte s lékařem o vhodné intenzitě.</li>
+<li><strong>Kofein a stimulanty.</strong> Zvyšují klidový i zátěžový tep o 5–15 bpm. Pre-workout 30 min před tréninkem zkresluje zóny.</li>
+<li><strong>Dehydratace a teplo.</strong> V horku stoupá tep o 10–20 bpm při stejné intenzitě. Zóny posunout dolů nebo měřit jinou metodu (např. tempo).</li>
+<li><strong>Atriální fibrilace a další arytmie.</strong> Tep nedává smysluplný signál o intenzitě. Konzultujte s kardiologem.</li>
+<li><strong>Silový trénink.</strong> Zóny založené na tepu nedávají u silového tréninku smysl – tep krátkodobě vyletí i v zóně 4–5, ale je to anaerobní zátěž jiného typu.</li>
+</ul>
+
+<h2>Časté otázky</h2>
+
+<h3>Mám trénovat pomalu, nebo rychle, abych zhubnul?</h3>
+<p>Pro hubnutí je rozhodující týdenní kalorický deficit. Trénink pomáhá tím, že zvyšuje výdej. Pokud máte čas, dlouhé tréninky v zóně 2 (60–90 min) dávají vysoký výdej a jsou udržitelné. Pokud máte 20 min, HIIT v zóně 4–5 zvedne výdej i EPOC. Obě možnosti fungují. Důležitější je <strong>pravidelnost a doplnění silovým tréninkem</strong> než volba mezi nimi.</p>
+
+<h3>Proč mám tep výš než ostatní stejně starý?</h3>
+<p>Individuální rozdíly v maximálním tepu jsou ±15 bpm i u stejně starých zdravých lidí. Souvisí s genetikou, velikostí srdce, kondicí a aktuálním stavem (spánek, stres, kofein). Pokud váš tep je konzistentně o 10+ bpm nad průměrem, není to obvykle problém – je to vaše individuální fyziologie.</p>
+
+<h3>Co je „cardiac drift"?</h3>
+<p>Při dlouhém tréninku (60+ min) za teplého počasí tep postupně stoupá při stejném tempu – tělo přesouvá krev do kůže pro chlazení, srdce kompenzuje. Není to známka zhoršení formy. Pro dlouhé tréninky pomáhá hodnotit intenzitu podle tempa/výkonu, ne jen tepu.</p>
+
+<h3>Pomůže nižší klidový tep s hubnutím?</h3>
+<p>Sám o sobě ne. Nižší klidový tep ukazuje na lepší srdeční výkon, ale neznamená vyšší výdej kalorií (BMR je nezávislý na tepu). Důležitější je celková aerobní kapacita a denní aktivita.</p>
+
+<h2>Související kalkulačky a články</h2>
+
+<ul>
+<li><a href="/kalkulacka-bmr/">BMR a TDEE kalkulačka</a> – kolik kalorií spotřebujete za den.</li>
+<li><a href="/kalkulacka-deficit/">Kalkulačka deficitu</a> – kolik jíst pro plánované hubnutí.</li>
+<li><a href="/tepova-frekvence-spalovani/">Tepová frekvence pro spalování tuků</a> – článek s detailním rozborem zón.</li>
+<li><a href="/nejlepsi-sport-na-hubnuti/">Nejlepší sport na hubnutí</a> – jak vybrat aktivitu.</li>
+<li><a href="/hubnuti-chuzi/">Hubnutí chůzí</a> – proč chůze funguje a kolik kroků denně.</li>
+</ul>
+
 </div>
 
 <script>

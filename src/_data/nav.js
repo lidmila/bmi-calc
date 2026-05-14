@@ -25,6 +25,8 @@ module.exports = {
     },
     { label: "Blog", url: "/blog/" },
     { label: "Metodika", url: "/metodika/" },
+    { label: "O nás", url: "/o-nas/" },
+    { label: "Kontakt", url: "/kontakt/" },
   ],
   footer: {
     kalkulacky: [
@@ -51,8 +53,13 @@ module.exports = {
       { label: "Počítání kalorií", url: "/pocitani-kalorii/" },
       { label: "Nejlepší sport na hubnutí", url: "/nejlepsi-sport-na-hubnuti/" },
       { label: "Tepová frekvence", url: "/tepova-frekvence-spalovani/" },
+      { label: "Proteinová potřeba", url: "/proteinova-potreba/" },
+      { label: "Pitný režim", url: "/pitny-rezim-a-hubnuti/" },
+      { label: "Spánek a hubnutí", url: "/spanek-a-hubnuti/" },
     ],
     onas: [
+      { label: "O nás", url: "/o-nas/" },
+      { label: "Kontakt", url: "/kontakt/" },
       { label: "Metodika a zdroje", url: "/metodika/" },
       { label: "Blog", url: "/blog/" },
       { label: "Ochrana soukromí", url: "/ochrana-soukromi/" },

@@ -3,8 +3,56 @@ layout: layouts/calculator.njk
 title: "Kalkulačka WHtR – obvod pasu k výšce"
 description: "Poměr obvodu pasu k výšce (WHtR) je modernější ukazatel zdravotního rizika než BMI. Změřte se a uvidíte."
 permalink: /kalkulacka-whtr/
+date: 2026-02-01
+dateModified: 2026-05-14
 tag: "Pas a viscerální tuk"
 perex: "Klasické pravidlo: obvod pasu by neměl být víc než polovina vaší výšky. WHtR pod 0,5 znamená nízké zdravotní riziko."
+ogImage: "/img/og-default.png"
+sources:
+  - { label: "Ashwell M, Hsieh SD. Six reasons why the body mass index should be replaced by waist-to-height ratio (Obes Rev, 2014)", url: "https://pubmed.ncbi.nlm.nih.gov/24417568/" }
+  - { label: "Browning LM et al. A systematic review of WHtR as a screening tool for cardiometabolic risk (Nutr Res Rev, 2010)", url: "https://pubmed.ncbi.nlm.nih.gov/20819243/" }
+  - { label: "Ashwell M. The Ashwell shape chart (1996)", url: "https://www.ashwell.uk.com/shape-chart" }
+  - { label: "NICE NG246 – Obesity: identification, assessment and management", url: "https://www.nice.org.uk/guidance/ng246" }
+  - { label: "WHO – Waist circumference and waist-hip ratio: report of a WHO expert consultation", url: "https://www.who.int/publications/i/item/9789241501491" }
+jsonld:
+  - "@context": "https://schema.org"
+    "@type": "FAQPage"
+    mainEntity:
+      - "@type": "Question"
+        name: "Co je WHtR?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "WHtR (Waist-to-Height Ratio) je poměr obvodu pasu k tělesné výšce. Vyjadřuje, jaká část výšky 'připadá' na obvod pasu. Výpočet: obvod pasu v cm dělený výškou v cm. Hodnota pod 0,5 znamená nízké kardiometabolické riziko, hodnota nad 0,5 zvýšené riziko, nad 0,6 vysoké."
+      - "@type": "Question"
+        name: "Proč je WHtR lepší než BMI?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "BMI měří poměr hmotnosti k výšce, ale nerozlišuje, kde se tuk v těle ukládá. Břišní (viscerální) tuk je rizikovější než tuk na hýždích nebo stehnech – obklopuje vnitřní orgány a souvisí s diabetem, vysokým tlakem a kardiovaskulárním onemocněním. WHtR tento rozdíl zachycuje, BMI ne. Studie ukazují, že WHtR předpovídá kardiometabolické riziko přesněji než BMI samotné."
+      - "@type": "Question"
+        name: "Jaký WHtR by měl muž a žena mít?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Univerzální pravidlo platí pro obě pohlaví: obvod pasu pod polovinou výšky (WHtR pod 0,5). Pro 175 cm vysokého muže to znamená pas pod 87,5 cm; pro 165 cm vysokou ženu pas pod 82,5 cm. Hodnota 0,4–0,5 je optimální zdravotní pásmo. Pod 0,4 začíná pásmo podváhy nebo extrémní štíhlosti."
+      - "@type": "Question"
+        name: "Jak správně změřit obvod pasu?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Pas měřte ráno nalačno, nesvlečeni nebo ve spodním prádle. Najděte nejtenčí místo mezi spodním žebrem a horní hranou kyčelní kosti (zhruba v úrovni pupku). Krejčovský metr veďte vodorovně kolem těla, ne stažený. Měřte při volném výdechu, ne s vtaženým břichem. Pro spolehlivost opakujte měření dvakrát a vezměte průměr."
+      - "@type": "Question"
+        name: "Mohu spoléhat na WHtR i u sportovce?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Ano, lépe než na BMI. WHtR funguje i u sportovců s vysokou svalovou hmotou, protože vysoké svaly se neukládají v oblasti pasu. Silový sportovec s BMI 28 (formálně nadváha) může mít WHtR 0,42 – tedy zdravé. Proto je WHtR vhodnější ukazatel pro tuto skupinu."
+      - "@type": "Question"
+        name: "Funguje WHtR u dětí?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Ano, dokonce už od 6 let. Studie potvrzují, že prahová hodnota 0,5 platí univerzálně pro děti i dospělé bez ohledu na pohlaví a věk. To je velká výhoda WHtR oproti BMI, který u dětí vyžaduje percentilové grafy podle věku."
+      - "@type": "Question"
+        name: "Co znamená WHtR nad 0,6?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "WHtR nad 0,6 indikuje vysoké kardiometabolické riziko bez ohledu na BMI. V tomto pásmu významně roste riziko hypertenze, diabetu 2. typu, dyslipidémie a kardiovaskulárních příhod. Doporučujeme kontaktovat praktického lékaře a v případě potřeby obezitologa pro komplexní vyšetření a plán redukce viscerálního tuku."
 ---
 
 <div class="card p-6 sm:p-8">
@@ -24,14 +72,99 @@ perex: "Klasické pravidlo: obvod pasu by neměl být víc než polovina vaší 
 </div>
 
 <div class="prose prose-slate dark:prose-invert max-w-none mt-10">
-  <h2>Proč WHtR?</h2>
-  <p>BMI nerozlišuje, kde tuk máte. Břišní (viscerální) tuk je rizikovější než tuk na bocích – obklopuje vnitřní orgány a souvisí se srdečními nemocemi a diabetem 2. typu. WHtR je přesnější a univerzální: <strong>stačí, aby byl pas méně než polovina výšky</strong>.</p>
-  <h3>Jak změřit pas správně</h3>
-  <ol>
-    <li>Svlékněte se na spodní prádlo, postavte se rovně.</li>
-    <li>Najděte si nejtenčí místo mezi spodním žebrem a horní hranou kyčelní kosti (přibližně v úrovni pupku).</li>
-    <li>Měřte při volném výdechu, pásmo má být vodorovně, ne stažené.</li>
-  </ol>
+
+<h2>Proč WHtR a ne jenom BMI</h2>
+
+<p>BMI (Body Mass Index) je užitečná populační statistika, ale má jednu zásadní slabinu: nezná rozdíl mezi tukem na hýždích a tukem kolem vnitřních orgánů. Z hlediska zdravotního rizika je to ale klíčové. <strong>Viscerální tuk</strong> – ten, který se ukládá uvnitř břišní dutiny kolem jater, slinivky a střev – je metabolicky aktivní a produkuje zánětlivé cytokiny, které zvyšují inzulinovou rezistenci a kardiovaskulární riziko. <strong>Podkožní tuk</strong> na bocích a stehnech (typicky „hruškovitá" silueta) má naopak protektivní účinek a zdravotní riziko zvyšuje minimálně.</p>
+
+<p>WHtR (Waist-to-Height Ratio) tenhle rozdíl zachycuje. Pas je dobrý proxy pro viscerální tuk – pokud se tuk ukládá hlavně v břiše („jablečná" silueta), obvod pasu roste rychleji než celková hmotnost. Výpočet je jednoduchý:</p>
+
+<p><strong>WHtR = obvod pasu (cm) / výška (cm)</strong></p>
+
+<p>Univerzální pravidlo: <strong>pas by neměl být větší než polovina vaší výšky</strong>. Pokud měříte 170 cm, pas by měl být pod 85 cm. Pokud měříte 180 cm, pod 90 cm. To je hodnota 0,5 – nejjednodušší zdravotní pravidlo, které si můžete zapamatovat.</p>
+
+<h2>Co znamenají jednotlivá pásma</h2>
+
+<table>
+<thead><tr><th>WHtR</th><th>Kategorie</th><th>Zdravotní riziko</th></tr></thead>
+<tbody>
+<tr><td>Pod 0,40</td><td>Velmi štíhlý / atletický</td><td>Nízké, ale velmi nízká hodnota u žen může indikovat podváhu</td></tr>
+<tr><td>0,40 – 0,50</td><td>Zdravé pásmo</td><td>Nízké kardiometabolické riziko</td></tr>
+<tr><td>0,50 – 0,60</td><td>Zvýšené riziko</td><td>Zvýšená pravděpodobnost hypertenze, prediabetu, dyslipidémie</td></tr>
+<tr><td>Nad 0,60</td><td>Vysoké riziko</td><td>Indikace ke konzultaci s lékařem; vyšší riziko kardiovaskulárních příhod a diabetu 2. typu</td></tr>
+</tbody>
+</table>
+
+<p>Pásma platí univerzálně – pro muže i ženy, pro dospělé i děti od 6 let, pro různé etnické skupiny. To je jedna z nejsilnějších vlastností WHtR: nepotřebuje korekci na pohlaví ani věk.</p>
+
+<h2>Jak změřit pas správně</h2>
+
+<p>Měření obvodu pasu vypadá triviálně, ale chyby v technice mohou hodnotu posunout o 5–10 cm. To je rozdíl mezi zdravým a rizikovým pásmem. Postupujte takto:</p>
+
+<ol>
+<li><strong>Měřte ráno nalačno</strong> – po jídle a pití pas přechodně narůstá, navečer kolísá o 2–4 cm podle obsahu střev.</li>
+<li><strong>Stůjte rovně</strong>, ne ve stojící póze s vtaženým břichem ani s prohnutým hřbetem. Volný vzpřímený postoj.</li>
+<li><strong>Najděte správné místo</strong>: nejužší část trupu mezi spodním žebrem a horní hranou kyčelní kosti. U štíhlých lidí je to mírně nad pupkem, u nadváhy a obezity může být v úrovni pupku nebo pod ním.</li>
+<li><strong>Pásmo veďte vodorovně</strong>, kontrolujte v zrcadle, ať neklesá vzadu.</li>
+<li><strong>Měřte při volném výdechu</strong>, ne ve výdrži nádechu nebo s vtaženým břichem.</li>
+<li><strong>Měřte dvakrát</strong>, vezměte průměr. Pokud se hodnoty liší o víc než 1 cm, měřte potřetí.</li>
+</ol>
+
+<p>Pro sledování trendu měřte ve stejnou dobu (ráno) a stejným způsobem (ve stejném oblečení nebo bez něj). Týdenní průměr je smysluplnější než jednotlivé měření.</p>
+
+<h2>Kdy je WHtR užitečnější než BMI</h2>
+
+<h3>Sportovci s vysokou svalovou hmotou</h3>
+<p>Silový atlet 180 cm a 95 kg má BMI 29,3 – formálně nadváha. Ale jeho WHtR může být klidně 0,42 (pas 76 cm), tedy zdravé pásmo. BMI ho považuje za rizikového, WHtR ho odebere mimo riziko – a má pravdu. Velká svalová hmota se neukládá v oblasti pasu.</p>
+
+<h3>Senioři</h3>
+<p>S věkem klesá svalová hmota (sarkopenie) a může klesat i celková hmotnost při zachování nebo nárůstu břišního tuku. Senior 78 let s BMI 23 a WHtR 0,58 má skryté riziko, které samotné BMI neodhalí. WHtR zde zachytí abnormální distribuci tuku.</p>
+
+<h3>Hraniční nadváha</h3>
+<p>Pacient s BMI 27 (mírná nadváha) a WHtR 0,45 (pas pod polovinou výšky) má nízké kardiometabolické riziko – přebytek hmotnosti je rozložen rovnoměrně nebo na hýždích a stehnech. Naopak pacient s BMI 26 a WHtR 0,55 má vyšší riziko, byť BMI je nižší.</p>
+
+<h3>Děti od 6 let</h3>
+<p>U dětí BMI vyžaduje hodnocení podle percentilových grafů specifických pro věk a pohlaví. WHtR funguje univerzálně už od 6 let s prahovou hodnotou 0,5. To je velká praktická výhoda pro screening.</p>
+
+<h2>Omezení WHtR</h2>
+
+<p>Žádný ukazatel není dokonalý a WHtR má své limity:</p>
+
+<ul>
+<li><strong>Těhotenství</strong> – pas přirozeně roste s rostoucí dělohou, WHtR nedává smysl.</li>
+<li><strong>Velké jizvy v oblasti břicha</strong> (po císařském řezu, operaci) – mohou ovlivnit přesnost měření.</li>
+<li><strong>Pupeční kýla, výrazná žilní stáza</strong> – fyziologicky zvětšují obvod, ale neznamenají automaticky vyšší viscerální tuk.</li>
+<li><strong>Velmi vysoká svalová hmota břišní</strong> – sportovci s vyvinutým svalovým reliéfem mohou mít obvod pasu mírně zvýšený bez tukové vrstvy.</li>
+<li><strong>Měření přes oblečení</strong> – posouvá hodnotu nahoru o 1–3 cm.</li>
+</ul>
+
+<p>Pro klinické rozhodování (zda je nutná intervence) doporučujeme kombinaci ukazatelů: BMI + WHtR + obvod pasu samotný (WHO doporučuje obvod pasu nad 102 cm u mužů a nad 88 cm u žen jako rizikovou hodnotu). Pokud všechny tři ukazují riziko, intervence je opodstatněná. Pokud se rozcházejí, je vhodné měření tělesné kompozice (DEXA scan).</p>
+
+<h2>Co dělat, pokud máte WHtR nad 0,5</h2>
+
+<p>Viscerální tuk reaguje na intervenci <strong>lépe než podkožní tuk</strong> – to je dobrá zpráva. I mírný kalorický deficit a zvýšená pohybová aktivita typicky redukují obvod pasu rychleji než celkovou hmotnost.</p>
+
+<ol>
+<li><strong>Kalorický deficit</strong> – 300–500 kcal pod TDEE denně. Pomůže <a href="/kalkulacka-deficit/">kalkulačka deficitu</a>.</li>
+<li><strong>Silový trénink 2–3× týdně</strong> – udržuje svalovou hmotu a zvyšuje klidový metabolismus.</li>
+<li><strong>Aerobní aktivita 150 min/týdně</strong> – střední intenzita, ideálně chůze, kolo, plavání. Doporučení WHO.</li>
+<li><strong>Omezení rychlých sacharidů</strong> – slazené nápoje, bílé pečivo, sladkosti. Mají přímý vliv na viscerální tuk.</li>
+<li><strong>Spánek 7–9 hodin</strong> – chronický nedostatek spánku posouvá ukládání tuku do viscerální oblasti.</li>
+<li><strong>Snížení alkoholu</strong> – „pivní břicho" není mýtus. Alkohol blokuje oxidaci tuku a podporuje jeho ukládání v břišní oblasti.</li>
+</ol>
+
+<p>Reálný cíl: zmenšení pasu o <strong>1 cm za 4 týdny</strong> při mírném deficitu. Rychleji to jde s agresivnějším deficitem, ale s vyšším rizikem ztráty svalové hmoty a hladu.</p>
+
+<h2>Související kalkulačky a články</h2>
+
+<ul>
+<li><a href="/kalkulacka-bmr/">BMR a TDEE kalkulačka</a> – kolik kalorií spotřebujete denně.</li>
+<li><a href="/kalkulacka-deficit/">Kalkulačka kalorického deficitu</a> – jak velký deficit zvolit pro cílovou ztrátu.</li>
+<li><a href="/bmi-vs-jine-metody/">BMI vs. jiné metody hodnocení hmotnosti</a> – srovnání všech dostupných ukazatelů.</li>
+<li><a href="/stupne-obezity/">Stupně obezity a zdravotní rizika</a> – co znamená BMI 30+.</li>
+<li><a href="/jak-snizit-bmi/">Jak snížit BMI</a> – kompletní průvodce redukcí hmotnosti.</li>
+</ul>
+
 </div>
 
 <script>

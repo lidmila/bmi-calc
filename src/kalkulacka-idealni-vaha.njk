@@ -3,8 +3,51 @@ layout: layouts/calculator.njk
 title: "Kalkulačka ideální váhy – Devine, Robinson, Miller"
 description: "Spočítejte si ideální tělesnou hmotnost podle tří klasických vzorců a porovnejte s rozsahem zdravého BMI."
 permalink: /kalkulacka-idealni-vaha/
+date: 2026-02-01
+dateModified: 2026-05-14
 tag: "Hmotnost"
 perex: "Ideální váha není jedna konkrétní hodnota. Každý vzorec ji počítá trochu jinak – ukážeme vám všechny tři, abyste si mohli udělat reálný cíl."
+ogImage: "/img/og-default.png"
+sources:
+  - { label: "Devine BJ. Gentamicin therapy. Drug Intell Clin Pharm (1974)", url: "https://pubmed.ncbi.nlm.nih.gov/4854124/" }
+  - { label: "Robinson JD et al. Determination of ideal body weight (Am J Hosp Pharm, 1983)", url: "https://pubmed.ncbi.nlm.nih.gov/6869387/" }
+  - { label: "Miller DR et al. Determining ideal body weight (Am J Hosp Pharm, 1983)", url: "https://pubmed.ncbi.nlm.nih.gov/6869388/" }
+  - { label: "Pai MP, Paloucek FP. The origin of the 'ideal' body weight equations (Ann Pharmacother, 2000)", url: "https://pubmed.ncbi.nlm.nih.gov/10852095/" }
+  - { label: "WHO – Body Mass Index", url: "https://www.who.int/data/gho/data/themes/topics/topic-details/GHO/body-mass-index" }
+jsonld:
+  - "@context": "https://schema.org"
+    "@type": "FAQPage"
+    mainEntity:
+      - "@type": "Question"
+        name: "Co je ideální váha?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Termín 'ideální váha' pochází z farmakologie 70. let, kdy vznikla potřeba sjednotit dávkování léků podle hmotnosti. Není to fitness cíl ani estetická norma. Vzorce Devine, Robinson a Miller dávají rozsah hodnot pro daný výška a pohlaví – beze zohlednění věku, podílu svalů, kostní stavby nebo zdravotního stavu. Reálným cílem je hmotnost v pásmu zdravého BMI (18,5–24,9)."
+      - "@type": "Question"
+        name: "Který vzorec mám použít?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Žádný z vzorců není 'správnější' než ostatní – každý je statistický odhad z jiné populace. Devine je nejstarší a nejkonzervativnější, Robinson aktualizace pro starší populaci, Miller pro mladší a vyšší jedince. Praktický doporučení: berte výsledek tří vzorců jako rozsah a zaměřte se na zdravotní cíle (BMI, obvod pasu, krevní hodnoty) místo konkrétního čísla na váze."
+      - "@type": "Question"
+        name: "Proč vzorce neberou v úvahu věk?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Vzorce ideální váhy byly navrženy pro farmakologické dávkování, ne pro hodnocení tělesné kompozice. Věk, podíl svalové hmoty, etnicita, kostní stavba ani aktivita nejsou v rovnici. Pro reálnější hodnocení zdravotní hmotnosti zvažte kombinaci BMI + obvodu pasu (WHtR) nebo měření tělesné kompozice (DEXA, bioimpedance)."
+      - "@type": "Question"
+        name: "Mám hubnout na 'ideální váhu' z kalkulačky?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Ne nutně. Pokud spadáte do pásma zdravého BMI (18,5–24,9), jste z hlediska hmotnosti v pořádku – i když jste nad hodnotou Devine. Pokud máte BMI nad 25 a chcete redukovat, NICE doporučuje ztrátu 5–10 % tělesné hmotnosti během 6 měsíců, ne dosažení konkrétní 'ideální' hodnoty. To je realistický cíl s prokázaným zdravotním přínosem."
+      - "@type": "Question"
+        name: "Co s ideální váhou u sportovců?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Vzorce ideální váhy ani BMI nefungují u jedinců s vysokou svalovou hmotou. Silový sportovec se 180 cm a 95 kg má BMI 29,3 (formálně nadváha), ale podíl tělesného tuku 12 %. Pro tyto případy je vhodnější měření tělesné kompozice (DEXA scan, hydrostatická vážení, vícefrekvenční bioimpedance) a obvodů (pas, kyčle, paže)."
+      - "@type": "Question"
+        name: "Jaká je ideální váha pro ženu 168 cm?"
+        acceptedAnswer:
+          "@type": "Answer"
+          text: "Pro ženu vysokou 168 cm vyjde: Devine 59,9 kg, Robinson 60,8 kg, Miller 61,8 kg. Zdravé BMI 18,5–24,9 dává rozsah 52,2–70,3 kg. To je výrazně širší pásmo – a všechny hmotnosti v tomto rozsahu jsou z hlediska BMI zdravé."
 ---
 
 <div class="card p-6 sm:p-8">
@@ -26,8 +69,109 @@ perex: "Ideální váha není jedna konkrétní hodnota. Každý vzorec ji poč�
 </div>
 
 <div class="prose prose-slate dark:prose-invert max-w-none mt-10">
-  <h2>Co je ideální váha?</h2>
-  <p>Vzorce vznikly pro dávkování léků, ne jako fitness cíl. Berou v úvahu jen výšku a pohlaví – ne věk, kostní stavbu ani podíl svalů. Proto je rozumné výsledek vnímat jako <strong>střed rozsahu</strong>, ne pevný cíl. Pokud spadáte do rozsahu zdravého BMI (18,5–24,9), jste v pohodě.</p>
+
+<h2>Co znamená „ideální váha"</h2>
+
+<p>Pojem <strong>ideální tělesná hmotnost (IBW – Ideal Body Weight)</strong> nepřišel z fitness ani estetiky. Vznikl v sedmdesátých letech minulého století ve farmakologii, kdy bylo třeba sjednotit dávkování léků závislých na hmotnosti – například antibiotik typu gentamicin. Lékaři potřebovali jeden standardní vzorec, který by řekl: „když má pacient 180 cm a je muž, jeho referenční hmotnost je X kg".</p>
+
+<p>Vzorce Devine (1974), Robinson (1983) a Miller (1983) tuto potřebu obstarávají dodnes. Podíváte-li se na ně blíže, zjistíte, že berou v úvahu jen <strong>výšku a pohlaví</strong>. Žádný věk, žádnou svalovou hmotu, žádnou kostní strukturu, žádné aktivity. Z tohoto důvodu je výsledek užitečný jako <strong>referenční střed</strong>, nikoli jako fitness cíl, ke kterému byste se měli za každou cenu propracovat.</p>
+
+<h2>Tři vzorce a jak se liší</h2>
+
+<p>Naše kalkulačka počítá všechny tři klasické vzorce paralelně, protože každý dává mírně jinou hodnotu a sám o sobě má omezení.</p>
+
+<h3>Devine (1974)</h3>
+<ul>
+<li><strong>Muži:</strong> 50 + 2,3 kg za každý palec nad 152 cm</li>
+<li><strong>Ženy:</strong> 45,5 + 2,3 kg za každý palec nad 152 cm</li>
+</ul>
+<p>Nejstarší vzorec, dnes nejčastěji používaný jako referenční ve studijních textech farmakologie. Tendence: nižší výsledky než Robinson a Miller, zejména u vysokých jedinců.</p>
+
+<h3>Robinson (1983)</h3>
+<ul>
+<li><strong>Muži:</strong> 52 + 1,9 kg za každý palec nad 152 cm</li>
+<li><strong>Ženy:</strong> 49 + 1,7 kg za každý palec nad 152 cm</li>
+</ul>
+<p>Aktualizace pro novější populační data, mírně vyšší výsledky než Devine. Vzniklo jako odpověď na pozorování, že Devine podhodnocuje zdravou hmotnost u průměrné populace.</p>
+
+<h3>Miller (1983)</h3>
+<ul>
+<li><strong>Muži:</strong> 56,2 + 1,41 kg za každý palec nad 152 cm</li>
+<li><strong>Ženy:</strong> 53,1 + 1,36 kg za každý palec nad 152 cm</li>
+</ul>
+<p>Vzorec s nejvyššími výchozími hodnotami a nejnižším přírůstkem. Pro velmi vysoké jedince vychází Miller nižší hmotnost než Robinson, pro průměrné vyšší.</p>
+
+<p>Pokud výsledky tří vzorců porovnáte, dostanete <strong>pásmo</strong>, ne jednu hodnotu. Pro praktické rozhodování se zaměřte na rozsah a zhodnoťte ho v kontextu svého BMI, obvodu pasu a vlastního zdravotního stavu.</p>
+
+<h2>Proč přidáváme i pásmo zdravého BMI</h2>
+
+<p>BMI rozsah 18,5–24,9 je z hlediska zdravotních rizik <a href="https://www.who.int/data/gho/data/themes/topics/topic-details/GHO/body-mass-index" rel="nofollow noopener" target="_blank">WHO referenční pásmo</a>. Pokud spadáte do tohoto rozsahu, vaše hmotnost je z hlediska statistik populačního zdraví v pořádku – i kdyby byla vyšší než hodnota podle Devine.</p>
+
+<p>Příklad. Žena 168 cm:</p>
+<ul>
+<li>Devine: 59,9 kg</li>
+<li>Robinson: 60,8 kg</li>
+<li>Miller: 61,8 kg</li>
+<li><strong>Zdravé BMI: 52,2–70,3 kg</strong></li>
+</ul>
+
+<p>Žena 168 cm a 68 kg má BMI 24,1 – stále zdravé. Podle tří vzorců „ideální váhy" by měla zhubnout 6–8 kg, ale klinicky k tomu není důvod, pokud nemá další rizikové faktory (vysoký obvod pasu, vyšší krevní tlak, dyslipidémii). To je důležitý kontext, který vzorce samy o sobě nezachytí.</p>
+
+<h2>Kdy ideální váhu nepoužívat</h2>
+
+<p>Vzorce jsou užitečné jako rychlý orientační bod. Pro tyto skupiny ale vůbec nefungují:</p>
+
+<ul>
+<li><strong>Sportovci s vysokou svalovou hmotou.</strong> Silový sportovec se 180 cm a 95 kg má BMI 29,3 (formálně nadváha) – přesto může mít 10 % tělesného tuku. Žádný vzorec ideální váhy ani BMI tuto situaci neumí oddělit od obezity. Vhodnější je <a href="/kalkulacka-whtr/">WHtR (obvod pasu k výšce)</a> nebo měření tělesné kompozice.</li>
+<li><strong>Senioři.</strong> Po 65. roce se snižuje svalová hmota (sarkopenie), takže „ideální váha" z vzorce může vést k podváze a oslabení. Pro seniory se uvažuje vyšší cílový BMI 23–27.</li>
+<li><strong>Děti a mladiství.</strong> Růst a vývoj vyžaduje hodnocení podle percentilových grafů, ne podle vzorců pro dospělé. Viz <a href="/bmi-u-deti/">BMI u dětí</a>.</li>
+<li><strong>Těhotenství.</strong> Ve fyziologickém těhotenství nárůst hmotnosti 11–16 kg (u žen s normálním BMI před otěhotněním) je doporučovaný – nikoli odchylka od „ideální váhy".</li>
+<li><strong>Etnické rozdíly.</strong> Studie ukazují, že u asijské populace začínají zdravotní rizika nadváhy už od BMI 23. WHO proto navrhuje úpravu prahových hodnot pro některé populace. Vzorce ideální váhy s tím nepočítají.</li>
+</ul>
+
+<h2>Co dělat s výsledkem prakticky</h2>
+
+<h3>Pokud jste v pásmu zdravého BMI</h3>
+<p>Gratulujeme – z hlediska hmotnosti pro vás není důvod ke změně. I když jste nad „ideální váhou" podle Devine, vaše hmotnost je v pořádku. Soustřeďte se na pohyb, kvalitu jídelníčku a metabolické zdraví, ne na čísla na váze.</p>
+
+<h3>Pokud máte BMI nad 25 (nadváha)</h3>
+<p>Reálný cíl není „ideální váha", ale ztráta <strong>5–10 % hmotnosti během 6 měsíců</strong>. Tahle redukce má prokázaný zdravotní přínos: snížení krevního tlaku o 5–10 mmHg, zlepšení inzulinové citlivosti, pokles cholesterolu. NICE i WHO doporučují tento cíl, ne „ideální váhu" z vzorce.</p>
+
+<p>Pro plánování viz <a href="/kalkulacka-deficit/">kalkulačku kalorického deficitu</a> nebo článek <a href="/jak-snizit-bmi/">Jak snížit BMI</a>.</p>
+
+<h3>Pokud máte BMI pod 18,5 (podváha)</h3>
+<p>Vzorce ideální váhy ukazují vyšší hodnotu, než je vaše. Pokud podváhu nemá zdravotní příčinu (porucha příjmu potravy, neléčená nemoc, podvýživa), zvažte návštěvu lékaře nebo nutričního terapeuta. Cílené přibrání s důrazem na svalovou hmotu (silový trénink + 200–300 kcal nad TDEE) je bezpečná cesta.</p>
+
+<h3>Pokud máte BMI nad 30 (obezita)</h3>
+<p>Zde ideální váha nedává smysl jako cíl – rozdíl od reálné hmotnosti by mohl být desítky kilo. Postupujte v krocích: prvních 5 %, pak dalších 5 %. Pro středně závažnou až těžkou obezitu konzultujte obezitologa, kde je dostupná i farmakoterapie (GLP-1 analogy) a u BMI 40+ bariatrická chirurgie.</p>
+
+<h2>Lepší alternativy než „ideální váha"</h2>
+
+<p>Pokud chcete realistický pohled na svou tělesnou kompozici, místo jedné hodnoty z vzorce zvažte kombinaci ukazatelů:</p>
+
+<ul>
+<li><strong>BMI</strong> – populační orientace, nehodí se pro sportovce. Spočítejte si na <a href="/">úvodní stránce</a>.</li>
+<li><strong>Obvod pasu k výšce (WHtR)</strong> – jednoduchý a robustní ukazatel kardiometabolického rizika. Pokud pas / výška &lt; 0,5, jste v pořádku bez ohledu na celkovou hmotnost. <a href="/kalkulacka-whtr/">Vyzkoušejte WHtR kalkulačku</a>.</li>
+<li><strong>Procento tělesného tuku</strong> – nejpřesnější je DEXA scan (cca 500–1 500 Kč v ČR), bioimpedance je dostupnější ale méně přesná.</li>
+<li><strong>Krevní hodnoty</strong> – glykémie nalačno, HbA1c, lipidový profil, krevní tlak. Tahle čísla říkají o vašem zdraví víc než váha sama.</li>
+</ul>
+
+<p>Komplexní srovnání metod najdete v článku <a href="/bmi-vs-jine-metody/">BMI vs. jiné metody hodnocení hmotnosti</a>.</p>
+
+<h2>Časté otázky</h2>
+
+<h3>Mám se snažit dostat na hodnotu podle Devine?</h3>
+<p>Ne, pokud spadáte do zdravého BMI. Devine byl vytvořen pro farmakologii, ne pro fitness. Pokud máte BMI mezi 18,5 a 24,9, nemá smysl hubnout jen kvůli vzorci.</p>
+
+<h3>Proč mi vyšla menší hmotnost u žen než u mužů?</h3>
+<p>Vzorce reflektují průměrný rozdíl ve složení těla – muži mají v průměru větší podíl svalové hmoty a tedy i vyšší referenční hmotnost při stejné výšce. Rozdíl je 4–5 kg pro průměrnou výšku.</p>
+
+<h3>Existuje vzorec s věkem?</h3>
+<p>Ano, ale méně známé. Vzorec Hamwi (1964) a Lemmens (2005) jsou alternativy s mírně jiným přístupem. Pro praktické rozhodování nepřinášejí dramatický rozdíl. Zvolte raději <a href="/kalkulacka-bmr/">BMR/TDEE kalkulačku</a> pro plánování příjmu nebo BMI pro orientaci v pásmu.</p>
+
+<h3>Co když chci konkrétní cílovou hmotnost na nákup vstupenky / tetování / soutěž?</h3>
+<p>Pro tyto účely můžete vzorce použít jako orientační bod, ale uvědomte si, že každý vzorec dá jinou hodnotu. Reálný cíl bývá rozumnější nastavit jako pásmo (např. 65–70 kg) než pevnou hodnotu – tělo kolísá o ±1–2 kg podle hydratace, obsahu střev a fáze cyklu u žen.</p>
+
 </div>
 
 <script>
