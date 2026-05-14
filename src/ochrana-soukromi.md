@@ -21,9 +21,25 @@ Web: [idealnibmi.com](https://idealnibmi.com/)
 
 ## 2. Jaké údaje zpracováváme
 
-Web **idealnibmi.com** přímo nesbírá žádné osobní údaje uživatelů. Na webu neexistuje registrace, přihlášení, kontaktní formulář ani newsletter.
+Web **idealnibmi.com** neprovozuje registraci, přihlášení ani newsletter. Osobní údaje zpracovává pouze ve dvou případech:
 
-Údaje zadané do BMI kalkulačky (výška, hmotnost, věk, pohlaví, obvod pasu) jsou zpracovávány **výhradně na straně klienta** (v prohlížeči pomocí JavaScriptu). Tyto údaje se **neodesílají na žádný server** a provozovatel k nim nemá přístup. Jedná se o zdravotní údaje ve smyslu čl. 9 GDPR, které však provozovatel nijak nezpracovává.
+### 2.1 Údaje zadané do kalkulaček
+
+Údaje zadané do BMI a dalších kalkulaček (výška, hmotnost, věk, pohlaví, obvod pasu, klidový tep apod.) jsou zpracovávány **výhradně na straně klienta** (ve vašem prohlížeči pomocí JavaScriptu). Tyto údaje se **neodesílají na žádný server** a provozovatelka k nim nemá přístup. Jedná se sice o zdravotní údaje ve smyslu čl. 9 GDPR, ale provozovatelka je nijak nezpracovává ani neukládá.
+
+### 2.2 Údaje z kontaktního formuláře
+
+Pokud vyplníte [kontaktní formulář](/kontakt/), zpracováváme:
+
+- **Jméno** – pro adresnou odpověď.
+- **E-mail** – pro doručení odpovědi.
+- **Téma a text zprávy** – pro vyřízení dotazu.
+
+**Právní titul:** souhlas (čl. 6 odst. 1 písm. a GDPR), který udělujete zaškrtnutím souhlasu před odesláním formuláře.
+**Účel:** výhradně zodpovězení vašeho dotazu a případná navazující redakční komunikace.
+**Doba uchování:** maximálně 12 měsíců od poslední zprávy v komunikaci; poté zprávu mažeme.
+**Příjemci:** zpráva se doručuje přes službu **Web3Forms** (Web3Forms Pte. Ltd., Singapore), která působí jako zpracovatel a má vlastní [zásady ochrany osobních údajů](https://web3forms.com/legal/privacy). Vaše údaje neukládáme do žádné databáze ani je nesdílíme s nikým dalším.
+**Vaše práva:** kdykoliv můžete požádat o výpis, opravu nebo výmaz uložené komunikace na [hello@codewhiskers.app](mailto:hello@codewhiskers.app).
 
 ## 3. Cookies a technologie sledování
 

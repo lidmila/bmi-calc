@@ -35,7 +35,7 @@ Vyplňte formulář níže nebo nám pošlete e-mail na **[hello@codewhiskers.ap
 
 <div class="not-prose my-8">
 <form action="https://api.web3forms.com/submit" method="POST" class="card p-6 sm:p-8 grid gap-4">
-  <input type="hidden" name="access_key" value="REPLACE_WITH_WEB3FORMS_KEY">
+  <input type="hidden" name="access_key" value="175914ac-4bc4-4c1d-90f5-abfc56b8ba44">
   <input type="hidden" name="subject" value="Zpráva z idealnibmi.com">
   <input type="hidden" name="from_name" value="Ideální BMI – kontaktní formulář">
   <input type="hidden" name="redirect" value="https://idealnibmi.com/kontakt/?odeslano=1">
